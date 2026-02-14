@@ -1,0 +1,24 @@
+# NestJS Agentic Rules (@akr/api)
+
+## Architecture
+- Modular structure (Modules, Controllers, Services).
+- Use Dependency Injection correctly.
+- Use DTOs for request validation.
+
+## Data Persistence
+- Use TypeORM/Prisma for PostgreSQL.
+- Implement Repository pattern if applicable.
+- Define clear entities/schemas.
+
+## Caching
+- Use Redis for high-frequency data access.
+- Implement CacheInterceptor where appropriate.
+
+## Security
+- Validate all incoming data using `class-validator`.
+- Use Guards for authentication and authorization.
+- Sanitize inputs to prevent SQL injection.
+
+## Documentation
+- Document APIs using Swagger (if integrated).
+- Keep code self-documenting with clear naming and small functions.

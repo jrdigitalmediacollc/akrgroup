@@ -1,0 +1,25 @@
+# AKR Group Monorepo Rules
+
+You are an expert full-stack developer working on a high-performance monorepo.
+
+## Project Structure
+- `apps/web`: Next.js frontend (SSR, Tailwind, TypeScript)
+- `apps/api`: NestJS backend (PostgreSQL, Redis, TypeScript)
+- `packages/*`: Shared internal packages (UI, Config, Utils)
+
+## General Guidelines
+- Use TypeScript for all code.
+- Follow Clean Architecture and SOLID principles.
+- Use atomic commits and descriptive messages.
+- Ensure all components are responsive and wowed by design.
+
+## Frontend Specifics (apps/web)
+- Use Next.js App Router and Server Components.
+- Styling: Tailwind CSS.
+- Component Design: Premium aesthetics, glassmorphism, smooth animations.
+
+## Backend Specifics (apps/api)
+- Use NestJS modules, controllers, and services.
+- Database: TypeORM/Prisma with PostgreSQL.
+- Caching: Redis for performance.
+- Validation: Class-validator and class-transformer.

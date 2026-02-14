@@ -1,0 +1,23 @@
+# Next.js Agentic Rules (@akr/web)
+
+## Architecture
+- Use App Router (src/app).
+- Prefer Server Components for data fetching.
+- Use Client Components only when necessary for interactivity.
+
+## Styling
+- Tailwind CSS 4+ (using @tailwindcss/postcss).
+- Maintain a premium design system:
+  - Custom colors in `tailwind.config.ts`.
+  - Glassmorphism effects.
+  - Smooth transitions using Framer Motion (if added later).
+
+## Performance
+- Optimize images using `next/image`.
+- Implement proper loading states with `loading.tsx`.
+- Use `error.tsx` for graceful error handling.
+
+## Code Quality
+- Strict TypeScript.
+- Descriptive component names.
+- Modularize components into `src/components`.
