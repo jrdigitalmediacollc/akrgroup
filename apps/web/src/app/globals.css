@@ -609,7 +609,7 @@ body {
 }
 
 .why-card {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: #4a1810;
   border: 1px solid rgba(212, 149, 43, 0.3);
   border-radius: 12px;
   padding: 40px 32px;
@@ -659,5 +659,224 @@ body {
   
   .services__title, .why-choose__title {
     font-size: 26px;
+  }
+}
+
+/* ============================= */
+/*      CTA SECTION STYLES       */
+/* ============================= */
+.cta-section {
+  background: linear-gradient(to right, #e67e22, #d35400); /* Refined gradient */
+  padding: 100px 24px;
+  text-align: center;
+  color: white;
+  border-top: 3px solid oklch(66.6% 0.179 58.318);
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #300b0b;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  background-color: #1a0505;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/*        FOOTER STYLES          */
+/* ============================= */
+.footer {
+  background-color: #290a0a; /* Slightly lighter maroon for better contrast */
+  color: white;
+  border-bottom: 2px solid oklch(47.3% 0.137 46.201);
+  padding: 80px 24px 40px;
+}
+
+.footer-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 2px solid oklch(47.3% 0.137 46.201);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  color: #fff; /* Titles in footer seem white in screenshot */
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.footer-logo-circle {
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--akr-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--akr-gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.footer-logo-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--akr-gold);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.footer-contact-item svg {
+  color: var(--akr-gold);
+  flex-shrink: 0;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #d35400; /* Social icon background from screenshot */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.footer-social-btn:hover {
+  transform: translateY(-3px);
+  background-color: #e67e22;
+}
+
+.footer-disclaimer-box {
+  max-width: 80rem;
+  margin: 0px auto;
+  background-color: #38100b; /* Matching the maroon box from screenshot */
+  border-radius: 12px;
+  padding: 24px 32px;
+}
+
+.footer-license {
+  color: var(--akr-gold);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.footer-disclaimer-text {
+  color: var(--akr-gold); /* Screenshot shows disclaimer text also gold/yellowish */
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  max-width: 80rem;
+  margin: 40px auto;
+  border-top: 2px solid oklch(47.3% 0.137 46.201); /* Final divider line */
+  padding-top: 32px;
+  text-align: center;
+  color: var(--akr-gold);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer-col {
+    min-width: 100%;
   }
 }
