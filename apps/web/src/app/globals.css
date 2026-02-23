@@ -216,6 +216,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  border-bottom: 3px solid oklch(66.6% 0.179 58.318);
 }
 
 .hero::before {
@@ -224,18 +225,6 @@ body {
   inset: 0;
   background: rgba(60, 18, 12, 0.82);
   z-index: 1;
-}
-
-.hero-accent-line {
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--akr-gold) 0%,
-    var(--akr-gold-light) 50%,
-    var(--akr-gold) 100%
-  );
-  position: relative;
-  z-index: 2;
 }
 
 .hero-content {
@@ -325,11 +314,13 @@ body {
 /*  MORTGAGE CALCULATOR SECTION  */
 /* ============================= */
 .mortgage-calc {
-  background-color: var(--akr-maroon-dark);
+  background: linear-gradient(to bottom, #5a1810, #4a1810);
   padding: 64px 24px;
+  border-bottom: 3px solid oklch(66.6% 0.179 58.318);
 }
 
 .mortgage-calc__container {
+  background: linear-gradient(to bottom right, #3a1010,  #4a1810);
   max-width: 960px;
   margin: 0 auto;
 }
@@ -503,5 +494,170 @@ body {
 
   .mortgage-calc__title {
     font-size: 22px;
+  }
+}
+
+/* ============================= */
+/*  SERVICES SECTION             */
+/* ============================= */
+.services {
+  background-color: var(--akr-maroon-dark);
+  padding: 130px 24px;
+}
+
+.services__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.services__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.services__title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+}
+
+.services__subtitle {
+  color: var(--akr-text-muted);
+  font-size: 16px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background-color: #4a1810;
+  border: 1px solid rgba(212, 149, 43, 0.3);
+  border-radius: 12px;
+  padding: 32px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--akr-gold);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.service-card__icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: #D97706; /* Solid orange background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.service-card__title {
+  color: var(--akr-gold);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.service-card__description {
+  color: var(--akr-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================= */
+/*  WHY CHOOSE US SECTION         */
+/* ============================= */
+.why-choose {
+  background-color: var(--akr-maroon-dark);
+  padding: 0 24px 80px;
+}
+
+.why-choose__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.why-choose__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.why-choose__title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.why-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 149, 43, 0.3);
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-card__icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background-color: #D97706;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.why-card__title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.why-card__description {
+  color: var(--akr-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services__grid, .why-choose__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .services__grid, .why-choose__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services__title, .why-choose__title {
+    font-size: 26px;
   }
 }

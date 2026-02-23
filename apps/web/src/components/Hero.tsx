@@ -3,9 +3,6 @@ import Link from "next/link";
 export default function Hero() {
     return (
         <section className="hero">
-            {/* Top gold accent line */}
-            <div className="hero-accent-line" />
-
             <div className="hero-content">
                 <h1 className="hero-heading">
                     Premium Financial &amp;
@@ -49,9 +46,6 @@ export default function Hero() {
                     </Link>
                 </div>
             </div>
-
-            {/* Bottom gold accent line */}
-            <div className="hero-accent-line" />
         </section>
     );
 }
