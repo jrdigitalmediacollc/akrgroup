@@ -1,23 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "../styles/index.css";
+import { Providers } from "./providers";
+import { SiteHeader } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { LoginModal } from "./components/LoginModal";
 
 export const metadata: Metadata = {
-  title: "AKR Group UAE | Financial & Real Estate Advisory",
+  title: "AKR Group UAE - Financial & Real Estate Advisory",
   description:
-    "AKR Group UAE – Premier Financial and Real Estate Advisory Services in the UAE.",
+    "Expert guidance for your investment journey in the UAE. Financial planning, real estate advisory, and advanced calculators.",
 };
 
 export default function RootLayout({
@@ -27,12 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
+      <body>
+        <Providers>
+          <div className="min-h-screen flex flex-col bg-linear-to-b from-[#2a0808] to-[#1a0404]">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <LoginModal />
+          </div>
+        </Providers>
       </body>
     </html>
   );
