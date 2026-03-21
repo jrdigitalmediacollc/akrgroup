@@ -6,12 +6,16 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "npm run dev:api & npm run dev:web",
     "dev:web": "npm run dev --workspace=@akr/web",
     "dev:api": "npm run dev --workspace=@akr/api",
     "build:web": "npm run build --workspace=@akr/web",
     "build:api": "npm run build --workspace=@akr/api",
     "start:api": "npm run start --workspace=@akr/api",
+    "db:setup": "npm run db:setup --workspace=@akr/api",
+    "db:start": "docker compose up -d",
     "lint": "npm run lint --workspaces",
-    "test": "npm run test --workspaces"
+    "test": "npm run test --workspaces",
+    "install:all": "npm install && npm run db:setup --workspace=@akr/api"
   }
 }
