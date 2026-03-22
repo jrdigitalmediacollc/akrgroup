@@ -3,17 +3,16 @@
   "private": true,
   "packageManager": "pnpm@9.1.0",
   "scripts": {
-    "dev": "pnpm run dev:api & pnpm run dev:web",
-    "dev:web": "pnpm run dev --filter=@akr/web",
-    "dev:api": "pnpm run dev --filter=@akr/api",
-    "build:web": "pnpm run build --filter=@akr/web",
-    "build:api": "pnpm run build --filter=@akr/api",
-    "start:api": "pnpm run start --filter=@akr/api",
-    "db:setup": "pnpm run db:setup --filter=@akr/api",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start:api": "pnpm --filter @akr/api start",
+    "db:setup": "turbo run db:setup --filter=@akr/api",
     "db:start": "docker compose up -d",
-    "lint": "pnpm run lint --recursive",
-    "test": "pnpm run test --recursive",
-    "install:all": "pnpm install && pnpm run db:setup --filter=@akr/api"
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "install:all": "pnpm install && turbo run db:setup --filter=@akr/api"
+  },
+  "devDependencies": {
+    "turbo": "^2.8.20"
   }
 }
-

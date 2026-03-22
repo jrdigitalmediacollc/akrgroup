@@ -22,7 +22,7 @@ services:
     container_name: akr-redis
     restart: unless-stopped
     ports:
-      - "6379:6379"
+      - "9379:6379"
     healthcheck:
       test: [ "CMD", "redis-cli", "ping" ]
       interval: 10s
