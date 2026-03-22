@@ -112,7 +112,7 @@ model User {
 model Lead {
   id        String        @id @default(cuid())
   name      String
-  email     String
+  email     String      @unique
   phone     String?
   source    CalculatorType @map("source")
   advisorId String?        @map("advisor_id")
