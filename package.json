@@ -1,21 +1,19 @@
 {
   "name": "akr-monorepo",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@9.1.0",
   "scripts": {
-    "dev": "npm run dev:api & npm run dev:web",
-    "dev:web": "npm run dev --workspace=@akr/web",
-    "dev:api": "npm run dev --workspace=@akr/api",
-    "build:web": "npm run build --workspace=@akr/web",
-    "build:api": "npm run build --workspace=@akr/api",
-    "start:api": "npm run start --workspace=@akr/api",
-    "db:setup": "npm run db:setup --workspace=@akr/api",
+    "dev": "pnpm run dev:api & pnpm run dev:web",
+    "dev:web": "pnpm run dev --filter=@akr/web",
+    "dev:api": "pnpm run dev --filter=@akr/api",
+    "build:web": "pnpm run build --filter=@akr/web",
+    "build:api": "pnpm run build --filter=@akr/api",
+    "start:api": "pnpm run start --filter=@akr/api",
+    "db:setup": "pnpm run db:setup --filter=@akr/api",
     "db:start": "docker compose up -d",
-    "lint": "npm run lint --workspaces",
-    "test": "npm run test --workspaces",
-    "install:all": "npm install && npm run db:setup --workspace=@akr/api"
+    "lint": "pnpm run lint --recursive",
+    "test": "pnpm run test --recursive",
+    "install:all": "pnpm install && pnpm run db:setup --filter=@akr/api"
   }
 }
+

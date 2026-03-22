@@ -19,7 +19,7 @@ Initialized with Next.js (SSR), NestJS, PostgreSQL, Redis, Render, and Cloudflar
 
 1. **Install dependencies**:
    ```bash
-   npm install
+   pnpm install
    ```
 
 2. **Start Local Services (Postgres & Redis)**:
@@ -28,9 +28,10 @@ Initialized with Next.js (SSR), NestJS, PostgreSQL, Redis, Render, and Cloudflar
    ```
 
 3. **Run Development Mode**:
-   - Both: `npm run dev` (from root)
-   - Frontend: `npm run dev:web`
-   - Backend: `npm run dev:api`
+   - Both: `pnpm run dev` (from root)
+   - Frontend: `pnpm run dev:web`
+   - Backend: `pnpm run dev:api`
+
 
 ## Deployment
 
