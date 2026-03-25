@@ -4,6 +4,7 @@
   "description": "AKR Group API",
   "author": "AKR Group",
   "private": true,
+  "packageManager": "pnpm@9.1.0",
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
