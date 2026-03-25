@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import * as puppeteer from 'puppeteer';
+import * as puppeteer from 'puppeteer-core';
 import * as fs from 'fs';
 import * as path from 'path';
 import { CalculatorType } from '@prisma/client';
@@ -95,7 +95,6 @@ export class PdfService {
 
     try {
       const browser = await puppeteer.launch({
-        headless: 'new',
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
       });
       const page = await browser.newPage();
