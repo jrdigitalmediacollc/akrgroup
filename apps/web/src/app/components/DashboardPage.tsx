@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Users, Calculator, Building2, TrendingUp, FileText, DollarSign, Activity, Mail, Phone, Download, Eye, MessageSquare } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
+import { leadsApi, usersApi, calculatorsApi, listingsApi } from '@/lib/api';
 
 interface DashboardPageProps {
   userRole: 'admin' | 'advisor' | 'customer';
@@ -23,11 +24,35 @@ export function DashboardPage({ userRole }: DashboardPageProps) {
 }
 
 function AdminDashboard() {
+  const [leads, setLeads] = useState<any[]>([]);
+  const [advisors, setAdvisors] = useState<any[]>([]);
+  const [listings, setListings] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [leadsRes, advisorsRes, listingsRes] = await Promise.all([
+          leadsApi.getAll({ limit: 10 }),
+          usersApi.getAdvisors(),
+          listingsApi.getAll({ status: 'PENDING', limit: 10 }),
+        ]);
+        setLeads(leadsRes.data.data);
+        setAdvisors(advisorsRes.data);
+        setListings(listingsRes.data.data);
+      } catch (err) {
+        console.error("Failed to fetch dashboard data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
   const stats = [
-    { label: 'Total Leads', value: '1,247', icon: Users, change: '+12%', color: 'text-green-500' },
-    { label: 'Active Advisors', value: '24', icon: Users, change: '+2', color: 'text-blue-500' },
-    { label: 'Calculator Uses', value: '3,456', icon: Calculator, change: '+18%', color: 'text-purple-500' },
-    { label: 'Property Listings', value: '156', icon: Building2, change: '+8', color: 'text-amber-500' },
+    { label: 'Total Leads', value: leads.length || '—', icon: Users, color: 'text-green-500' },
+    { label: 'Active Advisors', value: advisors.length || '—', icon: Users, color: 'text-blue-500' },
+    { label: 'Pending Listings', value: listings.length || '—', icon: Building2, color: 'text-amber-500' },
   ];
 
   return (
@@ -45,11 +70,8 @@ function AdminDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-2">
                   <stat.icon className="w-8 h-8 text-amber-400" />
-                  <Badge className={`${stat.color} bg-transparent border`}>
-                    {stat.change}
-                  </Badge>
                 </div>
-                <div className="text-3xl font-bold text-amber-100 mb-1">{stat.value}</div>
+                <div className="text-3xl font-bold text-amber-100 mb-1">{loading ? '...' : stat.value}</div>
                 <div className="text-sm text-amber-300">{stat.label}</div>
               </CardContent>
             </Card>
@@ -92,28 +114,24 @@ function AdminDashboard() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {[
-                      { name: 'Ahmed Al Maktoum', email: 'ahmed@example.com', calculator: 'Mortgage', status: 'new', date: '2024-02-17' },
-                      { name: 'Sara Johnson', email: 'sara@example.com', calculator: 'ROI', status: 'contacted', date: '2024-02-17' },
-                      { name: 'Mohammed Ali', email: 'mohammed@example.com', calculator: 'Mutual Fund', status: 'assigned', date: '2024-02-16' },
-                      { name: 'Lisa Chen', email: 'lisa@example.com', calculator: 'Mortgage', status: 'new', date: '2024-02-16' },
-                    ].map((lead, index) => (
-                      <TableRow key={index} className="border-amber-700 hover:bg-[#3a1010]">
+                    {(loading ? [] : leads).map((lead: any) => (
+                      <TableRow key={lead.id} className="border-amber-700 hover:bg-[#3a1010]">
                         <TableCell className="text-amber-100">{lead.name}</TableCell>
                         <TableCell className="text-amber-200 text-sm">{lead.email}</TableCell>
                         <TableCell>
-                          <Badge className="bg-amber-700 text-amber-100">{lead.calculator}</Badge>
+                          <Badge className="bg-amber-700 text-amber-100">{lead.source}</Badge>
                         </TableCell>
                         <TableCell>
                           <Badge className={
-                            lead.status === 'new' ? 'bg-green-700 text-white' :
-                              lead.status === 'contacted' ? 'bg-blue-700 text-white' :
-                                'bg-purple-700 text-white'
+                            lead.status === 'NEW' ? 'bg-green-700 text-white' :
+                              lead.status === 'CONTACTED' ? 'bg-blue-700 text-white' :
+                                lead.status === 'QUALIFIED' ? 'bg-purple-700 text-white' :
+                                  'bg-yellow-700 text-white'
                           }>
                             {lead.status}
                           </Badge>
                         </TableCell>
-                        <TableCell className="text-amber-200 text-sm">{lead.date}</TableCell>
+                        <TableCell className="text-amber-200 text-sm">{new Date(lead.createdAt).toLocaleDateString()}</TableCell>
                         <TableCell>
                           <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white">
                             Assign
@@ -121,6 +139,11 @@ function AdminDashboard() {
                         </TableCell>
                       </TableRow>
                     ))}
+                    {!loading && leads.length === 0 && (
+                      <TableRow>
+                        <TableCell colSpan={6} className="text-center text-amber-300 py-8">No leads found</TableCell>
+                      </TableRow>
+                    )}
                   </TableBody>
                 </Table>
               </CardContent>
@@ -135,38 +158,34 @@ function AdminDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {[
-                    { name: 'Khalid Rahman', leads: 45, conversion: '32%', status: 'active' },
-                    { name: 'Emily Watson', leads: 38, conversion: '28%', status: 'active' },
-                    { name: 'Omar Farouk', leads: 52, conversion: '35%', status: 'active' },
-                    { name: 'Jennifer Lee', leads: 29, conversion: '24%', status: 'active' },
-                    { name: 'Hassan Ibrahim', leads: 41, conversion: '30%', status: 'active' },
-                    { name: 'Maria Garcia', leads: 33, conversion: '26%', status: 'active' },
-                  ].map((advisor, index) => (
-                    <Card key={index} className="bg-[#3a1010] border border-amber-700">
+                  {(loading ? [] : advisors).map((advisor: any) => (
+                    <Card key={advisor.id} className="bg-[#3a1010] border border-amber-700">
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between mb-4">
                           <div>
                             <h3 className="text-lg font-semibold text-amber-100">{advisor.name}</h3>
                             <Badge className="mt-2 bg-green-700 text-white text-xs">
-                              {advisor.status}
+                              active
                             </Badge>
                           </div>
                           <Users className="w-8 h-8 text-amber-400" />
                         </div>
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm">
-                            <span className="text-amber-300">Active Leads</span>
-                            <span className="text-amber-100 font-semibold">{advisor.leads}</span>
+                            <span className="text-amber-300">Email</span>
+                            <span className="text-amber-100 font-semibold text-xs">{advisor.email}</span>
                           </div>
                           <div className="flex justify-between text-sm">
-                            <span className="text-amber-300">Conversion Rate</span>
-                            <span className="text-amber-100 font-semibold">{advisor.conversion}</span>
+                            <span className="text-amber-300">Phone</span>
+                            <span className="text-amber-100 font-semibold">{advisor.phone || '—'}</span>
                           </div>
                         </div>
                       </CardContent>
                     </Card>
                   ))}
+                  {!loading && advisors.length === 0 && (
+                    <p className="text-amber-300 text-center col-span-3 py-8">No advisors found</p>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -180,31 +199,29 @@ function AdminDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {[
-                    { name: 'Dubai Marina Tower', location: 'Dubai Marina', price: '5.2M', status: 'pending' },
-                    { name: 'Palm Villa Residences', location: 'Palm Jumeirah', price: '28M', status: 'pending' },
-                    { name: 'Business Bay Apartment', location: 'Business Bay', price: '2.8M', status: 'approved' },
-                  ].map((listing, index) => (
-                    <div key={index} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700 flex items-center justify-between">
+                  {(loading ? [] : listings).map((listing: any) => (
+                    <div key={listing.id} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700 flex items-center justify-between">
                       <div>
-                        <h3 className="text-lg font-semibold text-amber-100 mb-1">{listing.name}</h3>
+                        <h3 className="text-lg font-semibold text-amber-100 mb-1">{listing.title}</h3>
                         <p className="text-sm text-amber-300 flex items-center gap-2">
                           <Building2 className="w-4 h-4" />
-                          {listing.location} • AED {listing.price}
+                          {listing.location} • AED {Number(listing.price).toLocaleString()}
                         </p>
                       </div>
                       <div className="flex items-center gap-3">
                         <Badge className={
-                          listing.status === 'pending' ? 'bg-yellow-700 text-white' : 'bg-green-700 text-white'
+                          listing.status === 'PENDING' ? 'bg-yellow-700 text-white' :
+                            listing.status === 'APPROVED' ? 'bg-green-700 text-white' :
+                              'bg-red-700 text-white'
                         }>
                           {listing.status}
                         </Badge>
-                        {listing.status === 'pending' && (
+                        {listing.status === 'PENDING' && (
                           <div className="flex gap-2">
-                            <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                            <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white" onClick={() => listingsApi.approve(listing.id)}>
                               Approve
                             </Button>
-                            <Button size="sm" variant="outline" className="border-red-700 text-red-400 hover:bg-red-700">
+                            <Button size="sm" variant="outline" className="border-red-700 text-red-400 hover:bg-red-700" onClick={() => listingsApi.reject(listing.id)}>
                               Reject
                             </Button>
                           </div>
@@ -212,6 +229,9 @@ function AdminDashboard() {
                       </div>
                     </div>
                   ))}
+                  {!loading && listings.length === 0 && (
+                    <p className="text-amber-300 text-center py-8">No pending listings</p>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -283,6 +303,23 @@ function AdminDashboard() {
 }
 
 function AdvisorDashboard() {
+  const [leads, setLeads] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLeads = async () => {
+      try {
+        const res = await leadsApi.getAll({ limit: 20 });
+        setLeads(res.data.data);
+      } catch (err) {
+        console.error("Failed to fetch leads:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchLeads();
+  }, []);
+
   return (
     <div className="min-h-screen bg-linear-to-b from-[#2a0808] to-[#3a1010] py-12">
       <div className="max-w-7xl mx-auto px-4">
@@ -291,13 +328,12 @@ function AdvisorDashboard() {
           <p className="text-amber-200">Manage your leads and client relationships</p>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           {[
-            { label: 'Active Leads', value: '42', icon: Users },
-            { label: 'Reports Generated', value: '128', icon: FileText },
-            { label: 'This Month', value: '18', icon: TrendingUp },
-            { label: 'Conversion Rate', value: '32%', icon: Activity },
+            { label: 'Active Leads', value: loading ? '...' : leads.length, icon: Users },
+            { label: 'Reports Generated', value: '—', icon: FileText },
+            { label: 'This Month', value: '—', icon: TrendingUp },
+            { label: 'Conversion Rate', value: '—', icon: Activity },
           ].map((stat, index) => (
             <Card key={index} className="bg-[#4a1810] border-2 border-amber-700">
               <CardContent className="p-6">
@@ -309,7 +345,6 @@ function AdvisorDashboard() {
           ))}
         </div>
 
-        {/* Assigned Leads */}
         <Card className="bg-[#4a1810] border-2 border-amber-700 mb-8">
           <CardHeader>
             <CardTitle className="text-amber-100">Assigned Leads</CardTitle>
@@ -317,42 +352,30 @@ function AdvisorDashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {[
-                { name: 'Ahmed Al Maktoum', calculator: 'Mortgage', amount: 'AED 1.5M', date: '2024-02-17', status: 'new' },
-                { name: 'Sara Johnson', calculator: 'ROI', amount: 'AED 500K', date: '2024-02-17', status: 'follow-up' },
-                { name: 'Mohammed Ali', calculator: 'Mutual Fund', amount: 'AED 250K', date: '2024-02-16', status: 'contacted' },
-                { name: 'Lisa Chen', calculator: 'Mortgage', amount: 'AED 2.2M', date: '2024-02-16', status: 'new' },
-              ].map((lead, index) => (
-                <div key={index} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700">
+              {(loading ? [] : leads).map((lead: any) => (
+                <div key={lead.id} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-lg font-semibold text-amber-100 mb-1">{lead.name}</h3>
                       <div className="flex items-center gap-3 text-sm text-amber-300">
                         <span className="flex items-center gap-1">
                           <Calculator className="w-4 h-4" />
-                          {lead.calculator}
+                          {lead.source}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <DollarSign className="w-4 h-4" />
-                          {lead.amount}
-                        </span>
-                        <span>{lead.date}</span>
+                        <span>{new Date(lead.createdAt).toLocaleDateString()}</span>
                       </div>
                     </div>
                     <Badge className={
-                      lead.status === 'new' ? 'bg-green-700 text-white' :
-                        lead.status === 'contacted' ? 'bg-blue-700 text-white' :
-                          'bg-yellow-700 text-white'
+                      lead.status === 'NEW' ? 'bg-green-700 text-white' :
+                        lead.status === 'CONTACTED' ? 'bg-blue-700 text-white' :
+                          lead.status === 'QUALIFIED' ? 'bg-purple-700 text-white' :
+                            'bg-yellow-700 text-white'
                     }>
                       {lead.status}
                     </Badge>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 flex-wrap">
                     <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white">
-                      <Eye className="w-4 h-4 mr-1" />
-                      View Report
-                    </Button>
-                    <Button size="sm" variant="outline" className="border-amber-700 text-amber-100 hover:bg-amber-700">
                       <Phone className="w-4 h-4 mr-1" />
                       Call
                     </Button>
@@ -367,6 +390,9 @@ function AdvisorDashboard() {
                   </div>
                 </div>
               ))}
+              {!loading && leads.length === 0 && (
+                <p className="text-amber-300 text-center py-8">No leads assigned yet</p>
+              )}
             </div>
           </CardContent>
         </Card>
@@ -376,6 +402,23 @@ function AdvisorDashboard() {
 }
 
 function CustomerDashboard() {
+  const [results, setResults] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchResults = async () => {
+      try {
+        const res = await calculatorsApi.getMyResults();
+        setResults(res.data || []);
+      } catch (err) {
+        console.error("Failed to fetch calculator results:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchResults();
+  }, []);
+
   return (
     <div className="min-h-screen bg-linear-to-b from-[#2a0808] to-[#3a1010] py-12">
       <div className="max-w-7xl mx-auto px-4">
@@ -419,30 +462,34 @@ function CustomerDashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {[
-                { type: 'Mortgage Calculator', date: '2024-02-17', property: 'AED 1.5M Property', emi: 'AED 7,650' },
-                { type: 'ROI Calculator', date: '2024-02-15', property: 'AED 500K Investment', roi: '8.2% XIRR' },
-                { type: 'Mortgage Calculator', date: '2024-02-10', property: 'AED 2.2M Property', emi: 'AED 11,200' },
-              ].map((report, index) => (
-                <div key={index} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700 flex items-center justify-between">
+              {(loading ? [] : results).map((result: any) => (
+                <div key={result.id} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700 flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-amber-100 mb-1">{report.type}</h3>
+                    <h3 className="text-lg font-semibold text-amber-100 mb-1">
+                      {result.type === 'MORTGAGE' ? 'Mortgage Calculator' :
+                        result.type === 'ROI' ? 'ROI / XIRR Calculator' :
+                          'Mutual Fund Calculator'}
+                    </h3>
                     <div className="flex items-center gap-4 text-sm text-amber-300">
-                      <span>{report.property}</span>
+                      <span>Ref: {result.referenceId.slice(0, 8)}...</span>
                       <span>•</span>
-                      <span>{report.date}</span>
+                      <span>{new Date(result.createdAt).toLocaleDateString()}</span>
                     </div>
                     <div className="mt-2">
                       <Badge className="bg-amber-600 text-white">
-                        {'emi' in report ? `EMI: ${report.emi}` : `ROI: ${report.roi}`}
+                        {result.type}
                       </Badge>
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white">
-                      <Download className="w-4 h-4 mr-1" />
-                      Download PDF
-                    </Button>
+                    {result.pdfUrl && (
+                      <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white" asChild>
+                        <a href={`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/calculators/${result.id}/pdf`} download>
+                          <Download className="w-4 h-4 mr-1" />
+                          PDF
+                        </a>
+                      </Button>
+                    )}
                     <Button size="sm" variant="outline" className="border-amber-700 text-amber-100 hover:bg-amber-700">
                       <Phone className="w-4 h-4 mr-1" />
                       Discuss
@@ -450,6 +497,11 @@ function CustomerDashboard() {
                   </div>
                 </div>
               ))}
+              {!loading && results.length === 0 && (
+                <p className="text-amber-300 text-center py-8">
+                  No calculator results yet. Visit the calculators page to get started.
+                </p>
+              )}
             </div>
           </CardContent>
         </Card>

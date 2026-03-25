@@ -6,17 +6,17 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Page() {
-  const { userRole, openLoginModal } = useAuth();
+  const { userRole, openLoginModal, isLoading } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (!userRole) {
+    if (!isLoading && !userRole) {
       openLoginModal();
       router.push("/");
     }
-  }, [userRole, openLoginModal, router]);
+  }, [userRole, openLoginModal, router, isLoading]);
 
-  if (!userRole) return null;
+  if (isLoading || !userRole) return null;
 
-  return <DashboardPage userRole={userRole} />;
+  return <DashboardPage userRole={userRole.toLowerCase() as "admin" | "advisor" | "customer"} />;
 }

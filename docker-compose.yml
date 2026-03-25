@@ -1,10 +1,8 @@
-version: '3.8'
-
 services:
   db:
     image: postgres:15-alpine
     container_name: akr-db
-    restart: always
+    restart: unless-stopped
     environment:
       POSTGRES_USER: akruser
       POSTGRES_PASSWORD: akrpassword
@@ -13,13 +11,49 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U akruser -d akrdb" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   redis:
     image: redis:7-alpine
     container_name: akr-redis
-    restart: always
+    restart: unless-stopped
     ports:
-      - "6379:6379"
+      - "9379:6379"
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: akr-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@akrgroup.ae
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: akr-mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    restart: unless-stopped
 
 volumes:
   postgres_data:
+
+
+networks:
+  default:
+    name: akr-network
