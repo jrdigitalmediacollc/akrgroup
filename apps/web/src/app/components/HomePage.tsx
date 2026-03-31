@@ -25,7 +25,7 @@ export function HomePage() {
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 py-20 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-amber-100 mb-6 tracking-wide">
-            PREMIUM FINANCIAL &<br />REAL ESTATE ADVISORY
+            ALI RAZA FINANCIAL &<br />REAL ESTATE ADVISORY
           </h1>
           <p className="text-xl md:text-2xl text-amber-200 mb-8 max-w-3xl mx-auto">
             Expert guidance for your investment journey in the UAE
