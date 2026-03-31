@@ -1,6 +1,7 @@
 {
   "name": "@akr/api",
   "version": "0.0.1",
+   "prisma": { "seed": "ts-node prisma/seed.ts"  },
   "description": "AKR Group API",
   "author": "AKR Group",
   "private": true,
