@@ -109,7 +109,7 @@ export function SiteHeader() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-4">
+            <Link href="apps\web\public\logo-main.jpeg" className="flex items-center gap-4">
               <div className="w-16 h-16 bg-linear-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center border-4 border-amber-500 shadow-lg">
                 <div className="text-white font-bold text-xl">AKR</div>
               </div>
