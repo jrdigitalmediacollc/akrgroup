@@ -110,15 +110,13 @@ export function SiteHeader() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-linear-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center border-4 border-amber-500 shadow-lg">
-                <Image
-                    src="/logo-main.jpeg"
-                    alt="AKR Group UAE Logo"
-                    width={64}
-                    height={64}
-                    className="rounded-full border-4 border-amber-500 shadow-lg object-cover"
-                  />
-              </div>
+             <Image
+              src="/logo-main.jpeg"
+              alt="AKR Group UAE Logo"
+              width={64}
+              height={64}
+              className="rounded-full border-4 border-amber-500 shadow-lg object-cover"
+            />
               <div className="text-white">
                 <div className="text-2xl font-bold tracking-wider text-amber-100">
                   AKR GROUP UAE
