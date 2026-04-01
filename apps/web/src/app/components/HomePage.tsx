@@ -16,7 +16,7 @@ export function HomePage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-linear-to-r from-[#2a0808]/95 via-[#3a1010]/90 to-[#2a0808]/95 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&h=900&fit=crop"
+            src="/banner.jpg"
             alt="Luxury Dubai Property"
             className="w-full h-full object-cover"
           />
