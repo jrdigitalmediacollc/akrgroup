@@ -5,6 +5,7 @@ import { Calculator, DollarSign, TrendingUp, Building2, Shield, Users } from 'lu
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { useRouter } from 'next/navigation';
+import { ServicesSection } from "@/components/services-section";
 
 export function HomePage() {
   const router = useRouter();
@@ -105,7 +106,9 @@ export function HomePage() {
 
       </div>
     </section>
-    
+    {/* Services */}
+<ServicesSection />
+
       {/* Quick Calculator Section */}
       <section className="bg-linear-to-b from-[#5a1810] to-[#4a1810] py-12 border-y-2 border-amber-600">
         <div className="max-w-5xl mx-auto px-4">
