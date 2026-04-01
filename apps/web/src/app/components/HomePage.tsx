@@ -111,7 +111,86 @@ export function HomePage() {
     </section>
     {/* Services */}
 { <ServicesSection /> }
+{/* Services Section */}
+<section className="py-20 px-10" style={{ background: "#2a0a05" }}>
+  <div className="text-center mb-16">
+    <span className="inline-block border border-amber-600 bg-amber-900/20 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-5">
+      What We Offer
+    </span>
+    <h2 className="text-4xl font-bold text-amber-100 font-serif mb-3">
+      Our <span className="text-amber-400">Premium</span> Services
+    </h2>
+    <div className="w-16 h-0.5 bg-amber-600 mx-auto mb-4" />
+    <p className="text-amber-800 text-sm max-w-lg mx-auto leading-relaxed">
+      Three powerful pillars of advisory — unified under one trusted partner across the UAE.
+    </p>
+  </div>
 
+  <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+    {[
+      {
+        sector: "Sector A",
+        title: "Real Estate Advisory",
+        location: "Dubai — AKR Realty LLC",
+        overview: "End-to-end property advisory aligned with Dubai's regulatory standards.",
+        image: "/realestate.jpg",
+        items: ["Buy | Sell | Lease — Residential & Commercial", "Off-Plan Investment Opportunities", "Distress Property Solutions", "Portfolio Structuring"],
+        compliance: "Regulated by Real Estate Regulatory Agency & Dubai Land Department",
+      },
+      {
+        sector: "Sector B",
+        title: "Financial & Insurance Advisory",
+        location: "Sharjah — SHAMS Licensed",
+        overview: "Structured financial solutions supporting asset growth and protection.",
+        image: "/financial.jpg",
+        items: ["Mortgage Loans", "Personal Loans & Credit Cards", "Life, Medical, Motor & Home Insurance", "Mortgage Protection", "Mutual Fund Analysis", "Risk Assessment & Financial Structuring"],
+        compliance: "Licensed under Sharjah Media City — Non-custodial advisory services",
+      },
+      {
+        sector: "Sector C",
+        title: "Marketing & Business Solutions",
+        location: "UAE-Wide Coverage",
+        overview: "Driving visibility, engagement, and revenue growth for businesses across the UAE.",
+        image: "/marketing.jpg",
+        items: ["Events Production & Brand Activation", "Marketing Campaigns & Promotions", "Digital & Social Media Marketing", "Direct & Email Marketing"],
+        compliance: "Strategic growth partner for businesses & high-net-worth individuals",
+      },
+    ].map((s) => (
+      <div key={s.sector} className="bg-[#3a0f08] hover:bg-[#4a1810] transition-colors flex flex-col border border-amber-700/20">
+        <div className="h-48 w-full overflow-hidden bg-amber-900/30 relative">
+          <img src={s.image} alt={s.title} className="w-full h-full object-cover brightness-75" />
+        </div>
+        <div className="h-0.5 bg-amber-600" />
+        <div className="p-7 flex flex-col flex-1">
+          <span className="text-amber-500 text-xs tracking-widest uppercase mb-2">{s.sector}</span>
+          <h3 className="text-xl font-bold text-amber-100 mb-1">{s.title}</h3>
+          <p className="text-amber-600 text-xs tracking-wide mb-3">{s.location}</p>
+          <p className="text-amber-200/60 text-sm leading-relaxed mb-5">{s.overview}</p>
+          <ul className="flex flex-col gap-2 mb-5">
+            {s.items.map((item, i) => (
+              <li key={i} className="flex items-start gap-2.5 text-xs text-amber-200/80">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-auto border-l-2 border-amber-600 pl-3 py-2 text-xs text-amber-700 leading-relaxed">
+            <span className="text-amber-600 font-semibold">Note: </span>{s.compliance}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div className="max-w-6xl mx-auto mt-6 border border-amber-700/25 bg-amber-500/5 px-10 py-7 flex items-center justify-between gap-6">
+    <p className="font-serif text-lg text-amber-100 italic">
+      Ready to explore our services? <span className="text-amber-400">Let's build your strategy.</span>
+    </p>
+    <button className="bg-amber-600 hover:bg-amber-500 text-white text-xs tracking-widest uppercase px-8 py-3 transition-colors whitespace-nowrap">
+      Book a Consultation
+    </button>
+  </div>
+</section>
       {/* Quick Calculator Section */}
       <section className="bg-linear-to-b from-[#5a1810] to-[#4a1810] py-12 border-y-2 border-amber-600">
         <div className="max-w-5xl mx-auto px-4">
