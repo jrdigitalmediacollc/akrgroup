@@ -8,6 +8,8 @@ import { useRouter } from 'next/navigation';
 import { ServicesSection } from "@/components/service-components";
 import { WhyAkrSection } from "@/components/why-akr-section";
 import { ProcessSection } from "@/components/process-section";
+import { TrustComplianceSection } from "@/components/trust-compliance-section";
+import { CTASection } from "@/components/cta-section";
 
 export function HomePage() {
   const router = useRouter();
@@ -173,22 +175,12 @@ export function HomePage() {
 {/* Processes */}
 <ProcessSection />
 
+{/* Trust */}
+<TrustComplianceSection />
+
+
       {/* CTA Section */}
-      <section className="py-20 bg-linear-to-r from-amber-800 to-amber-600">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-white/90 mb-8">
-            Speak with one of our expert advisors today
-          </p>
-          <Button
-            size="lg"
-            onClick={() => router.push('/contact')}
-            className="bg-[#3a1010] hover:bg-[#2a0808] text-amber-100 px-8 py-6 text-lg"
-          >
-            Contact an Advisor
-          </Button>
-        </div>
-      </section>
+     <CTASection />
     </div>
   );
 }
