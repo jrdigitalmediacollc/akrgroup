@@ -110,7 +110,7 @@ export function HomePage() {
       </div>
     </section>
     {/* Services */}
-{/* <ServicesSection /> */}
+{ <ServicesSection /> }
 
       {/* Quick Calculator Section */}
       <section className="bg-linear-to-b from-[#5a1810] to-[#4a1810] py-12 border-y-2 border-amber-600">
@@ -169,16 +169,16 @@ export function HomePage() {
 
         {/* Why Choose Us */}
      
-{/* <WhyAkrSection /> */}
+{<WhyAkrSection /> }
 
 {/* Processes */}
-{/* <ProcessSection /> */}
+{ <ProcessSection /> }
 
 {/* Trust */}
-{/* <TrustComplianceSection /> */}
+{ <TrustComplianceSection /> }
 
       {/* CTA Section */}
-     {/* <CTASection /> */}
+     {<CTASection /> }
     </div>
   );
 }
