@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { useRouter } from 'next/navigation';
 import { ServicesSection } from "@/components/services-section";
+import { WhyAkrSection } from "@/components/why-akr-section";
 
 export function HomePage() {
   const router = useRouter();
@@ -165,45 +166,8 @@ export function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-linear-to-b from-[#3a1010] to-[#2a0808]">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-amber-100 mb-4">Why Choose AKR Group UAE?</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#4a1810] p-8 rounded-lg border-2 border-amber-700 text-center">
-              <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-amber-100 mb-3">Licensed & Regulated</h3>
-              <p className="text-amber-200">
-                Fully compliant with UAE regulatory authorities including RERA and Central Bank
-              </p>
-            </div>
-
-            <div className="bg-[#4a1810] p-8 rounded-lg border-2 border-amber-700 text-center">
-              <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-amber-100 mb-3">Expert Advisors</h3>
-              <p className="text-amber-200">
-                Experienced professionals dedicated to your financial success
-              </p>
-            </div>
-
-            <div className="bg-[#4a1810] p-8 rounded-lg border-2 border-amber-700 text-center">
-              <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-amber-100 mb-3">Data-Driven Insights</h3>
-              <p className="text-amber-200">
-                Advanced analytics and calculators to inform your investment decisions
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+     
+<WhyAkrSection />
 
       {/* CTA Section */}
       <section className="py-20 bg-linear-to-r from-amber-800 to-amber-600">
