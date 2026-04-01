@@ -1,15 +1,15 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Calculator, DollarSign, TrendingUp, Building2, Shield, Users } from 'lucide-react';
+import { Calculator, Building2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { useRouter } from 'next/navigation';
-import { ServicesSection } from "@/components/service-components";
-import { WhyAkrSection } from "@/components/why-akr-section";
-import { ProcessSection } from "@/components/process-section";
-import { TrustComplianceSection } from "@/components/trust-compliance-section";
-import { CTASection } from "@/components/cta-section";
+import { ServicesSection } from "@/app/components/service-components";
+import { WhyAkrSection } from "@/app/components/why-akr-section";
+import { ProcessSection } from "@/app/components/process-section";
+import { TrustComplianceSection } from "@/app/components/trust-compliance-section";
+import { CTASection } from "@/app/components/cta-section";
 
 export function HomePage() {
   const router = useRouter();
@@ -120,54 +120,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-linear-to-b from-[#2a0808] to-[#3a1010]">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-amber-100 mb-4">Our Services</h2>
-            <p className="text-xl text-amber-200">Comprehensive advisory solutions for your financial goals</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              icon={<Calculator className="w-8 h-8" />}
-              title="Advanced Calculators"
-              description="Mortgage, ROI, and investment calculators with XIRR analysis"
-              onClick={() => router.push('/calculators')}
-            />
-            <ServiceCard
-              icon={<Building2 className="w-8 h-8" />}
-              title="Real Estate Advisory"
-              description="Expert guidance on property investments and market insights"
-              onClick={() => router.push('/properties')}
-            />
-            <ServiceCard
-              icon={<DollarSign className="w-8 h-8" />}
-              title="Financial Planning"
-              description="Comprehensive financial advisory services tailored to your needs"
-              onClick={() => router.push('/calculators')}
-            />
-            <ServiceCard
-              icon={<TrendingUp className="w-8 h-8" />}
-              title="Investment Analysis"
-              description="ROI calculations and portfolio performance tracking"
-              onClick={() => router.push('/calculators')}
-            />
-            <ServiceCard
-              icon={<Shield className="w-8 h-8" />}
-              title="Regulatory Compliance"
-              description="Fully compliant with RERA, Central Bank, and Insurance Authority"
-            />
-            <ServiceCard
-              icon={<Users className="w-8 h-8" />}
-              title="Expert Advisors"
-              description="Dedicated professionals to guide your investment decisions"
-              onClick={() => router.push('/contact')}
-            />
-          </div>
-        </div>
-      </section>
-
+    
       {/* Why Choose Us */}
      
 <WhyAkrSection />
