@@ -5,7 +5,7 @@ import { Calculator, DollarSign, TrendingUp, Building2, Shield, Users } from 'lu
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { useRouter } from 'next/navigation';
-import { ServicesSection } from "@/components/services-section";
+import { ServicesSection } from "@/components/services-components";
 import { WhyAkrSection } from "@/components/why-akr-section";
 
 export function HomePage() {
