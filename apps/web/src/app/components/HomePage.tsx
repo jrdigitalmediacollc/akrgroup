@@ -5,11 +5,11 @@ import { Calculator, DollarSign, TrendingUp, Building2, Shield, Users } from 'lu
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { useRouter } from 'next/navigation';
-import { ServicesSection } from "@/components/service-components";
-import { WhyAkrSection } from "@/components/why-akr-section";
-import { ProcessSection } from "@/components/process-section";
-import { TrustComplianceSection } from "@/components/trust-compliance-section";
-import { CTASection } from "@/components/cta-section";
+//import { ServicesSection } from "@/components/service-components";
+//import { WhyAkrSection } from "@/components/why-akr-section";
+//import { ProcessSection } from "@/components/process-section";
+//import { TrustComplianceSection } from "@/components/trust-compliance-section";
+//import { CTASection } from "@/components/cta-section";
 
 export function HomePage() {
   const router = useRouter();
