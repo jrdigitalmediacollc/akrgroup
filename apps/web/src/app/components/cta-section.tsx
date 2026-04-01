@@ -11,7 +11,7 @@ export function CTASection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/cta-bg.jpg"         {/* ← rename to whatever your image is called */}
+          src="/cta-bg.jpg"       
           alt=""
           className="w-full h-full object-cover opacity-25"
         />
