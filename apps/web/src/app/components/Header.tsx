@@ -55,7 +55,7 @@ export function SiteHeader() {
               className="flex items-center gap-2 hover:text-amber-100 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">+971 12 345 6789</span>
+              <span className="hidden sm:inline">+971 50 777 2751</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
