@@ -114,8 +114,8 @@ export function SiteHeader() {
              <Image
               src="/logo-main.jpeg"
               alt="AKR Group UAE Logo"
-              width={100}
-              height={100}
+              width={80}
+              height={130}
               className="rounded-full border-4 border-amber-500 shadow-lg object-cover"
             />
               <div className="text-white">
