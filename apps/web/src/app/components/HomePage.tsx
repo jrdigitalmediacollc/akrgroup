@@ -5,8 +5,9 @@ import { Calculator, DollarSign, TrendingUp, Building2, Shield, Users } from 'lu
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { useRouter } from 'next/navigation';
-import { ServicesSection } from "@/components/services-components";
+import { ServicesSection } from "@/components/service-components";
 import { WhyAkrSection } from "@/components/why-akr-section";
+import { ProcessSection } from "@/components/process-section";
 
 export function HomePage() {
   const router = useRouter();
@@ -168,6 +169,9 @@ export function HomePage() {
       {/* Why Choose Us */}
      
 <WhyAkrSection />
+
+{/* Processes */}
+<ProcessSection />
 
       {/* CTA Section */}
       <section className="py-20 bg-linear-to-r from-amber-800 to-amber-600">
