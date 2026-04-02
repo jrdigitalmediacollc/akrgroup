@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import { SiteHeader } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { LoginModal } from "./components/LoginModal";
+import { EntrancePopup } from "./components/entrance-popup";
 
 export const metadata: Metadata = {
   title: "AKR Group UAE - Financial & Real Estate Advisory",
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
+            <EntrancePopup />
           <div className="min-h-screen flex flex-col bg-linear-to-b from-[#2a0808] to-[#1a0404]">
             <SiteHeader />
             <main className="flex-1">{children}</main>
