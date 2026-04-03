@@ -17,39 +17,42 @@ export function HomePage() {
 
       {/* Hero Section */}
 {/* Hero Section */}
+{/* Hero Section */}
 <section className="relative min-h-[500px] flex items-center overflow-hidden">
   <div className="absolute inset-0 z-0">
     
-    {/* Layer 1: The actual image */}
+    {/* Layer 1: Image */}
     <img
       src="/banner.jpg"
       alt="Luxury Dubai Property"
       className="w-full h-full object-cover absolute inset-0"
     />
     
-    {/* Layer 2: Orange/amber color blend - this creates the golden tint */}
-    <div className="absolute inset-0 bg-amber-700 mix-blend-multiply opacity-70" />
+    {/* Layer 2: Strong amber multiply blend */}
+    <div className="absolute inset-0 bg-amber-600 mix-blend-multiply opacity-80" />
     
-    {/* Layer 3: Dark left overlay for text readability */}
-    <div className="absolute inset-0 bg-gradient-to-r from-[#2a0800]/85 via-[#3a1000]/40 to-transparent" />
+    {/* Layer 3: Extra warm orange on top */}
+    <div className="absolute inset-0 bg-orange-800 mix-blend-color opacity-50" />
+
+    {/* Layer 4: Dark left for text */}
+    <div className="absolute inset-0" style={{background: 'linear-gradient(to right, rgba(30,5,0,0.85) 0%, rgba(30,5,0,0.4) 50%, rgba(0,0,0,0.1) 100%)'}} />
 
   </div>
 
-  {/* Content */}
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
-      <h1 className="text-5xl md:text-6xl font-bold text-amber-50 mb-4 leading-tight">
+      <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
         Your Trusted Real Estate<br />
         & Property Advisors
       </h1>
-      <p className="text-amber-200 text-lg mb-8">
+      <p className="text-amber-300 text-lg mb-8 italic">
         Guiding You to the Right Investment
       </p>
       <button
         onClick={() => router.push('/contact')}
-        className="border-2 border-amber-400 text-amber-100 hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
+        className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
       >
-        Get Started
+        Get Start
       </button>
     </div>
   </div>
