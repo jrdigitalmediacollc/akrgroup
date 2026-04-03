@@ -8,7 +8,7 @@ const services = [
     overview: "End-to-end property advisory aligned with Dubai's regulatory standards.",
     image: "/realestate.jpg",
     items: [
-      { label: "Buy | Sell | Lease", desc: "Residential & Commercial" },
+      { label: "Buy | Sell ", desc: "Residential & Commercial" },
       { label: "Off-Plan Investment Opportunities" },
       { label: "Distress Property Solutions" },
       { label: "Portfolio Structuring" },

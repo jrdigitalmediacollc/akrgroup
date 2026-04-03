@@ -27,7 +27,7 @@ export function AboutPage() {
                 <div className="space-y-4 text-amber-200">
                   <p>
                     AKR Group UAE is a leading advisory firm specializing in financial planning and real estate investment solutions.
-                    With licenses from UAE Central Bank, Insurance Authority, and RERA, we provide comprehensive guidance to individuals
+                    We provide comprehensive guidance to individuals
                     and businesses seeking to optimize their investment portfolios.
                   </p>
                   <p>

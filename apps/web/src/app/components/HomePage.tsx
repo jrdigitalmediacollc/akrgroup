@@ -14,6 +14,40 @@ export function HomePage() {
   const router = useRouter();
   return (
     <div className="min-h-screen">
+
+      {/* Hero Section */}
+<section className="relative min-h-[500px] flex items-center overflow-hidden">
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    {/* Warm amber overlay - this gives that golden tone */}
+    <div className="absolute inset-0 bg-linear-to-r from-[#3a0a00]/90 via-[#5a1800]/60 to-transparent z-10" />
+    <div className="absolute inset-0 bg-amber-900/30 z-10 mix-blend-multiply" />
+    <img
+      src="/banner.jpg"
+      alt="Luxury Dubai Property"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Content - LEFT ALIGNED like the reference */}
+  <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
+    <div className="max-w-xl">
+      <h1 className="text-5xl md:text-6xl font-bold text-amber-50 mb-4 leading-tight">
+        Your Trusted Real Estate<br />
+        & Property Advisors
+      </h1>
+      <p className="text-amber-200 text-lg mb-8">
+        Guiding You to the Right Investment
+      </p>
+      <button
+        onClick={() => router.push('/contact')}
+        className="border-2 border-amber-400 text-amber-100 hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
+      >
+        Get Started
+      </button>
+    </div>
+  </div>
+</section>
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -29,7 +63,7 @@ export function HomePage() {
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 py-20 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-amber-100 mb-6 tracking-wide">
-            Strategic Real Estate,  <br />Financial & Investment Advisory
+            Trusted Strategic Real Estate,  <br />Financial & Investment Advisory
           </h1>
           <p className="text-xl md:text-2xl text-amber-200 mb-8 max-w-3xl mx-auto">
             Delivering integrated, compliant, and high-value solutions across UAE’s real estate and financial landscape for discerning clients.
@@ -111,8 +145,7 @@ export function HomePage() {
     </section>
     {/* Services */}
 { <ServicesSection /> }
-{/* Services Section */}
-<section className="py-20 px-10" style={{ background: "#2a0a05" }}>
+
   <div className="text-center mb-16">
     <span className="inline-block border border-amber-600 bg-amber-900/20 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-5">
       What We Offer
@@ -190,7 +223,7 @@ export function HomePage() {
       Book a Consultation
     </button>
   </div>
-</section>
+
       {/* Quick Calculator Section */}
       <section className="bg-linear-to-b from-[#5a1810] to-[#4a1810] py-12 border-y-2 border-amber-600">
         <div className="max-w-5xl mx-auto px-4">
@@ -199,7 +232,7 @@ export function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-linear-to-b from-[#2a0808] to-[#3a1010]">
+      {/* <section className="py-20 bg-linear-to-b from-[#2a0808] to-[#3a1010]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-amber-100 mb-4">Our Services</h2>
@@ -244,7 +277,7 @@ export function HomePage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
         {/* Why Choose Us */}
      
