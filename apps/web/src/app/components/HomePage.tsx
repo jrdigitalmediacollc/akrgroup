@@ -16,20 +16,26 @@ export function HomePage() {
     <div className="min-h-screen">
 
       {/* Hero Section */}
+{/* Hero Section */}
 <section className="relative min-h-[500px] flex items-center overflow-hidden">
-  {/* Background Image */}
   <div className="absolute inset-0 z-0">
-    {/* Warm amber overlay - this gives that golden tone */}
-    <div className="absolute inset-0 bg-linear-to-r from-[#3a0a00]/90 via-[#5a1800]/60 to-transparent z-10" />
-    <div className="absolute inset-0 bg-amber-900/30 z-10 mix-blend-multiply" />
+    
+    {/* Layer 1: The actual image */}
     <img
       src="/banner.jpg"
       alt="Luxury Dubai Property"
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover absolute inset-0"
     />
+    
+    {/* Layer 2: Orange/amber color blend - this creates the golden tint */}
+    <div className="absolute inset-0 bg-amber-700 mix-blend-multiply opacity-70" />
+    
+    {/* Layer 3: Dark left overlay for text readability */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[#2a0800]/85 via-[#3a1000]/40 to-transparent" />
+
   </div>
 
-  {/* Content - LEFT ALIGNED like the reference */}
+  {/* Content */}
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
       <h1 className="text-5xl md:text-6xl font-bold text-amber-50 mb-4 leading-tight">
