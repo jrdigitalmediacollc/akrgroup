@@ -16,14 +16,14 @@ export function HomePage() {
     <div className="min-h-screen">
 
       {/* Hero Section */}
-{/* Hero Section */}
+
 {/* Hero Section */}
 <section className="relative min-h-[500px] flex items-center overflow-hidden">
   <div className="absolute inset-0 z-0">
     
     {/* Layer 1: Image */}
     <img
-      src="/banner.jpg"
+      src="/bg.jpeg"
       alt="Luxury Dubai Property"
       className="w-full h-full object-cover absolute inset-0"
     />
