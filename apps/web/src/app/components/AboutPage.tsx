@@ -162,50 +162,80 @@ export function AboutPage() {
         </Card>
 
         {/* Licenses & Compliance */}
-        <Card className="bg-[#4a1810] border-2 border-amber-700 mb-12">
-          <CardHeader>
-            <CardTitle className="text-amber-100 text-3xl text-center">Licensed & Regulated</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-6 max-w-4xl mx-auto">
-              <div className="bg-[#3a1010] p-6 rounded-lg border border-amber-700">
-                <div className="flex items-start gap-4">
-                  <Building2 className="w-8 h-8 text-amber-400 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-amber-300 mb-2">AKR Realty LLC</h3>
-                    <p className="text-amber-200 mb-2">
-                      Licensed by the <strong>Real Estate Regulatory Agency (RERA)</strong> to provide real estate
-                      advisory services in Dubai and the UAE.
-                    </p>
-                    <p className="text-amber-300 text-sm">License No: XXXXX</p>
-                  </div>
-                </div>
-              </div>
+      <Card className="bg-[#4a1810] border-2 border-amber-700 mb-12">
+  <CardHeader>
+    <CardTitle className="text-amber-100 text-3xl text-center">Licensed & Regulated</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="space-y-6 max-w-4xl mx-auto">
 
-              <div className="bg-[#3a1010] p-6 rounded-lg border border-amber-700">
-                <div className="flex items-start gap-4">
-                  <TrendingUp className="w-8 h-8 text-amber-400 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-amber-300 mb-2">AKR Financial & Real Estate LLC</h3>
-                    <p className="text-amber-200 mb-2">
-                      Licensed by the <strong>UAE Central Bank</strong> and <strong>Insurance Authority</strong> to
-                      provide financial advisory and investment guidance services.
-                    </p>
-                    <p className="text-amber-300 text-sm">License No: XXXXX</p>
-                  </div>
-                </div>
+      {/* Box 1 - AKR Realty */}
+      <div className="bg-[#3a1010] p-6 rounded-lg border border-amber-700">
+        <div className="flex items-start gap-4">
+          <Building2 className="w-8 h-8 text-amber-400 shrink-0 mt-1" />
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-1">
+              <h3 className="text-xl font-semibold text-amber-300">AKR Realty LLC</h3>
+              <span className="text-xs border border-amber-600 text-amber-400 px-2 py-0.5 tracking-wider uppercase">RERA · DLD</span>
+            </div>
+            <p className="text-amber-200 text-sm leading-relaxed mb-3">
+              A RERA & DLD-registered real estate brokerage in Dubai. Licensed to provide full property
+              transaction and brokerage services in compliance with UAE laws and Dubai Land Department regulations.
+            </p>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-amber-900/30 border border-amber-700/50 px-4 py-2.5 rounded">
+                <div className="text-amber-600 text-xs uppercase tracking-widest mb-0.5">ORN No.</div>
+                <div className="text-amber-300 font-bold tracking-wider">57750</div>
               </div>
-
-              <div className="bg-amber-900/30 p-6 rounded-lg border border-amber-700 text-center">
-                <p className="text-amber-200">
-                  <strong className="text-amber-300">Important:</strong> AKR Group operates as an advisory firm.
-                  We do not facilitate direct transactions, act as brokers, or provide brokerage services.
-                  All recommendations are for advisory purposes and subject to regulatory compliance.
-                </p>
+              <div className="bg-amber-900/30 border border-amber-700/50 px-4 py-2.5 rounded">
+                <div className="text-amber-600 text-xs uppercase tracking-widest mb-0.5">BRN No.</div>
+                <div className="text-amber-300 font-bold tracking-wider">95660</div>
               </div>
             </div>
-          </CardContent>
-        </Card>
+            <p className="text-amber-700 text-xs mt-3 italic">
+              All property transactions are subject to UAE laws and DLD regulations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Box 2 - AKR Financial */}
+      <div className="bg-[#3a1010] p-6 rounded-lg border border-amber-700">
+        <div className="flex items-start gap-4">
+          <TrendingUp className="w-8 h-8 text-amber-400 shrink-0 mt-1" />
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-1">
+              <h3 className="text-xl font-semibold text-amber-300">AKR Financial & Real Estate Service LLC</h3>
+              <span className="text-xs border border-amber-600 text-amber-400 px-2 py-0.5 tracking-wider uppercase">SHAMS</span>
+            </div>
+            <p className="text-amber-200 text-sm leading-relaxed mb-3">
+              Registered under Sharjah Media City (SHAMS), Sharjah. Licensed to provide financial, real estate,
+              and marketing advisory services subject to UAE regulatory requirements and approvals where applicable.
+            </p>
+            <div className="bg-amber-900/30 border border-amber-700/50 px-4 py-2.5 rounded inline-block">
+              <div className="text-amber-600 text-xs uppercase tracking-widest mb-0.5">License No.</div>
+              <div className="text-amber-300 font-bold tracking-wider">24286.01</div>
+            </div>
+            <p className="text-amber-700 text-xs mt-3 italic">
+              Advisory services are subject to UAE regulatory requirements and approvals where applicable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Disclaimer */}
+      <div className="bg-amber-900/30 p-6 rounded-lg border border-amber-700 text-center">
+        <p className="text-amber-200 text-sm leading-relaxed">
+          <strong className="text-amber-300">Important: </strong>
+          AKR Group operates as an advisory firm. We do not facilitate direct transactions, act as brokers,
+          or provide brokerage services beyond our licensed scope. All recommendations are for advisory
+          purposes and subject to regulatory compliance.
+        </p>
+      </div>
+
+    </div>
+  </CardContent>
+</Card>
 
         {/* CTA Section */}
         <Card className="bg-linear-to-r from-amber-800 to-amber-600 border-none">
