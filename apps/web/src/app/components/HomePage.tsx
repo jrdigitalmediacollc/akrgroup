@@ -153,7 +153,7 @@ export function HomePage() {
       </div>
     </section>
     {/* Services */}
-{ <ServicesSection /> }
+
 
   <div className="text-center mb-16">
     <span className="inline-block border border-amber-600 bg-amber-900/20 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-5">
