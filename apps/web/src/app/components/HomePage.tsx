@@ -27,38 +27,35 @@ export function HomePage() {
       alt="Luxury Dubai Property"
       className="w-full h-full object-cover absolute inset-0"
     />
-    
-    {/* Layer 2: Strong amber multiply blend */}
-    <div className="absolute inset-0 bg-amber-600 mix-blend-multiply opacity-80" />
-    
-    {/* Layer 3: Extra warm orange on top */}
-    <div className="absolute inset-0 bg-orange-800 mix-blend-color opacity-50" />
 
-    {/* Layer 4: Dark left for text */}
-    <div className="absolute inset-0" style={{background: 'linear-gradient(to right, rgba(30,5,0,0.85) 0%, rgba(30,5,0,0.4) 50%, rgba(0,0,0,0.1) 100%)'}} />
+    {/* Layer 2: Simple dark overlay — no color blending */}
+    <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(20,4,0,0.88) 0%, rgba(30,8,0,0.60) 55%, rgba(0,0,0,0.25) 100%)' }} />
 
   </div>
 
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
       <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-        Trusted Strategic Real Estate,  <br />Financial & Investment Advisory
+        Trusted Strategic Real Estate,<br />Financial & Investment Advisory
       </h1>
       <p className="text-amber-300 text-lg mb-8 italic">
         Guiding You to the Right Investment
       </p>
-      <button
-        onClick={() => router.push('/contact')}
-        className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
-      >
-           Explore Opportunities
-      </button>
-       <button
-        onClick={() => router.push('/contact')}
-        className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
-      >
-           Speak To an Advisor
-      </button>
+      {/* Fixed: added flex and gap */}
+      <div className="flex flex-wrap gap-4">
+        <button
+          onClick={() => router.push('/contact')}
+          className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
+        >
+          Explore Opportunities
+        </button>
+        <button
+          onClick={() => router.push('/contact')}
+          className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
+        >
+          Speak To an Advisor
+        </button>
+      </div>
     </div>
   </div>
 </section>
