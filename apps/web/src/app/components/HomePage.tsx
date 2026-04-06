@@ -147,19 +147,19 @@ export function HomePage() {
 
 
       {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+      {/* {/* <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden"> */}
+      
+        {/* <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-linear-to-r from-[#2a0808]/95 via-[#3a1010]/90 to-[#2a0808]/95 z-10" />
           <img
             src="/banner.jpg"
             alt="Luxury Dubai Property"
             className="w-full h-full object-cover"
           />
-        </div>
+        </div> */}
 
         {/* Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 py-20 text-center">
+        {/* <div className="relative z-20 max-w-7xl mx-auto px-4 py-20 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-amber-100 mb-6 tracking-wide">
             Trusted Strategic Real Estate,  <br />Financial & Investment Advisory
           </h1>
@@ -185,91 +185,126 @@ export function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
    <section className="relative overflow-hidden py-20 px-10">
   <div className="absolute inset-0">
     <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
-   
+    <div className="absolute inset-0 bg-[#3a0800]/50" />
   </div>
 
   <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
     {/* Left */}
     <div>
-      <span className="inline-block border border-amber-600 bg-amber-900/30 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-6">
+      <div className="inline-block border border-[#8B3A0F] bg-[#6B1A06]/60 text-[#E8C060] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-6"
+        style={{ clipPath: "polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)" }}>
         About AKR Group UAE
-      </span>
-      <h2 className="text-4xl font-bold text-amber-100 leading-snug mb-4">
+      </div>
+
+      <h2 className="text-4xl font-bold leading-snug mb-4 font-serif" style={{ color: "#2a0a00" }}>
         Multi-Sector Advisory<br />
-        <span className="text-amber-400">Built for UAE</span>
+        <span style={{ color: "#8B2A0A" }}>Built for UAE</span>
       </h2>
-      <div className="w-14 h-0.5 bg-amber-600 mb-7" />
-      <p className="text-amber-200/80 text-base leading-relaxed mb-8">
-        AKR Group UAE is a multi-sector advisory firm combining real estate, finance, insurance, 
+
+      <div className="flex items-center gap-3 mb-7">
+        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
+        <div className="w-2 h-2 rotate-45" style={{ background: "#C8960A" }} />
+        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
+      </div>
+
+      <p className="text-base leading-relaxed mb-8" style={{ color: "#3a0e00" }}>
+        AKR Group UAE is a multi-sector advisory firm combining real estate, finance, insurance,
         and strategic marketing into one unified platform.<br /><br />
-        With 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide 
-        confidential, insight-driven advisory services tailored for investors, business owners, 
+        With 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide
+        confidential, insight-driven advisory services tailored for investors, business owners,
         and high-net-worth individuals.
       </p>
-      <div className="border-l-4 border-amber-500 pl-5 py-3 bg-amber-500/10 italic text-amber-300 text-lg">
-        One Partner. Complete Advisory. Measurable Value.
+
+      <div className="border-l-4 py-3 pl-5 pr-4"
+        style={{ borderColor: "#8B3A0F", background: "rgba(107,26,6,0.25)" }}>
+        <p className="italic text-lg font-serif" style={{ color: "#2a0800" }}>
+          One Partner. Complete Advisory. Measurable Value.
+        </p>
       </div>
     </div>
 
     {/* Right */}
     <div className="flex flex-col gap-4">
+
+      {/* Stat boxes */}
       <div className="grid grid-cols-2 gap-4">
         {[{num: '25+', label: 'Years of Expertise'}, {num: '4', label: 'Advisory Sectors'}].map((s) => (
-          <div key={s.label} className="border border-amber-700/40 bg-white/5 p-6 border-l-2 border-l-amber-600">
-            <div className="text-4xl font-bold text-amber-400">{s.num}</div>
-            <div className="text-xs text-amber-700 uppercase tracking-widest mt-1">{s.label}</div>
+          <div key={s.label}
+            className="p-6 border-2 relative"
+            style={{ borderColor: "#C8960A", background: "linear-gradient(170deg, #8B1A08 0%, #5B0E05 100%)" }}>
+            {/* Corner ornaments */}
+            <div className="absolute top-1 left-1 w-3 h-3 border-t border-l" style={{ borderColor: "#C8960A" }} />
+            <div className="absolute top-1 right-1 w-3 h-3 border-t border-r" style={{ borderColor: "#C8960A" }} />
+            <div className="absolute bottom-1 left-1 w-3 h-3 border-b border-l" style={{ borderColor: "#C8960A" }} />
+            <div className="absolute bottom-1 right-1 w-3 h-3 border-b border-r" style={{ borderColor: "#C8960A" }} />
+            <div className="text-4xl font-bold mb-1" style={{ color: "#E8C060" }}>{s.num}</div>
+            <div className="text-xs uppercase tracking-widest" style={{ color: "#C8960A" }}>{s.label}</div>
           </div>
         ))}
       </div>
+
+      {/* Pillar items */}
       {[
         {title: 'Real Estate', desc: 'Premium property advisory & investment'},
         {title: 'Finance', desc: 'Structured financial planning & solutions'},
         {title: 'Insurance', desc: 'Comprehensive risk & asset protection'},
         {title: 'Marketing', desc: 'Strategic growth & brand positioning'},
       ].map((p) => (
-        <div key={p.title} className="flex items-center gap-4 p-4 border border-amber-700/25 bg-white/[0.03]">
-          <div className="w-9 h-9 rounded-full bg-amber-700/30 border border-amber-600/50 flex items-center justify-center shrink-0">
-            <span className="text-amber-400 text-xs font-bold">{p.title[0]}</span>
+        <div key={p.title}
+          className="flex items-center gap-4 p-4 border relative"
+          style={{ borderColor: "rgba(200,150,10,0.3)", background: "rgba(107,26,6,0.35)" }}>
+          <div className="w-9 h-9 flex items-center justify-center shrink-0 border-2 font-bold text-sm"
+            style={{ borderColor: "#C8960A", background: "rgba(139,26,8,0.6)", color: "#E8C060" }}>
+            {p.title[0]}
           </div>
-          <div className="text-sm text-amber-200/80">
-            <strong className="text-amber-200">{p.title}</strong> — {p.desc}
+          <div className="text-sm">
+            <strong style={{ color: "#E8C060" }}>{p.title}</strong>
+            <span style={{ color: "#8B3A0F" }}> — {p.desc}</span>
           </div>
         </div>
       ))}
     </div>
+
   </div>
 </section>
+
+
     {/* Services */}
-
-
-  <section className="relative py-20 px-10 overflow-hidden">
-  {/* Texture background — no overlay */}
+<section className="relative py-20 px-10 overflow-hidden">
   <div className="absolute inset-0">
     <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-[#3a0800]/50" />
   </div>
 
-  {/* All your existing content — just add relative z-10 here */}
   <div className="relative z-10">
 
+    {/* Header */}
     <div className="text-center mb-16">
-      <span className="inline-block border border-amber-600 bg-amber-900/20 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-5">
+      <div className="inline-block border border-[#8B3A0F] bg-[#6B1A06]/60 text-[#E8C060] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-5"
+        style={{ clipPath: "polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)" }}>
         What We Offer
-      </span>
-      <h2 className="text-4xl font-bold text-amber-100 font-serif mb-3">
-        Our <span className="text-amber-400">Premium</span> Services
+      </div>
+      <h2 className="text-4xl font-bold font-serif mb-3" style={{ color: "#2a0800" }}>
+        Our <span style={{ color: "#8B2A0A" }}>Premium</span> Services
       </h2>
-      <div className="w-16 h-0.5 bg-amber-600 mx-auto mb-4" />
-      <p className="text-amber-800 text-sm max-w-lg mx-auto leading-relaxed">
+      <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
+        <div className="w-2 h-2 rotate-45" style={{ background: "#C8960A" }} />
+        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
+      </div>
+      <p className="text-sm max-w-lg mx-auto leading-relaxed" style={{ color: "#3a0e00" }}>
         Three powerful pillars of advisory — unified under one trusted partner across the UAE.
       </p>
     </div>
 
+    {/* Cards */}
     <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
       {[
         {
@@ -300,45 +335,77 @@ export function HomePage() {
           compliance: "Strategic growth partner for businesses & high-net-worth individuals",
         },
       ].map((s) => (
-        <div key={s.sector} className="bg-[#3a0f08] hover:bg-[#4a1810] transition-colors flex flex-col border border-amber-700/20">
-          <div className="h-48 w-full overflow-hidden bg-amber-900/30 relative">
-            <img src={s.image} alt={s.title} className="w-full h-full object-cover brightness-75" />
-          </div>
-          <div className="h-0.5 bg-amber-600" />
-          <div className="p-7 flex flex-col flex-1">
-            <span className="text-amber-500 text-xs tracking-widest uppercase mb-2">{s.sector}</span>
-            <h3 className="text-xl font-bold text-amber-100 mb-1">{s.title}</h3>
-            <p className="text-amber-600 text-xs tracking-wide mb-3">{s.location}</p>
-            <p className="text-amber-200/60 text-sm leading-relaxed mb-5">{s.overview}</p>
-            <ul className="flex flex-col gap-2 mb-5">
-              {s.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-xs text-amber-200/80">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto border-l-2 border-amber-600 pl-3 py-2 text-xs text-amber-700 leading-relaxed">
-              <span className="text-amber-600 font-semibold">Note: </span>{s.compliance}
+        <div key={s.sector}
+          className="flex flex-col border-2 relative p-[3px] transition-opacity hover:opacity-95"
+          style={{ borderColor: "#C8960A", background: "linear-gradient(170deg, #8B1A08 0%, #5B0E05 100%)" }}>
+          {/* Corner ornaments */}
+          <div className="absolute top-2 left-2 w-3 h-3 border-t border-l z-10" style={{ borderColor: "#C8960A" }} />
+          <div className="absolute top-2 right-2 w-3 h-3 border-t border-r z-10" style={{ borderColor: "#C8960A" }} />
+          <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l z-10" style={{ borderColor: "#C8960A" }} />
+          <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r z-10" style={{ borderColor: "#C8960A" }} />
+
+          <div className="border flex flex-col flex-1" style={{ borderColor: "rgba(200,150,10,0.3)" }}>
+            {/* Image */}
+            <div className="h-48 w-full overflow-hidden relative">
+              <img src={s.image} alt={s.title} className="w-full h-full object-cover brightness-75" />
+            </div>
+            <div className="h-0.5" style={{ background: "#C8960A" }} />
+
+            {/* Body */}
+            <div className="p-7 flex flex-col flex-1">
+              <span className="text-xs tracking-widest uppercase mb-2" style={{ color: "#C8960A" }}>{s.sector}</span>
+              <h3 className="text-xl font-bold mb-1 font-serif" style={{ color: "#E8C060" }}>{s.title}</h3>
+              <p className="text-xs tracking-wide mb-3" style={{ color: "#C8960A" }}>{s.location}</p>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(232,192,96,0.7)" }}>{s.overview}</p>
+
+              <ul className="flex flex-col gap-2 mb-5">
+                {s.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2.5 text-xs" style={{ color: "rgba(232,192,96,0.8)" }}>
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#C8960A" }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-auto border-l-2 pl-3 py-2 text-xs leading-relaxed" style={{ borderColor: "#C8960A", background: "rgba(200,150,10,0.08)" }}>
+                <span className="font-semibold" style={{ color: "#C8960A" }}>Note: </span>
+                <span style={{ color: "rgba(200,150,10,0.7)" }}>{s.compliance}</span>
+              </div>
             </div>
           </div>
         </div>
       ))}
     </div>
 
-    <div className="max-w-6xl mx-auto mt-6 border border-amber-700/25 bg-amber-500/5 px-10 py-7 flex items-center justify-between gap-6">
-      <p className="font-serif text-lg text-amber-100 italic">
-        Ready to explore our services? <span className="text-amber-400">Let's build your strategy.</span>
+    {/* Bottom CTA */}
+    <div className="max-w-6xl mx-auto mt-6 border px-10 py-7 flex items-center justify-between gap-6"
+      style={{ borderColor: "rgba(200,150,10,0.3)", background: "rgba(107,26,6,0.4)" }}>
+      <p className="font-serif text-lg italic" style={{ color: "#2a0800" }}>
+        Ready to explore our services?{" "}
+        <span style={{ color: "#8B2A0A" }}>Let's build your strategy.</span>
       </p>
-      <button className="bg-amber-600 hover:bg-amber-500 text-white text-xs tracking-widest uppercase px-8 py-3 transition-colors whitespace-nowrap">
+      <button
+        className="text-xs tracking-widest uppercase px-8 py-3 transition-opacity hover:opacity-90 whitespace-nowrap border-2 font-bold"
+        style={{
+          borderColor: "#8B3A0F",
+          background: "linear-gradient(180deg, #8B2A0A 0%, #6B1A06 100%)",
+          color: "#E8C060",
+          clipPath: "polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)"
+        }}
+      >
         Book a Consultation
       </button>
     </div>
 
   </div>
 </section>
+
       {/* Quick Calculator Section */}
       <section className="bg-linear-to-b from-[#5a1810] to-[#4a1810] py-12 border-y-2 border-amber-600">
+         <div className="absolute inset-0">
+    <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-[#3a0800]/50" />
+  </div>
         <div className="max-w-5xl mx-auto px-4">
           <MortgageCalculatorQuick />
         </div>
