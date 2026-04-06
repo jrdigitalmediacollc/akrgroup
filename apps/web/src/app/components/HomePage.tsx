@@ -62,6 +62,90 @@ export function HomePage() {
     </div>
   </div>
 </section>
+
+{/* Golden Services Section */}
+<section className="relative py-14 px-10 overflow-hidden">
+  <div className="absolute inset-0">
+    <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
+  </div>
+
+  <div className="relative z-10 max-w-5xl mx-auto">
+
+    {/* Title */}
+    <div className="flex items-center justify-center gap-4 mb-10">
+      <div className="flex-1 max-w-[120px] h-0.5" style={{ background: "linear-gradient(to right, transparent, #8B3A0F)" }} />
+      <div
+        className="px-12 py-2.5 border-2 border-amber-800"
+        style={{
+          background: "linear-gradient(180deg, #8B2A0A 0%, #6B1A06 100%)",
+          clipPath: "polygon(14px 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0% 50%)"
+        }}
+      >
+        <span className="text-amber-300 font-bold tracking-[3px] uppercase text-lg font-serif">Our Services</span>
+      </div>
+      <div className="flex-1 max-w-[120px] h-0.5" style={{ background: "linear-gradient(to left, transparent, #8B3A0F)" }} />
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-11">
+      {[
+        { title: "Property Consulting", desc: "Personalized property advice", icon: "M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 2l5 5h-5V4zM8 13h8v1H8v-1zm0 3h8v1H8v-1zm0-6h3v1H8v-1z" },
+        { title: "Investment Advisory", desc: "Strategic investment solutions", icon: "M2 20h20v2H2v-2zm2-8h2v7H4v-7zm5 0h2v7H9v-7zm4 0h2v7h-2v-7zm5 0h2v7h-2v-7zM12 1L2 6v2h20V6L12 1z" },
+        { title: "Real Estate Management", desc: "Comprehensive property management", icon: "M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2zM9 22V12h6v10" },
+      ].map((s) => (
+        <div key={s.title} className="border-2 border-amber-600 p-[3px]"
+          style={{ background: "linear-gradient(170deg, #8B1A08 0%, #5B0E05 100%)" }}>
+          {/* Middle border layer */}
+          <div className="border border-amber-600/50 p-[3px] h-full">
+            {/* Inner border layer with corner ornaments */}
+            <div className="border border-amber-600/25 p-7 text-center flex flex-col items-center h-full relative">
+              {/* Corner ornaments */}
+              <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t border-l border-amber-500" />
+              <div className="absolute top-1.5 right-1.5 w-3 h-3 border-t border-r border-amber-500" />
+              <div className="absolute bottom-1.5 left-1.5 w-3 h-3 border-b border-l border-amber-500" />
+              <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b border-r border-amber-500" />
+
+              <svg className="w-14 h-14 fill-amber-500 mb-4" viewBox="0 0 24 24">
+                <path d={s.icon} />
+              </svg>
+              <h3 className="text-amber-300 font-bold text-base font-serif mb-2">{s.title}</h3>
+              <p className="text-amber-600 text-xs mb-5 leading-relaxed font-sans">{s.desc}</p>
+
+              {/* Button with dot ornaments */}
+              <div className="mt-auto flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-600" />
+                <button className="border-2 border-amber-600 text-amber-300 text-xs tracking-widest uppercase px-6 py-2 hover:bg-amber-600/15 transition-colors font-sans">
+                  View More
+                </button>
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-600" />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="text-center">
+      <h3 className="text-3xl font-bold font-serif italic mb-6" style={{ color: "#2a0a00" }}>
+        Let's Find Your Dream Property
+      </h3>
+      <button
+        onClick={() => router.push('/contact')}
+        className="border-2 border-amber-800 text-amber-300 font-bold text-xs tracking-[3px] uppercase px-14 py-3 font-sans hover:opacity-90 transition-opacity"
+        style={{
+          background: "linear-gradient(180deg, #8B2A0A 0%, #6B1A06 100%)",
+          clipPath: "polygon(10px 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0% 50%)"
+        }}
+      >
+        Schedule a Consultation
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
