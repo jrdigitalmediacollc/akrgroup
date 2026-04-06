@@ -187,60 +187,63 @@ export function HomePage() {
         </div>
       </section>
       {/* About Section */}
-      <section className="relative overflow-hidden py-20 px-10" style={{background: 'linear-gradient(135deg, #3a0f08 0%, #5a1810 50%, #4a1208 100%)'}}>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+   <section className="relative overflow-hidden py-20 px-10">
+  <div className="absolute inset-0">
+    <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-[#3a0f08]/75" />
+  </div>
 
-        {/* Left */}
-        <div>
-          <span className="inline-block border border-amber-600 bg-amber-900/30 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-6">
-            About AKR Group UAE
-          </span>
-          <h2 className="text-4xl font-bold text-amber-100 leading-snug mb-4">
-            Multi-Sector Advisory<br />
-            <span className="text-amber-400">Built for UAE</span>
-          </h2>
-          <div className="w-14 h-0.5 bg-amber-600 mb-7" />
-          <p className="text-amber-200/80 text-base leading-relaxed mb-8">
-            AKR Group UAE is a multi-sector advisory firm combining real estate, finance, insurance, 
-            and strategic marketing into one unified platform.<br /><br />
-            With 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide 
-            confidential, insight-driven advisory services tailored for investors, business owners, 
-            and high-net-worth individuals.
-          </p>
-          <div className="border-l-4 border-amber-500 pl-5 py-3 bg-amber-500/10 italic text-amber-300 text-lg">
-            One Partner. Complete Advisory. Measurable Value.
-          </div>
-        </div>
-
-        {/* Right */}
-        <div className="flex flex-col gap-4">
-          <div className="grid grid-cols-2 gap-4">
-            {[{num: '25+', label: 'Years of Expertise'}, {num: '4', label: 'Advisory Sectors'}].map((s) => (
-              <div key={s.label} className="border border-amber-700/40 bg-white/5 p-6 border-l-2 border-l-amber-600">
-                <div className="text-4xl font-bold text-amber-400">{s.num}</div>
-                <div className="text-xs text-amber-700 uppercase tracking-widest mt-1">{s.label}</div>
-              </div>
-            ))}
-          </div>
-          {[
-            {title: 'Real Estate', desc: 'Premium property advisory & investment'},
-            {title: 'Finance', desc: 'Structured financial planning & solutions'},
-            {title: 'Insurance', desc: 'Comprehensive risk & asset protection'},
-            {title: 'Marketing', desc: 'Strategic growth & brand positioning'},
-          ].map((p) => (
-            <div key={p.title} className="flex items-center gap-4 p-4 border border-amber-700/25 bg-white/[0.03]">
-              <div className="w-9 h-9 rounded-full bg-amber-700/30 border border-amber-600/50 flex items-center justify-center shrink-0">
-                <span className="text-amber-400 text-xs font-bold">{p.title[0]}</span>
-              </div>
-              <div className="text-sm text-amber-200/80">
-                <strong className="text-amber-200">{p.title}</strong> — {p.desc}
-              </div>
-            </div>
-          ))}
-        </div>
-
+  <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    {/* Left */}
+    <div>
+      <span className="inline-block border border-amber-600 bg-amber-900/30 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-6">
+        About AKR Group UAE
+      </span>
+      <h2 className="text-4xl font-bold text-amber-100 leading-snug mb-4">
+        Multi-Sector Advisory<br />
+        <span className="text-amber-400">Built for UAE</span>
+      </h2>
+      <div className="w-14 h-0.5 bg-amber-600 mb-7" />
+      <p className="text-amber-200/80 text-base leading-relaxed mb-8">
+        AKR Group UAE is a multi-sector advisory firm combining real estate, finance, insurance, 
+        and strategic marketing into one unified platform.<br /><br />
+        With 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide 
+        confidential, insight-driven advisory services tailored for investors, business owners, 
+        and high-net-worth individuals.
+      </p>
+      <div className="border-l-4 border-amber-500 pl-5 py-3 bg-amber-500/10 italic text-amber-300 text-lg">
+        One Partner. Complete Advisory. Measurable Value.
       </div>
-    </section>
+    </div>
+
+    {/* Right */}
+    <div className="flex flex-col gap-4">
+      <div className="grid grid-cols-2 gap-4">
+        {[{num: '25+', label: 'Years of Expertise'}, {num: '4', label: 'Advisory Sectors'}].map((s) => (
+          <div key={s.label} className="border border-amber-700/40 bg-white/5 p-6 border-l-2 border-l-amber-600">
+            <div className="text-4xl font-bold text-amber-400">{s.num}</div>
+            <div className="text-xs text-amber-700 uppercase tracking-widest mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+      {[
+        {title: 'Real Estate', desc: 'Premium property advisory & investment'},
+        {title: 'Finance', desc: 'Structured financial planning & solutions'},
+        {title: 'Insurance', desc: 'Comprehensive risk & asset protection'},
+        {title: 'Marketing', desc: 'Strategic growth & brand positioning'},
+      ].map((p) => (
+        <div key={p.title} className="flex items-center gap-4 p-4 border border-amber-700/25 bg-white/[0.03]">
+          <div className="w-9 h-9 rounded-full bg-amber-700/30 border border-amber-600/50 flex items-center justify-center shrink-0">
+            <span className="text-amber-400 text-xs font-bold">{p.title[0]}</span>
+          </div>
+          <div className="text-sm text-amber-200/80">
+            <strong className="text-amber-200">{p.title}</strong> — {p.desc}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
     {/* Services */}
 
 
