@@ -42,8 +42,7 @@ export function HomePage() {
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
       <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-        Your Trusted Real Estate<br />
-        & Property Advisors
+        Trusted Strategic Real Estate,  <br />Financial & Investment Advisory
       </h1>
       <p className="text-amber-300 text-lg mb-8 italic">
         Guiding You to the Right Investment
@@ -52,7 +51,13 @@ export function HomePage() {
         onClick={() => router.push('/contact')}
         className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
       >
-        Get Start
+           Explore Opportunities
+      </button>
+       <button
+        onClick={() => router.push('/contact')}
+        className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
+      >
+           Speak To an Advisor
       </button>
     </div>
   </div>
