@@ -23,7 +23,7 @@ export function HomePage() {
     
     {/* Layer 1: Image */}
     <img
-      src="/bg.jpeg"
+      src="/bg-img.jpeg"
       alt="Luxury Dubai Property"
       className="w-full h-full object-cover absolute inset-0"
     />
@@ -153,7 +153,7 @@ export function HomePage() {
       </div>
     </section>
     {/* Services */}
-{ <ServicesSection /> }
+
 
   <div className="text-center mb-16">
     <span className="inline-block border border-amber-600 bg-amber-900/20 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-5">
