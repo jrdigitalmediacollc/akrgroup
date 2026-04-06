@@ -190,7 +190,7 @@ export function HomePage() {
    <section className="relative overflow-hidden py-20 px-10">
   <div className="absolute inset-0">
     <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-[#3a0f08]/75" />
+   
   </div>
 
   <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
