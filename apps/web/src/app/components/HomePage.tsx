@@ -23,14 +23,10 @@ export function HomePage() {
     
     {/* Layer 1: Image */}
     <img
-      src="/bg-img.jpeg"
+      src="/hero.jpeg"
       alt="Luxury Dubai Property"
       className="w-full h-full object-cover absolute inset-0"
     />
-
-    {/* Layer 2: Simple dark overlay — no color blending */}
-    <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(20,4,0,0.88) 0%, rgba(30,8,0,0.60) 55%, rgba(0,0,0,0.25) 100%)' }} />
-
   </div>
 
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
@@ -202,7 +198,7 @@ export function HomePage() {
 
       <h2 className="text-4xl font-bold leading-snug mb-4 font-serif" style={{ color: "#2a0a00" }}>
         Multi-Sector Advisory<br />
-        <span style={{ color: "#8B2A0A" }}>Built for UAE</span>
+        <span style={{ color: "#6B1A06" }}>Built for UAE</span>
       </h2>
 
       <div className="flex items-center gap-3 mb-7">
@@ -398,15 +394,17 @@ export function HomePage() {
 </section>
 
       {/* Quick Calculator Section */}
-      <section className="bg-linear-to-b from-[#5a1810] to-[#4a1810] py-12 border-y-2 border-amber-600">
-         <div className="absolute inset-0">
+    <section className="relative py-12 border-y-2 border-amber-600 overflow-hidden">
+  {/* Texture background */}
+  <div className="absolute inset-0">
     <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-[#3a0800]/50" />
+    <div className="absolute inset-0 bg-[#3a0800]/60" />
   </div>
-        <div className="max-w-5xl mx-auto px-4">
-          <MortgageCalculatorQuick />
-        </div>
-      </section>
+  {/* Content */}
+  <div className="relative z-10 max-w-5xl mx-auto px-4">
+    <MortgageCalculatorQuick />
+  </div>
+</section>
 
       {/* Services Section */}
       {/* <section className="py-20 bg-linear-to-b from-[#2a0808] to-[#3a1010]">
