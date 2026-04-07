@@ -120,7 +120,7 @@ export function HomePage() {
 
     {/* CTA */}
     <div className="text-center">
-      <h3 className="text-3xl font-bold font-serif italic mb-6" style={{ color: "#2a0a00" }}>
+      <h3 className="text-3xl font-bold font-serif italic mb-6" style={{ color: "#fff" }}>
         Let's Find Your Dream Property
       </h3>
       <button
