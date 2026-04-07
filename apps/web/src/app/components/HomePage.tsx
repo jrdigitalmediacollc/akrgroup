@@ -31,9 +31,9 @@ export function HomePage() {
 
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
-      <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-        Trusted Strategic Real Estate,<br />Financial & Investment Advisory
-      </h1>
+     <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight font-serif">
+      Trusted Strategic Real Estate,<br />Financial & Investment Advisory
+    </h1>
       <p className="text-amber-300 text-lg mb-8 italic">
         Guiding You to the Right Investment
       </p>
@@ -196,7 +196,7 @@ export function HomePage() {
         About AKR Group UAE
       </div>
 
-      <h2 className="text-4xl font-bold leading-snug mb-4 font-serif" style={{ color: "#2a0a00" }}>
+      <h2 className="text-4xl font-bold leading-snug mb-4 font-serif" style={{ color: "#fff" }}>
         Multi-Sector Advisory<br />
         <span style={{ color: "#6B1A06" }}>Built for UAE</span>
       </h2>
@@ -207,7 +207,7 @@ export function HomePage() {
         <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
       </div>
 
-      <p className="text-base leading-relaxed mb-8" style={{ color: "#3a0e00" }}>
+      <p className="text-base leading-relaxed mb-8" style={{ color: "#fff" }}>
         AKR Group UAE is a multi-sector advisory firm combining real estate, finance, insurance,
         and strategic marketing into one unified platform.<br /><br />
         With 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide
@@ -259,7 +259,7 @@ export function HomePage() {
           </div>
           <div className="text-sm">
             <strong style={{ color: "#E8C060" }}>{p.title}</strong>
-            <span style={{ color: "#8B3A0F" }}> — {p.desc}</span>
+            <span style={{ color: "#fff" }}> — {p.desc}</span>
           </div>
         </div>
       ))}
@@ -280,7 +280,7 @@ export function HomePage() {
 
     {/* Header */}
     <div className="text-center mb-16">
-      <div className="inline-block border border-[#8B3A0F] bg-[#6B1A06]/60 text-[#E8C060] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-5"
+      <div className="inline-block border border-[#8B3A0F]  text-[#E8C060] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-5"
         style={{ clipPath: "polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)" }}>
         What We Offer
       </div>
@@ -398,7 +398,7 @@ export function HomePage() {
   {/* Texture background */}
   <div className="absolute inset-0">
     <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-[#3a0800]/60" />
+    <div className="absolute inset-0 " />
   </div>
   {/* Content */}
   <div className="relative z-10 max-w-5xl mx-auto px-4">
