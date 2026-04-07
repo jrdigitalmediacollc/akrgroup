@@ -50,7 +50,7 @@ export function WhyAkrSection() {
         Why <span className="text-amber-400">AKR Group UAE</span>
       </h2>
       <div className="w-14 h-0.5 bg-amber-600 mx-auto mb-5" />
-      <p className="text-amber-800 text-sm max-w-md mx-auto leading-relaxed">
+      <p className="text-white text-sm max-w-md mx-auto leading-relaxed">
         A value proposition built for high-net-worth individuals, investors, and business leaders who demand more.
       </p>
     </div>
