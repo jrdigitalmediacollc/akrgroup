@@ -373,7 +373,7 @@ export function HomePage() {
     {/* Bottom CTA */}
     <div className="max-w-6xl mx-auto mt-6 border px-10 py-7 flex items-center justify-between gap-6"
       style={{ borderColor: "rgba(200,150,10,0.3)", background: "rgba(107,26,6,0.4)" }}>
-      <p className="font-serif text-lg italic" style={{ color: "#2a0800" }}>
+      <p className="font-serif text-lg italic" style={{ color: "#fff" }}>
         Ready to explore our services?{" "}
         <span style={{ color: "#8B2A0A" }}>Let's build your strategy.</span>
       </p>
@@ -393,7 +393,7 @@ export function HomePage() {
   </div>
 </section>
 
-      {/* Quick Calculator Section */}
+    {/* Quick Calculator Section */}
     <section className="relative py-12 border-y-2 border-amber-600 overflow-hidden">
   {/* Texture background */}
   <div className="absolute inset-0">
