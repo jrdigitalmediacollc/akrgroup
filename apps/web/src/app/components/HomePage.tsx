@@ -217,7 +217,7 @@ export function HomePage() {
 
       <div className="border-l-4 py-3 pl-5 pr-4"
         style={{ borderColor: "#8B3A0F", background: "rgba(107,26,6,0.25)" }}>
-        <p className="italic text-lg font-serif" style={{ color: "#2a0800" }}>
+        <p className="italic text-lg font-serif" style={{ color: "#fff" }}>
           One Partner. Complete Advisory. Measurable Value.
         </p>
       </div>
@@ -273,7 +273,7 @@ export function HomePage() {
 <section className="relative py-20 px-10 overflow-hidden">
   <div className="absolute inset-0">
     <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-[#3a0800]/50" />
+    <div className="absolute inset-0 " />
   </div>
 
   <div className="relative z-10">
