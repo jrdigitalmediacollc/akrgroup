@@ -56,7 +56,7 @@ export function CalculatorsPage() {
         </Tabs>
 
         {/* Compliance Disclaimer */}
-        <Card className="mt-12 bg-[#4a1810] border-2 border-amber-700">
+        {/* <Card className="mt-12 bg-[#4a1810] border-2 border-amber-700">
           <CardHeader>
             <CardTitle className="text-amber-300 flex items-center gap-2">
               <DollarSign className="w-5 h-5" />
@@ -76,7 +76,7 @@ export function CalculatorsPage() {
               For personalized advice, please consult with one of our licensed advisors.
             </p>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
 
       {/* Lead Capture Modal */}

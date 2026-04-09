@@ -31,9 +31,10 @@ export function HomePage() {
 
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
-     <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight font-serif">
-      Trusted Strategic Real Estate,<br />Financial & Investment Advisory
-    </h1>
+   <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight font-serif">
+  Trusted Strategic Real Estate,<br />
+  Financial & Investment Advisory
+</h1>
       <p className="text-amber-300 text-lg mb-8 italic">
         Guiding You to the Right Investment
       </p>
@@ -306,7 +307,7 @@ export function HomePage() {
           location: "Dubai — AKR Realty LLC",
           overview: "End-to-end property advisory aligned with Dubai's regulatory standards.",
           image: "/realestate.jpg",
-          items: ["Buy | Sell | Lease — Residential & Commercial", "Off-Plan Investment Opportunities", "Distress Property Solutions", "Portfolio Structuring"],
+          items: ["Buy | Sell  — Residential & Commercial", "Off-Plan Investment Opportunities", "Distress Property Solutions", "Portfolio Structuring"],
           compliance: "Regulated by Real Estate Regulatory Agency & Dubai Land Department",
         },
         {
