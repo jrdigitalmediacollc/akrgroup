@@ -20,6 +20,7 @@ export function SiteHeader() {
     { id: "/calculators", label: "Calculators" },
     { id: "/about", label: "About Us" },
     { id: "/teams", label: "Teams" },
+    { id: "/insights", label: "Journals" }
     { id: "/faq", label: "FAQ" },
     { id: "/contact", label: "Contact" },
   ];
