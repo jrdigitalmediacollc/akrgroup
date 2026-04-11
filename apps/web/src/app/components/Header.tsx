@@ -19,6 +19,7 @@ export function SiteHeader() {
     { id: "/properties", label: "Property Listings" },
     { id: "/calculators", label: "Financial Services" },
     { id: "/about", label: "About Us" },
+    { id: "/faq", label: "FAQ" },
     { id: "/contact", label: "Contact" },
   ];
 
