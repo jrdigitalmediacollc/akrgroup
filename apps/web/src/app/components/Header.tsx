@@ -112,7 +112,7 @@ export function SiteHeader() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-4">
              <Image
-              src="/logo-main.jpeg"
+              src="/logonew.png"
               alt="AKR Group UAE Logo"
               width={80}
               height={130}
