@@ -17,8 +17,9 @@ export function SiteHeader() {
   const navItems = [
     { id: "/", label: "Home" },
     { id: "/properties", label: "Property Listings" },
-    { id: "/calculators", label: "Financial Services" },
+    { id: "/calculators", label: "Calculators" },
     { id: "/about", label: "About Us" },
+    { id: "/teams", label: "Teams" },
     { id: "/faq", label: "FAQ" },
     { id: "/contact", label: "Contact" },
   ];
