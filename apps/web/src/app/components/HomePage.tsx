@@ -20,25 +20,32 @@ export function HomePage() {
 {/* Hero Section */}
 <section className="relative min-h-[500px] flex items-center overflow-hidden">
   <div className="absolute inset-0 z-0">
-    
-    {/* Layer 1: Image */}
-    <img
-      src="/hero.jpeg"
-      alt="Luxury Dubai Property"
-      className="w-full h-full object-cover absolute inset-0"
-    />
+    {/* Video Background */}
+    <iframe
+  className="absolute inset-0 w-full h-full pointer-events-none"
+  src="https://www.youtube.com/embed/6N-WrDHtUf8?autoplay=1&mute=1&loop=1&playlist=6N-WrDHtUf8&controls=0&showinfo=0&rel=0"
+  allow="autoplay; fullscreen"
+  frameBorder="0"
+  style={{ transform: 'scale(1.5)' }}
+/>
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-black/50 z-10" />
   </div>
 
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
-   <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight font-serif">
-  Trusted Strategic Real Estate,<br />
-  Financial & Investment Advisory
-</h1>
+      <h1 className="text-2xl md:text-3xl font-bold tracking-wider text-amber-100 mb-4 leading-tight uppercase">
+        AKR GROUP UAE
+      </h1>
+      <p className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
+        Trusted Strategic<br />
+        Real Estate,<br />
+        Financial &<br />
+        Investment Advisory
+      </p>
       <p className="text-amber-300 text-lg mb-8 italic">
         Guiding You to the Right Investment
       </p>
-      {/* Fixed: added flex and gap */}
       <div className="flex flex-wrap gap-4">
         <button
           onClick={() => router.push('/contact')}
