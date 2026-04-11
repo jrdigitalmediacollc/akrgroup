@@ -18,7 +18,14 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-linear-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center border-2 border-amber-500">
-                <div className="text-white font-bold">AKR</div>
+                <div className="flex items-center gap-3 mb-4">
+  <img
+    src="/logonew.png"
+    alt="AKR Group UAE Logo"
+    width={120}
+    height={130}
+    className="object-cover"
+  />
               </div>
               <div>
                 <div className="font-bold text-lg text-amber-100">
