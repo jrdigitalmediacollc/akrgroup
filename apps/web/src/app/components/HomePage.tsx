@@ -34,9 +34,7 @@ export function HomePage() {
 
   <div className="relative z-20 max-w-7xl mx-auto px-12 py-24 w-full">
     <div className="max-w-xl">
-      <h1 className="text-2xl md:text-3xl font-bold tracking-wider text-amber-100 mb-4 leading-tight uppercase">
-        AKR GROUP UAE
-      </h1>
+     
       <p className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
         Trusted Strategic<br />
         Real Estate,<br />
