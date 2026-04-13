@@ -52,7 +52,7 @@ export function EntrancePopup() {
           {/* Logo */}
         {/* Logo */}
 <div className="w-20 h-20  border-2 border-amber-600  flex items-center justify-center mx-auto mb-5">
-  <Image
+  <img
     src="/logonew.png"
     alt="AKR Group UAE Logo"
     width={80}
