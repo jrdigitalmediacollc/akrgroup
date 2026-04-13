@@ -36,13 +36,13 @@ export function HomePage() {
     <div className="max-w-xl">
      
       <p className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
-        Trusted Strategic<br />
+        Trusted Strategic,<br />
         Real Estate,<br />
         Financial &<br />
-        Investment Advisory
+        Investment Architects
       </p>
       <p className="text-amber-300 text-lg mb-8 italic">
-        Guiding You to the Right Investment
+        Forward Together. For Life. For Legacy
       </p>
       <div className="flex flex-wrap gap-4">
         <button

@@ -126,7 +126,7 @@ export function SiteHeader() {
                   AKR GROUP UAE
                 </div>
                 <div className="text-xs text-amber-300 tracking-widest">
-                  FINANCIAL &amp; REAL ESTATE ADVISORY
+                  FINANCIAL &amp; REAL ESTATE INVESTMENT ARCHITECTS
                 </div>
               </div>
             </Link>
