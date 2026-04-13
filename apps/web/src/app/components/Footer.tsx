@@ -14,23 +14,19 @@ export function Footer() {
     <footer className="bg-linear-to-b from-[#3a1010] to-[#2a0808] text-amber-100 border-t-2 border-amber-600">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-linear-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center border-2 border-amber-500">
-                <div className="flex items-center gap-3 mb-4">
-  <img
-    src="/logonew.png"
-    alt="AKR Group UAE Logo"
-    width={120}
-    height={130}
-    className="object-cover"
-  />
-              </div>
-              <div>
-                <div className="font-bold text-lg text-amber-100">
-                  AKR GROUP UAE
-                </div>
+              <img
+                src="/logonew.png"
+                alt="AKR Group UAE Logo"
+                width={120}
+                height={130}
+                className="object-cover"
+              />
+              <div className="font-bold text-lg text-amber-100">
+                AKR GROUP UAE
               </div>
             </div>
             <p className="text-sm text-amber-200 leading-relaxed">
@@ -41,39 +37,25 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-amber-300 mb-4 text-lg">
-              Quick Links
-            </h3>
+            <h3 className="font-bold text-amber-300 mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/properties"
-                  className="text-sm hover:text-amber-300 transition-colors"
-                >
+                <Link href="/properties" className="text-sm hover:text-amber-300 transition-colors">
                   Property Listings
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/calculators"
-                  className="text-sm hover:text-amber-300 transition-colors"
-                >
+                <Link href="/calculators" className="text-sm hover:text-amber-300 transition-colors">
                   Financial Services
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/calculators"
-                  className="text-sm hover:text-amber-300 transition-colors"
-                >
+                <Link href="/calculators" className="text-sm hover:text-amber-300 transition-colors">
                   Calculators
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/about"
-                  className="text-sm hover:text-amber-300 transition-colors"
-                >
+                <Link href="/about" className="text-sm hover:text-amber-300 transition-colors">
                   About Us
                 </Link>
               </li>
@@ -82,9 +64,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-amber-300 mb-4 text-lg">
-              Contact Us
-            </h3>
+            <h3 className="font-bold text-amber-300 mb-4 text-lg">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm">
                 <Phone className="w-4 h-4 mt-1 text-amber-400" />
@@ -103,32 +83,18 @@ export function Footer() {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-bold text-amber-300 mb-4 text-lg">
-              Follow Us
-            </h3>
+            <h3 className="font-bold text-amber-300 mb-4 text-lg">Follow Us</h3>
             <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all"
-              >
+              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all"
-              >
+              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all"
-              >
+              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all"
-              >
+              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -144,9 +110,7 @@ export function Footer() {
               advisory services. License No: XXXXX
             </div>
             <div>
-              <strong className="text-amber-300">
-                AKR Financial &amp; Real Estate LLC
-              </strong>{" "}
+              <strong className="text-amber-300">AKR Financial &amp; Real Estate LLC</strong>{" "}
               - Licensed by UAE Central Bank and Insurance Authority for
               financial advisory services. License No: XXXXX
             </div>
@@ -164,10 +128,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-amber-800 text-center text-sm text-amber-300">
-          <p>
-            &copy; {new Date().getFullYear()} AKR Group UAE. All rights
-            reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} AKR Group UAE. All rights reserved.</p>
         </div>
       </div>
     </footer>
