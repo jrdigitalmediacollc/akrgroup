@@ -137,7 +137,7 @@ export function SiteHeader() {
                 <Link
                   key={item.id}
                   href={item.id}
-                  className={`px-3 py-2 text-xs font-medium tracking-wide transition-all ${currentPage === item.id
+                  className={`px-3 py-2 text-sm font-medium tracking-wide transition-all ${currentPage === item.id
                     ? "text-amber-300 bg-[#4a1810]"
                     : "text-amber-100 hover:text-amber-200 hover:bg-[#4a1810]"
                     }`}

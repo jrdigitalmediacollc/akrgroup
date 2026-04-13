@@ -18,6 +18,65 @@ export function AboutPage() {
           </p>
         </div>
 
+{/* Founder Message Section */}
+<section className="relative py-20 px-10 overflow-hidden" style={{ background: "#0e0201" }}>
+  <div className="absolute inset-0">
+    <img src="/texture-bg.png" alt="" className="w-full h-full object-cover opacity-[0.12]" />
+    <div className="absolute inset-0 bg-[#0e0201]/82" />
+  </div>
+
+  <div className="relative z-10 max-w-5xl mx-auto">
+
+    {/* Tag */}
+    <div className="flex items-center gap-4 mb-12">
+      <div className="w-10 h-px bg-amber-600" />
+      <span className="text-amber-600 text-xs tracking-[3px] uppercase font-sans">Message from the Founder</span>
+    </div>
+
+    {/* Layout */}
+    <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-16 items-start">
+
+      {/* Left — Founder card */}
+      <div className="flex flex-col items-center">
+        <div className="w-44 h-44 border-2 border-amber-600 bg-amber-600/10 flex items-center justify-center mb-5 relative">
+          <div className="absolute inset-1.5 border border-amber-600/30" />
+          {/* Replace with founder photo if available */}
+          <img src="/founder.jpg" alt="Founder" className="w-full h-full object-cover" 
+            onError={(e) => { e.currentTarget.style.display='none'; }} />
+          <span className="text-5xl font-bold text-amber-600 font-serif">AKR</span>
+        </div>
+        <div className="text-lg font-bold text-amber-300 font-serif text-center mb-1">Founder, AKR Group UAE</div>
+        <div className="text-xs tracking-[2px] text-amber-600 uppercase font-sans text-center mb-6">Chairman & CEO</div>
+        <div className="flex items-center gap-2 w-full">
+          <div className="flex-1 h-px bg-amber-700/30" />
+          <div className="w-1.5 h-1.5 bg-amber-600 rotate-45" />
+          <div className="flex-1 h-px bg-amber-700/30" />
+        </div>
+      </div>
+
+      {/* Right — Message */}
+      <div>
+        <span className="text-7xl leading-none text-amber-600/20 font-serif block mb-4">"</span>
+        <div className="font-serif italic text-sm leading-loose mb-8 space-y-4" style={{ color: "rgba(232,192,96,0.85)" }}>
+          <p>I founded AKR on a simple belief: that wealth is only truly valuable when it provides peace of mind for the people you love.</p>
+          <p>In a world of cold transactions and complex paperwork, it is easy to forget the human story behind the wealth. At AKR, we choose to look past the balance sheets and focus on what truly matters: your peace of mind.</p>
+          <p>We know that every investment represents a lifetime of your sacrifice, your hard work, and your dreams for your children. It is a promise made to those you love. That is why we don't just act as advisors; we act as the steady guardians of your family's future.</p>
+          <p>When you trust us with your journey, we take it personally. We provide the honest guidance and the stable hands you need to ensure that what you build today becomes a legacy that lasts forever.</p>
+        </div>
+        <div className="border-l-4 border-amber-600 pl-5 py-3 bg-amber-600/[0.07]">
+          <div className="text-lg font-bold font-serif italic text-amber-300">
+            " We Forward Together. For Life. For Legacy."
+          </div>
+          <div className="text-xs tracking-[2px] text-amber-600 uppercase font-sans mt-1">
+            — Founder, AKR Group UAE
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
         {/* Company Overview */}
         <Card className="bg-[#4a1810] border-2 border-amber-700 mb-12">
           <CardContent className="p-8">
@@ -52,6 +111,93 @@ export function AboutPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Mission & Vision Section */}
+<section className="relative py-20 px-10 overflow-hidden" style={{ background: "#1a0603" }}>
+  <div className="absolute inset-0">
+    <img src="/texture-bg.png" alt="" className="w-full h-full object-cover opacity-10" />
+    <div className="absolute inset-0 bg-[#1a0603]/80" />
+  </div>
+
+  <div className="relative z-10 max-w-5xl mx-auto">
+
+    {/* Header */}
+    <div className="text-center mb-14">
+      <span className="text-amber-600 text-xs tracking-[3px] uppercase font-sans">Our Foundation</span>
+      <div className="flex items-center justify-center gap-3 mt-4">
+        <div className="w-10 h-px bg-amber-600" />
+        <div className="w-1.5 h-1.5 bg-amber-600 rotate-45" />
+        <div className="w-10 h-px bg-amber-600" />
+      </div>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-amber-600/15">
+
+      {/* Mission */}
+      <div className="bg-[#1a0603] p-12 relative">
+        <div className="absolute inset-3 border border-amber-600/15 pointer-events-none" />
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-6 h-px bg-amber-600" />
+          <span className="text-amber-600 text-xs tracking-[3px] uppercase font-sans font-bold">Our Mission</span>
+        </div>
+        <div className="w-12 h-12 border border-amber-600/40 bg-amber-600/8 flex items-center justify-center mb-5">
+          <svg className="w-5 h-5 fill-amber-600" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div className="font-serif italic text-sm leading-loose mb-6" style={{ color: "rgba(232,192,96,0.8)" }}>
+          <p className="mb-4">
+            As <strong className="text-amber-300 not-italic">Architects</strong> of your financial future, we don't just manage assets; we design the structural integrity of your family's wealth.
+          </p>
+          <p>
+            At <strong className="text-amber-300 not-italic">AKR</strong>, our mission is to ensure that every investment serves as a cornerstone for the{" "}
+            <strong className="text-amber-300 not-italic">generations to follow</strong> — because{" "}
+            <strong className="text-amber-300 not-italic">We Forward Together. For Life. For Legacy.</strong>
+          </p>
+        </div>
+        <div className="border-l-4 border-amber-600 pl-4 py-2 bg-amber-600/[0.06] font-serif italic text-amber-300 text-sm">
+          Every investment, a cornerstone. Every family, a legacy.
+        </div>
+      </div>
+
+      {/* Vision */}
+      <div className="bg-[#1a0603] p-12 relative">
+        <div className="absolute inset-3 border border-amber-600/15 pointer-events-none" />
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-6 h-px bg-amber-600" />
+          <span className="text-amber-600 text-xs tracking-[3px] uppercase font-sans font-bold">Our Vision</span>
+        </div>
+        <div className="w-12 h-12 border border-amber-600/40 bg-amber-600/8 flex items-center justify-center mb-5">
+          <svg className="w-5 h-5 fill-amber-600" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        </div>
+        <div className="font-serif italic text-sm leading-loose mb-6" style={{ color: "rgba(232,192,96,0.8)" }}>
+          <p className="mb-4">
+            True wealth is not just what you earn; it is what you leave behind. As your{" "}
+            <strong className="text-amber-300 not-italic">Investment Architects</strong>, we don't just build portfolios —
+          </p>
+          <p className="mb-4">
+            <strong className="text-amber-300 not-italic">"we build foundations that stand for generations."</strong>
+          </p>
+          <p>
+            At AKR, we bridge the gap between today's ambition and tomorrow's heritage, ensuring your vision becomes a life well-lived and a legacy that never fades.
+          </p>
+        </div>
+        <div className="border-l-4 border-amber-600 pl-4 py-2 bg-amber-600/[0.06] font-serif italic text-amber-300 text-sm">
+          We Forward Together. For Life. For Legacy.
+        </div>
+      </div>
+
+    </div>
+
+    {/* Bottom strip */}
+    <div className="border border-amber-600/20 bg-amber-600/[0.07] px-10 py-6 text-center mt-px">
+      <div className="font-serif italic font-bold text-lg text-amber-300">
+        " We Forward Together. For Life. For Legacy."
+      </div>
+      <div className="text-xs tracking-[2px] text-amber-600 uppercase font-sans mt-2">— The AKR Promise</div>
+    </div>
+
+  </div>
+</section>
 
         {/* Our Values */}
         <div className="mb-12">
@@ -236,6 +382,8 @@ export function AboutPage() {
     </div>
   </CardContent>
 </Card>
+
+
 
         {/* CTA Section */}
         <Card className="bg-linear-to-r from-amber-800 to-amber-600 border-none">
