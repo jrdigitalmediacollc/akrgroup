@@ -106,13 +106,16 @@ export function Footer() {
           <div className="bg-[#4a1810] p-6 rounded-lg space-y-4 text-xs text-amber-200">
             <div>
               <strong className="text-amber-300">AKR Realty LLC</strong> -
-              Licensed by RERA (Real Estate Regulatory Agency) for real estate
-              advisory services. License No: XXXXX
+             AKR Realty LLC is a RERA-Dubai Land Department -registered and licensed real estate brokerage in Dubai-UAE 
+ORN no:57750 & 
+BRN NO:95660
+All property transactions are subject to UAE laws and DLD regulations.
             </div>
             <div>
               <strong className="text-amber-300">AKR Financial &amp; Real Estate LLC</strong>{" "}
-              - Licensed by UAE Central Bank and Insurance Authority for
-              financial advisory services. License No: XXXXX
+              Registered and Licensed by SHAMS ,SHARJAH -UAE
+License no:24286.01 
+Financial & Real Estate & Marketing advisory services are subject to UAE regulatory requirements and approvals where-ever applicable.
             </div>
             <div>
               <strong className="text-amber-300">Important Disclaimer:</strong>{" "}
