@@ -232,13 +232,16 @@ export function ContactPage() {
               <CardContent className="text-sm text-amber-200 space-y-3">
                 <div>
                   <strong className="text-amber-300">AKR Realty LLC</strong><br />
-                  Real Estate Regulatory Agency (RERA) Licensed<br />
-                  License No: XXXXX
+               AKR Realty LLC is a RERA-Dubai Land Department -registered and licensed real estate brokerage in Dubai-UAE 
+ORN no:57750 & 
+BRN NO:95660
+All property transactions are subject to UAE laws and DLD regulations. 
                 </div>
                 <div>
                   <strong className="text-amber-300">AKR Financial & Real Estate LLC</strong><br />
-                  UAE Central Bank & Insurance Authority Licensed<br />
-                  License No: XXXXX
+                AKR FINANCIAL AND REAL ESTATE SERVICE LLC -Registered and Licensed by SHAMS ,SHARJAH -UAE
+License no:24286.01 
+Financial & Real Estate & Marketing advisory services are subject to UAE regulatory requirements and approvals where-ever applicable.
                 </div>
                 <p className="pt-3 border-t border-amber-700">
                   All services are provided in compliance with UAE regulations.
