@@ -231,6 +231,7 @@ export function ContactPage() {
               </CardHeader>
               <CardContent className="text-sm text-amber-800 space-y-3">
                 <div>
+<<<<<<< HEAD
                   <strong className="text-amber-900">AKR Realty LLC</strong><br />
                   Real Estate Regulatory Agency (RERA) Licensed<br />
                   License No: XXXXX
@@ -239,6 +240,19 @@ export function ContactPage() {
                   <strong className="text-amber-900">AKR Financial & Real Estate LLC</strong><br />
                   UAE Central Bank & Insurance Authority Licensed<br />
                   License No: XXXXX
+=======
+                  <strong className="text-amber-300">AKR Realty LLC</strong><br />
+               AKR Realty LLC is a RERA-Dubai Land Department -registered and licensed real estate brokerage in Dubai-UAE 
+ORN no:57750 & 
+BRN NO:95660
+All property transactions are subject to UAE laws and DLD regulations. 
+                </div>
+                <div>
+                  <strong className="text-amber-300">AKR Financial & Real Estate LLC</strong><br />
+                AKR FINANCIAL AND REAL ESTATE SERVICE LLC -Registered and Licensed by SHAMS ,SHARJAH -UAE
+License no:24286.01 
+Financial & Real Estate & Marketing advisory services are subject to UAE regulatory requirements and approvals where-ever applicable.
+>>>>>>> fd4b0eb5ad5862545f1508a8edb559354246123c
                 </div>
                 <p className="pt-3 border-t border-amber-300">
                   All services are provided in compliance with UAE regulations.
