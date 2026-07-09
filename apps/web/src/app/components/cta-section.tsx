@@ -58,7 +58,7 @@ export function CTASection() {
         <div key={item} className="flex items-center gap-5">
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-amber-600" />
-            <span className="text-xs text-amber-800 tracking-widest uppercase">{item}</span>
+            <span className="text-xs text-white tracking-widest uppercase">{item}</span>
           </div>
           {i < arr.length - 1 && (
             <div className="w-px h-4 bg-amber-700/30" />

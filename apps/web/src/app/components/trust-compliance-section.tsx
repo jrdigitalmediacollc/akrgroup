@@ -65,7 +65,7 @@ export function TrustComplianceSection() {
           <div>
             <div className="text-amber-600 text-xs tracking-widest uppercase mb-1.5">{r.authority}</div>
             <h3 className="text-lg font-bold text-amber-100 font-serif mb-2">{r.title}</h3>
-            <p className="text-xs text-amber-900 leading-relaxed mb-3">{r.desc}</p>
+            <p className="text-xs text-amber-200 leading-relaxed mb-3">{r.desc}</p>
             <span className="inline-block border border-amber-700/40 bg-amber-600/10 text-amber-600 text-xs tracking-widest px-3 py-1 uppercase">
               {r.pill}
             </span>
@@ -85,7 +85,7 @@ export function TrustComplianceSection() {
           </div>
           <div>
             <div className="text-sm font-bold text-amber-100 mb-1.5">{p.title}</div>
-            <div className="text-xs text-amber-900 leading-relaxed">{p.desc}</div>
+            <div className="text-xs text-amber-200 leading-relaxed">{p.desc}</div>
           </div>
         </div>
       ))}
@@ -96,7 +96,7 @@ export function TrustComplianceSection() {
       <svg className="w-5 h-5 fill-amber-600 shrink-0 mt-0.5" viewBox="0 0 24 24">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
       </svg>
-      <p className="text-xs text-amber-900 leading-relaxed">
+      <p className="text-xs text-amber-200 leading-relaxed">
         <span className="text-amber-600 font-semibold">Important Disclaimer: </span>
         All calculators and estimates provided are for advisory purposes only and do not constitute financial advice. Results are indicative and subject to approval by relevant financial institutions. Past performance does not guarantee future results. This platform does not facilitate direct transactions between clients and property listings.
       </p>

@@ -68,7 +68,7 @@ export function WhyAkrSection() {
             <span className="text-amber-600 text-sm font-bold">{a.title[0]}</span>
           </div>
           <h3 className="text-base font-bold text-amber-100 font-serif mb-3 leading-snug">{a.title}</h3>
-          <p className="text-xs text-amber-900 leading-relaxed">{a.desc}</p>
+          <p className="text-xs text-amber-200 leading-relaxed">{a.desc}</p>
         </div>
       ))}
     </div>

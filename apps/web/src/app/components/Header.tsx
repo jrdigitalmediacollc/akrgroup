@@ -54,11 +54,11 @@ export function SiteHeader() {
               <span className="hidden sm:inline">info@akrgroupuae.com</span>
             </a>
             <a
-              href="tel:+971123456789"
+              href="tel:+971558847365"
               className="flex items-center gap-2 hover:text-amber-100 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">+971 50 777 2751</span>
+              <span className="hidden sm:inline">+971 55 884 7365</span>
             </a>
           </div>
           <div className="flex items-center gap-4">

@@ -119,7 +119,7 @@ export function ServicesSection() {
       {/* Bottom CTA strip */}
       <div className="max-w-6xl mx-auto mt-0.5 border border-amber-700/25 bg-amber-500/5 px-10 py-7 flex items-center justify-between gap-6">
         <p className="font-serif text-lg text-amber-100 italic">
-          Ready to explore our services? <span className="text-amber-400">Let's build your strategy.</span>
+          Ready to explore our services? <span className="text-white">Let's build your strategy.</span>
         </p>
         <button className="bg-amber-600 hover:bg-amber-500 text-white text-xs tracking-widest uppercase px-8 py-3 transition-colors whitespace-nowrap">
           Book a Consultation

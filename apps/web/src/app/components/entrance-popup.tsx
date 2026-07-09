@@ -62,7 +62,7 @@ export function EntrancePopup() {
 </div>
 
           <div className="text-amber-400 text-xs tracking-[4px] uppercase mb-1">AKR Group UAE</div>
-          <div className="text-amber-900 text-xs tracking-[2px] uppercase mb-7">Financial & Real Estate Advisory</div>
+          <div className="text-amber-200 text-xs tracking-[2px] uppercase mb-7">Financial & Real Estate Advisory</div>
 
           {/* Divider */}
           <div className="flex items-center gap-3 mb-6">
@@ -74,7 +74,7 @@ export function EntrancePopup() {
           <h2 className="text-2xl font-bold text-amber-100 font-serif mb-2">
             Welcome to<br /><span className="text-amber-400">AKR Group UAE</span>
           </h2>
-          <p className="text-xs text-amber-900 leading-relaxed mb-8 max-w-xs mx-auto">
+          <p className="text-xs text-amber-200 leading-relaxed mb-8 max-w-xs mx-auto">
             Your trusted partner for premium real estate, financial, and investment advisory services across the UAE.
           </p>
 
@@ -83,7 +83,7 @@ export function EntrancePopup() {
             <div className="w-full h-0.5 bg-amber-700/20 mb-2">
               <div className="h-full bg-amber-600 transition-all duration-75" style={{ width: `${progress}%` }} />
             </div>
-            <div className="text-xs text-amber-900 tracking-widest uppercase mb-7">
+            <div className="text-xs text-amber-200 tracking-widest uppercase mb-7">
               {progress < 100 ? `${progress}%` : "Ready to Enter"}
             </div>
           </div>
@@ -98,7 +98,7 @@ export function EntrancePopup() {
             Enter Website
           </button>
 
-          <button onClick={handleEnter} className="text-xs text-amber-900 hover:text-amber-700 tracking-widest uppercase transition-colors">
+          <button onClick={handleEnter} className="text-xs text-amber-200 hover:text-amber-100 tracking-widest uppercase transition-colors">
             Skip Intro
           </button>
         </div>
@@ -108,7 +108,7 @@ export function EntrancePopup() {
           {["RERA", "DLD", "SHAMS", "25+ Years"].map((b) => (
             <div key={b} className="flex items-center gap-1.5">
               <div className="w-1 h-1 rounded-full bg-amber-600" />
-              <span className="text-xs text-amber-900 tracking-wider uppercase">{b}</span>
+              <span className="text-xs text-amber-200 tracking-wider uppercase">{b}</span>
             </div>
           ))}
         </div>

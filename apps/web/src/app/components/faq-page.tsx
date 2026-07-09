@@ -250,7 +250,7 @@ export default function FAQPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <a
-              href="tel:+971507772751"
+              href="tel:+971558847365"
               className="bg-[#3a1010] border border-amber-900 rounded-lg p-6 flex flex-col items-center gap-3 hover:border-amber-500 transition-colors group"
             >
               <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
@@ -258,7 +258,7 @@ export default function FAQPage() {
               </div>
               <div>
                 <p className="text-amber-100 font-medium text-sm">Call Us</p>
-                <p className="text-amber-500 text-xs mt-1">+971 50 777 2751</p>
+                <p className="text-amber-500 text-xs mt-1">+971 55 884 7365</p>
               </div>
             </a>
             <a

@@ -59,7 +59,7 @@ export function ProcessSection() {
             </span>
           </div>
           <h3 className="text-base font-bold text-amber-100 font-serif mb-2">{step.title}</h3>
-          <p className="text-xs text-amber-900 leading-relaxed">{step.desc}</p>
+          <p className="text-xs text-amber-200 leading-relaxed">{step.desc}</p>
         </div>
       ))}
     </div>
@@ -71,7 +71,7 @@ export function ProcessSection() {
         <p className="font-serif italic text-lg text-amber-100 leading-relaxed mb-4">
           "From first conversation to long-term partnership — we are with you at every stage."
         </p>
-        <p className="text-xs text-amber-900 leading-relaxed">
+        <p className="text-xs text-amber-200 leading-relaxed">
           Every step is designed to protect your interests, maximize outcomes, and build a lasting advisory relationship rooted in trust.
         </p>
       </div>
