@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/app/auth-context";
-import Image from "next/image"; 
+import Image from "next/image";
 
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -43,19 +43,19 @@ export function SiteHeader() {
   return (
     <header className="relative z-50">
       {/* Top bar */}
-      <div className="bg-[#4a1810] text-amber-200 py-2 px-4">
+      <div className="bg-velvet-dark text-gold-light py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <a
               href="mailto:info@akrgroupuae.com"
-              className="flex items-center gap-2 hover:text-amber-100 transition-colors"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
             >
               <Mail className="w-4 h-4" />
               <span className="hidden sm:inline">info@akrgroupuae.com</span>
             </a>
             <a
               href="tel:+971558847365"
-              className="flex items-center gap-2 hover:text-amber-100 transition-colors"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="hidden sm:inline">+971 55 884 7365</span>
@@ -67,14 +67,14 @@ export function SiteHeader() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-amber-200 hover:text-amber-100 hover:bg-[#5a2010] h-8"
+                  className="text-gold-light hover:text-gold hover:bg-velvet h-8"
                   onClick={openLoginModal}
                 >
                   Login
                 </Button>
                 <Button
                   size="sm"
-                  className="bg-amber-600 hover:bg-amber-700 text-white h-8"
+                  className="bg-velvet hover:bg-velvet-light text-white h-8"
                   onClick={onDashboardClick}
                 >
                   Dashboard
@@ -82,13 +82,13 @@ export function SiteHeader() {
               </>
             ) : (
               <>
-                <span className="text-amber-200 text-sm hidden sm:inline">
+                <span className="text-gold-light text-sm hidden sm:inline">
                   Welcome,{" "}
                   {userRole.charAt(0).toUpperCase() + userRole.slice(1)}
                 </span>
                 <Button
                   size="sm"
-                  className="bg-amber-600 hover:bg-amber-700 text-white h-8"
+                  className="bg-velvet hover:bg-velvet-light text-white h-8"
                   onClick={onDashboardClick}
                 >
                   Dashboard
@@ -96,7 +96,7 @@ export function SiteHeader() {
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="text-amber-200 hover:text-amber-100 hover:bg-[#5a2010] h-8"
+                  className="text-gold-light hover:text-gold hover:bg-velvet h-8"
                   onClick={onLogout}
                 >
                   <LogOut className="w-4 h-4 mr-1" />
@@ -109,7 +109,7 @@ export function SiteHeader() {
       </div>
 
       {/* Main header */}
-      <div className="bg-linear-to-b from-[#5a1810] to-[#6a1810] border-b-2 border-amber-600">
+      <div className="bg-linear-to-b from-velvet to-velvet-dark border-b-2 border-gold">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -122,10 +122,10 @@ export function SiteHeader() {
               className=" shadow-lg object-cover"
             />
               <div className="text-white">
-                <div className="text-2xl font-bold tracking-wider text-amber-100">
+                <div className="text-2xl font-bold tracking-wider text-pearl">
                   AKR GROUP UAE
                 </div>
-                <div className="text-xs text-amber-300 tracking-widest">
+                <div className="text-xs text-gold-light tracking-widest">
                   FINANCIAL &amp; REAL ESTATE INVESTMENT ARCHITECTS
                 </div>
               </div>
@@ -138,8 +138,8 @@ export function SiteHeader() {
                   key={item.id}
                   href={item.id}
                   className={`px-3 py-2 text-sm font-medium tracking-wide transition-all ${currentPage === item.id
-                    ? "text-amber-300 bg-[#4a1810]"
-                    : "text-amber-100 hover:text-amber-200 hover:bg-[#4a1810]"
+                    ? "text-gold-light bg-velvet-dark"
+                    : "text-pearl hover:text-gold-light hover:bg-velvet-dark"
                     }`}
                 >
                   {item.label}
@@ -149,7 +149,7 @@ export function SiteHeader() {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-amber-100 hover:text-amber-200"
+              className="lg:hidden text-pearl hover:text-gold-light"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
@@ -162,7 +162,7 @@ export function SiteHeader() {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <nav className="lg:hidden mt-4 pb-4 border-t border-amber-700 pt-4">
+            <nav className="lg:hidden mt-4 pb-4 border-t border-gold/40 pt-4">
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
                   <Link
@@ -170,8 +170,8 @@ export function SiteHeader() {
                     href={item.id}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-4 py-3 text-left text-sm font-medium tracking-wide transition-all ${currentPage === item.id
-                      ? "text-amber-300 bg-[#4a1810]"
-                      : "text-amber-100 hover:text-amber-200 hover:bg-[#4a1810]"
+                      ? "text-gold-light bg-velvet-dark"
+                      : "text-pearl hover:text-gold-light hover:bg-velvet-dark"
                       }`}
                   >
                     {item.label}

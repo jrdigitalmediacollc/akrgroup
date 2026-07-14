@@ -98,27 +98,27 @@ export default function TeamsPage() {
   if (sortBy === "Name Z-A") filtered = [...filtered].sort((a, b) => b.name.localeCompare(a.name));
 
   return (
-    <div className="min-h-screen bg-[#1a0808]">
+    <div className="min-h-screen bg-pearl">
       {/* Hero */}
       <div className="relative min-h-[340px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[#2a0808] opacity-90" />
+        <div className="absolute inset-0 bg-velvet-dark opacity-90" />
         <div className="absolute inset-0 opacity-10">
           <img src="/banner.jpg" alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10 text-center px-4 py-20">
-          <div className="inline-block border border-amber-600 text-amber-400 text-xs tracking-widest uppercase px-4 py-1.5 mb-6">
+          <div className="inline-block border border-gold text-gold-dark text-xs tracking-widest uppercase px-4 py-1.5 mb-6">
             Meet Our Team
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
             Your Trusted
           </h1>
-          <h1 className="text-4xl md:text-5xl font-bold text-amber-400 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gold-dark mb-6">
             Real Estate Experts
           </h1>
-          <p className="text-amber-300 text-base mb-3 italic">
+          <p className="text-gold-dark text-base mb-3 italic">
             Where expertise meets dedication & service meets excellence
           </p>
-          <p className="text-amber-200/70 text-sm max-w-lg mx-auto">
+          <p className="text-velvet/60 text-sm max-w-lg mx-auto">
             Connect with our experienced team of real estate professionals ready to help you find your dream property
           </p>
         </div>
@@ -126,14 +126,14 @@ export default function TeamsPage() {
 
       <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-amber-400 mb-8">
-          <Link href="/" className="hover:text-amber-300 transition-colors">Home</Link>
-          <span className="text-amber-700">/</span>
-          <span className="text-amber-200">Teams</span>
+        <div className="flex items-center gap-2 text-sm text-gold-dark mb-8">
+          <Link href="/" className="hover:text-gold-dark transition-colors">Home</Link>
+          <span className="text-velvet/50">/</span>
+          <span className="text-velvet/70">Teams</span>
         </div>
 
         {/* Department filter */}
-        <p className="text-amber-400 text-sm font-medium mb-3">Filter by Department</p>
+        <p className="text-gold-dark text-sm font-medium mb-3">Filter by Department</p>
         <div className="flex flex-wrap gap-2 mb-6">
           {departments.map((dept) => (
             <button
@@ -141,8 +141,8 @@ export default function TeamsPage() {
               onClick={() => setActiveDept(dept)}
               className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
                 activeDept === dept
-                  ? "bg-amber-500 text-[#1a0808]"
-                  : "bg-[#2a0808] border border-amber-800 text-amber-300 hover:border-amber-500"
+                  ? "bg-gold text-white"
+                  : "bg-pearl border border-gold/40 text-gold-dark hover:border-gold"
               }`}
             >
               {dept} ({deptCounts[dept] ?? 0})
@@ -153,31 +153,31 @@ export default function TeamsPage() {
         {/* Role / Language / Sort filters */}
         <div className="flex flex-wrap gap-4 mb-10 items-center">
           <div className="flex items-center gap-2">
-            <label className="text-amber-400 text-sm">Role</label>
+            <label className="text-gold-dark text-sm">Role</label>
             <select
               value={roleFilter}
               onChange={(e) => setRoleFilter(e.target.value)}
-              className="bg-[#2a0808] border border-amber-800 text-amber-200 text-xs rounded px-3 py-1.5 focus:outline-none focus:border-amber-500"
+              className="bg-pearl border border-gold/40 text-velvet/70 text-xs rounded px-3 py-1.5 focus:outline-none focus:border-gold"
             >
               {roles.map((r) => <option key={r}>{r}</option>)}
             </select>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-amber-400 text-sm">Language</label>
+            <label className="text-gold-dark text-sm">Language</label>
             <select
               value={langFilter}
               onChange={(e) => setLangFilter(e.target.value)}
-              className="bg-[#2a0808] border border-amber-800 text-amber-200 text-xs rounded px-3 py-1.5 focus:outline-none focus:border-amber-500"
+              className="bg-pearl border border-gold/40 text-velvet/70 text-xs rounded px-3 py-1.5 focus:outline-none focus:border-gold"
             >
               {languages.map((l) => <option key={l}>{l}</option>)}
             </select>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-amber-400 text-sm">Sort by</label>
+            <label className="text-gold-dark text-sm">Sort by</label>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-[#2a0808] border border-amber-800 text-amber-200 text-xs rounded px-3 py-1.5 focus:outline-none focus:border-amber-500"
+              className="bg-pearl border border-gold/40 text-velvet/70 text-xs rounded px-3 py-1.5 focus:outline-none focus:border-gold"
             >
               {sortOptions.map((s) => <option key={s}>{s}</option>)}
             </select>
@@ -186,16 +186,16 @@ export default function TeamsPage() {
 
         {/* Team Grid */}
         {filtered.length === 0 ? (
-          <p className="text-amber-400 text-center py-20">No team members found.</p>
+          <p className="text-gold-dark text-center py-20">No team members found.</p>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {filtered.map((member) => (
               <div
                 key={member.id}
-                className="bg-[#2a0808] border border-amber-900 rounded-lg overflow-hidden hover:border-amber-600 transition-colors group"
+                className="bg-pearl border border-gold/40 rounded-lg overflow-hidden hover:border-gold transition-colors group"
               >
                 {/* Photo */}
-                <div className="aspect-[3/4] bg-[#3a1010] flex items-center justify-center overflow-hidden">
+                <div className="aspect-[3/4] bg-pearl flex items-center justify-center overflow-hidden">
                   {member.image ? (
                     <img
                       src={member.image}
@@ -204,25 +204,25 @@ export default function TeamsPage() {
                     />
                   ) : (
                     <div className="flex flex-col items-center gap-2 opacity-30">
-                      <div className="w-16 h-16 rounded-full border-2 border-amber-600 flex items-center justify-center">
-                        <svg className="w-8 h-8 fill-amber-600" viewBox="0 0 24 24">
+                      <div className="w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center">
+                        <svg className="w-8 h-8 fill-gold-dark" viewBox="0 0 24 24">
                           <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
                         </svg>
                       </div>
-                      <span className="text-amber-700 text-xs">No Photo</span>
+                      <span className="text-velvet/50 text-xs">No Photo</span>
                     </div>
                   )}
                 </div>
 
                 {/* Info */}
                 <div className="p-3">
-                  <p className="text-amber-100 font-medium text-sm mb-0.5">{member.name}</p>
-                  <p className="text-amber-500 text-xs mb-2">{member.role}</p>
+                  <p className="text-velvet font-medium text-sm mb-0.5">{member.name}</p>
+                  <p className="text-gold-dark text-xs mb-2">{member.role}</p>
                   <div className="flex flex-wrap gap-1">
                     {member.languages.map((lang) => (
                       <span
                         key={lang}
-                        className="bg-amber-900/40 border border-amber-800 text-amber-300 text-[10px] px-2 py-0.5 rounded-full"
+                        className="bg-gold/10 border border-gold/40 text-gold-dark text-[10px] px-2 py-0.5 rounded-full"
                       >
                         {lang}
                       </span>

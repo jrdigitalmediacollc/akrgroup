@@ -24,65 +24,65 @@ export function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-[#faf6ee] to-[#f3ead9] py-12">
+    <div className="min-h-screen bg-pearl py-12">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-amber-900 mb-4">Contact Us</h1>
-          <p className="text-xl text-amber-800">Get in touch with our expert advisors</p>
+          <h1 className="text-5xl font-bold text-velvet mb-4">Contact Us</h1>
+          <p className="text-xl text-velvet/70">Get in touch with our expert advisors</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-6">
-            <Card className="bg-white border-2 border-amber-300 shadow-sm">
+            <Card className="bg-white border border-gold/40 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-amber-900">Get in Touch</CardTitle>
-                <CardDescription className="text-amber-700">
+                <CardTitle className="text-velvet">Get in Touch</CardTitle>
+                <CardDescription className="text-velvet/70">
                   We're here to help you with your investment journey
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-amber-900 font-semibold mb-1">Phone</h3>
-                    <p className="text-amber-700 text-sm">+971 55 884 7365</p>
-                    <p className="text-amber-600 text-xs mt-1">Available 24/7</p>
+                    <h3 className="text-velvet font-semibold mb-1">Phone</h3>
+                    <p className="text-velvet/70 text-sm">+971 55 884 7365</p>
+                    <p className="text-gold-dark text-xs mt-1">Available 24/7</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-amber-900 font-semibold mb-1">Email</h3>
-                    <p className="text-amber-700 text-sm">info@akrgroupuae.com</p>
-                    <p className="text-amber-600 text-xs mt-1">Response within 24 hours</p>
+                    <h3 className="text-velvet font-semibold mb-1">Email</h3>
+                    <p className="text-velvet/70 text-sm">info@akrgroupuae.com</p>
+                    <p className="text-gold-dark text-xs mt-1">Response within 24 hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center shrink-0">
                     <MessageSquare className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-amber-900 font-semibold mb-1">WhatsApp</h3>
-                    <p className="text-amber-700 text-sm">+971 50 777 2751</p>
-                    <p className="text-amber-600 text-xs mt-1">Instant messaging</p>
+                    <h3 className="text-velvet font-semibold mb-1">WhatsApp</h3>
+                    <p className="text-velvet/70 text-sm">+971 50 777 2751</p>
+                    <p className="text-gold-dark text-xs mt-1">Instant messaging</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-amber-900 font-semibold mb-1">Office</h3>
-                    <p className="text-amber-700 text-sm">
+                    <h3 className="text-velvet font-semibold mb-1">Office</h3>
+                    <p className="text-velvet/70 text-sm">
                       Downtown Dubai<br />
                       Dubai, United Arab Emirates
                     </p>
@@ -90,12 +90,12 @@ export function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center shrink-0">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-amber-900 font-semibold mb-1">Business Hours</h3>
-                    <p className="text-amber-700 text-sm">
+                    <h3 className="text-velvet font-semibold mb-1">Business Hours</h3>
+                    <p className="text-velvet/70 text-sm">
                       Sunday - Thursday<br />
                       9:00 AM - 6:00 PM GST
                     </p>
@@ -105,9 +105,9 @@ export function ContactPage() {
             </Card>
 
             {/* Quick Links */}
-            <Card className="bg-white border-2 border-amber-300 shadow-sm">
+            <Card className="bg-white border border-gold/40 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-amber-900">Quick Actions</CardTitle>
+                <CardTitle className="text-velvet">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white justify-start">
@@ -118,7 +118,7 @@ export function ContactPage() {
                   <Phone className="w-4 h-4 mr-2" />
                   Schedule Call
                 </Button>
-                <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white justify-start">
+                <Button className="w-full bg-velvet hover:bg-velvet-light text-white justify-start">
                   <Mail className="w-4 h-4 mr-2" />
                   Send Email
                 </Button>
@@ -128,10 +128,10 @@ export function ContactPage() {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="bg-white border-2 border-amber-300 shadow-sm">
+            <Card className="bg-white border border-gold/40 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-amber-900 text-2xl">Send us a Message</CardTitle>
-                <CardDescription className="text-amber-700">
+                <CardTitle className="text-velvet text-2xl">Send us a Message</CardTitle>
+                <CardDescription className="text-velvet/70">
                   Fill out the form below and our team will get back to you shortly
                 </CardDescription>
               </CardHeader>
@@ -139,49 +139,49 @@ export function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label className="text-amber-900">Full Name *</Label>
+                      <Label className="text-velvet">Full Name *</Label>
                       <Input
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Enter your name"
-                        className="bg-[#faf6ee] border-amber-300 text-amber-900 mt-2"
+                        className="bg-pearl border-gold/40 text-velvet mt-2"
                       />
                     </div>
 
                     <div>
-                      <Label className="text-amber-900">Email Address *</Label>
+                      <Label className="text-velvet">Email Address *</Label>
                       <Input
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="your@email.com"
-                        className="bg-[#faf6ee] border-amber-300 text-amber-900 mt-2"
+                        className="bg-pearl border-gold/40 text-velvet mt-2"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label className="text-amber-900">Phone Number *</Label>
+                      <Label className="text-velvet">Phone Number *</Label>
                       <Input
                         type="tel"
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+971 XX XXX XXXX"
-                        className="bg-[#faf6ee] border-amber-300 text-amber-900 mt-2"
+                        className="bg-pearl border-gold/40 text-velvet mt-2"
                       />
                     </div>
 
                     <div>
-                      <Label className="text-amber-900">Subject *</Label>
+                      <Label className="text-velvet">Subject *</Label>
                       <Select value={formData.subject} onValueChange={(value) => setFormData({ ...formData, subject: value })}>
-                        <SelectTrigger className="bg-[#faf6ee] border-amber-300 text-amber-900 mt-2">
+                        <SelectTrigger className="bg-pearl border-gold/40 text-velvet mt-2">
                           <SelectValue />
                         </SelectTrigger>
-                        <SelectContent className="bg-white border-amber-300">
+                        <SelectContent className="bg-white border-gold/40">
                           <SelectItem value="general">General Inquiry</SelectItem>
                           <SelectItem value="property">Property Investment</SelectItem>
                           <SelectItem value="financial">Financial Advisory</SelectItem>
@@ -194,20 +194,20 @@ export function ContactPage() {
                   </div>
 
                   <div>
-                    <Label className="text-amber-900">Message *</Label>
+                    <Label className="text-velvet">Message *</Label>
                     <Textarea
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your investment goals and how we can help..."
                       rows={6}
-                      className="bg-[#faf6ee] border-amber-300 text-amber-900 mt-2 resize-none"
+                      className="bg-pearl border-gold/40 text-velvet mt-2 resize-none"
                     />
                   </div>
 
-                  <div className="bg-amber-50 p-4 rounded border border-amber-300">
-                    <p className="text-xs text-amber-800">
-                      <strong className="text-amber-900">Privacy Notice:</strong> Your information is confidential and will only be used to respond to your inquiry.
+                  <div className="bg-gold/10 p-4 rounded border border-gold/40">
+                    <p className="text-xs text-velvet/80">
+                      <strong className="text-velvet">Privacy Notice:</strong> Your information is confidential and will only be used to respond to your inquiry.
                       We comply with UAE data protection regulations.
                     </p>
                   </div>
@@ -215,7 +215,7 @@ export function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full md:w-auto bg-amber-600 hover:bg-amber-700 text-white px-12"
+                    className="w-full md:w-auto bg-velvet hover:bg-velvet-light text-white px-12"
                   >
                     <Send className="w-4 h-4 mr-2" />
                     Send Message
@@ -225,36 +225,24 @@ export function ContactPage() {
             </Card>
 
             {/* License Information */}
-            <Card className="mt-8 bg-white border-2 border-amber-300 shadow-sm">
+            <Card className="mt-8 bg-white border border-gold/40 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-amber-800 text-lg">Licensed & Regulated</CardTitle>
+                <CardTitle className="text-velvet text-lg">Licensed & Regulated</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-amber-800 space-y-3">
+              <CardContent className="text-sm text-velvet/80 space-y-3">
                 <div>
-<<<<<<< HEAD
-                  <strong className="text-amber-900">AKR Realty LLC</strong><br />
-                  Real Estate Regulatory Agency (RERA) Licensed<br />
-                  License No: XXXXX
+                  <strong className="text-velvet">AKR Realty LLC</strong><br />
+                  AKR Realty LLC is a RERA-Dubai Land Department -registered and licensed real estate brokerage in Dubai-UAE
+                  ORN no:57750 &amp; BRN NO:95660
+                  All property transactions are subject to UAE laws and DLD regulations.
                 </div>
                 <div>
-                  <strong className="text-amber-900">AKR Financial & Real Estate LLC</strong><br />
-                  UAE Central Bank & Insurance Authority Licensed<br />
-                  License No: XXXXX
-=======
-                  <strong className="text-amber-300">AKR Realty LLC</strong><br />
-               AKR Realty LLC is a RERA-Dubai Land Department -registered and licensed real estate brokerage in Dubai-UAE 
-ORN no:57750 & 
-BRN NO:95660
-All property transactions are subject to UAE laws and DLD regulations. 
+                  <strong className="text-velvet">AKR Financial &amp; Real Estate LLC</strong><br />
+                  AKR FINANCIAL AND REAL ESTATE SERVICE LLC - Registered and Licensed by SHAMS, SHARJAH -UAE
+                  License no:24286.01
+                  Financial &amp; Real Estate &amp; Marketing advisory services are subject to UAE regulatory requirements and approvals where-ever applicable.
                 </div>
-                <div>
-                  <strong className="text-amber-300">AKR Financial & Real Estate LLC</strong><br />
-                AKR FINANCIAL AND REAL ESTATE SERVICE LLC -Registered and Licensed by SHAMS ,SHARJAH -UAE
-License no:24286.01 
-Financial & Real Estate & Marketing advisory services are subject to UAE regulatory requirements and approvals where-ever applicable.
->>>>>>> fd4b0eb5ad5862545f1508a8edb559354246123c
-                </div>
-                <p className="pt-3 border-t border-amber-300">
+                <p className="pt-3 border-t border-gold/40">
                   All services are provided in compliance with UAE regulations.
                   Advisory services do not constitute financial transactions or brokerage.
                 </p>

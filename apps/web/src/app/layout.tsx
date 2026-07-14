@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
         <Providers>
             <EntrancePopup />
-          <div className="min-h-screen flex flex-col bg-linear-to-b from-[#2a0808] to-[#1a0404]">
+          <div className="min-h-screen flex flex-col bg-pearl">
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <Footer />

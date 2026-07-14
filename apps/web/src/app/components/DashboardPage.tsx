@@ -52,27 +52,27 @@ function AdminDashboard() {
   const stats = [
     { label: 'Total Leads', value: leads.length || '—', icon: Users, color: 'text-green-500' },
     { label: 'Active Advisors', value: advisors.length || '—', icon: Users, color: 'text-blue-500' },
-    { label: 'Pending Listings', value: listings.length || '—', icon: Building2, color: 'text-amber-500' },
+    { label: 'Pending Listings', value: listings.length || '—', icon: Building2, color: 'text-gold-dark' },
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-[#2a0808] to-[#3a1010] py-12">
+    <div className="min-h-screen bg-pearl py-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-amber-100 mb-2">Admin Dashboard</h1>
-          <p className="text-amber-200">System overview and management</p>
+          <h1 className="text-4xl font-bold text-velvet mb-2">Admin Dashboard</h1>
+          <p className="text-velvet/70">System overview and management</p>
         </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {stats.map((stat, index) => (
-            <Card key={index} className="bg-[#4a1810] border-2 border-amber-700">
+            <Card key={index} className="bg-white border border-gold/30 shadow-sm">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <stat.icon className="w-8 h-8 text-amber-400" />
+                  <stat.icon className="w-8 h-8 text-gold-dark" />
                 </div>
-                <div className="text-3xl font-bold text-amber-100 mb-1">{loading ? '...' : stat.value}</div>
-                <div className="text-sm text-amber-300">{stat.label}</div>
+                <div className="text-3xl font-bold text-velvet mb-1">{loading ? '...' : stat.value}</div>
+                <div className="text-sm text-gold-dark">{stat.label}</div>
               </CardContent>
             </Card>
           ))}
@@ -80,46 +80,46 @@ function AdminDashboard() {
 
         {/* Main Content */}
         <Tabs defaultValue="leads" className="space-y-6">
-          <TabsList className="bg-[#4a1810]">
-            <TabsTrigger value="leads" className="data-[state=active]:bg-amber-600 data-[state=active]:text-white text-amber-100">
+          <TabsList className="bg-white">
+            <TabsTrigger value="leads" className="data-[state=active]:bg-velvet data-[state=active]:text-white text-velvet">
               Leads
             </TabsTrigger>
-            <TabsTrigger value="advisors" className="data-[state=active]:bg-amber-600 data-[state=active]:text-white text-amber-100">
+            <TabsTrigger value="advisors" className="data-[state=active]:bg-velvet data-[state=active]:text-white text-velvet">
               Advisors
             </TabsTrigger>
-            <TabsTrigger value="listings" className="data-[state=active]:bg-amber-600 data-[state=active]:text-white text-amber-100">
+            <TabsTrigger value="listings" className="data-[state=active]:bg-velvet data-[state=active]:text-white text-velvet">
               Listings
             </TabsTrigger>
-            <TabsTrigger value="analytics" className="data-[state=active]:bg-amber-600 data-[state=active]:text-white text-amber-100">
+            <TabsTrigger value="analytics" className="data-[state=active]:bg-velvet data-[state=active]:text-white text-velvet">
               Analytics
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="leads">
-            <Card className="bg-[#4a1810] border-2 border-amber-700">
+            <Card className="bg-white border border-gold/30 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-amber-100">Recent Leads</CardTitle>
-                <CardDescription className="text-amber-200">Latest calculator submissions and inquiries</CardDescription>
+                <CardTitle className="text-velvet">Recent Leads</CardTitle>
+                <CardDescription className="text-velvet/70">Latest calculator submissions and inquiries</CardDescription>
               </CardHeader>
               <CardContent>
                 <Table>
                   <TableHeader>
-                    <TableRow className="border-amber-700 hover:bg-transparent">
-                      <TableHead className="text-amber-300">Name</TableHead>
-                      <TableHead className="text-amber-300">Email</TableHead>
-                      <TableHead className="text-amber-300">Calculator</TableHead>
-                      <TableHead className="text-amber-300">Status</TableHead>
-                      <TableHead className="text-amber-300">Date</TableHead>
-                      <TableHead className="text-amber-300">Action</TableHead>
+                    <TableRow className="border-gold/30 hover:bg-transparent">
+                      <TableHead className="text-gold-dark">Name</TableHead>
+                      <TableHead className="text-gold-dark">Email</TableHead>
+                      <TableHead className="text-gold-dark">Calculator</TableHead>
+                      <TableHead className="text-gold-dark">Status</TableHead>
+                      <TableHead className="text-gold-dark">Date</TableHead>
+                      <TableHead className="text-gold-dark">Action</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {(loading ? [] : leads).map((lead: any) => (
-                      <TableRow key={lead.id} className="border-amber-700 hover:bg-[#3a1010]">
-                        <TableCell className="text-amber-100">{lead.name}</TableCell>
-                        <TableCell className="text-amber-200 text-sm">{lead.email}</TableCell>
+                      <TableRow key={lead.id} className="border-gold/30 hover:bg-pearl">
+                        <TableCell className="text-velvet">{lead.name}</TableCell>
+                        <TableCell className="text-velvet/70 text-sm">{lead.email}</TableCell>
                         <TableCell>
-                          <Badge className="bg-amber-700 text-amber-100">{lead.source}</Badge>
+                          <Badge className="bg-gold text-velvet">{lead.source}</Badge>
                         </TableCell>
                         <TableCell>
                           <Badge className={
@@ -131,9 +131,9 @@ function AdminDashboard() {
                             {lead.status}
                           </Badge>
                         </TableCell>
-                        <TableCell className="text-amber-200 text-sm">{new Date(lead.createdAt).toLocaleDateString()}</TableCell>
+                        <TableCell className="text-velvet/70 text-sm">{new Date(lead.createdAt).toLocaleDateString()}</TableCell>
                         <TableCell>
-                          <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white">
+                          <Button size="sm" className="bg-velvet hover:bg-velvet-light text-white">
                             Assign
                           </Button>
                         </TableCell>
@@ -141,7 +141,7 @@ function AdminDashboard() {
                     ))}
                     {!loading && leads.length === 0 && (
                       <TableRow>
-                        <TableCell colSpan={6} className="text-center text-amber-300 py-8">No leads found</TableCell>
+                        <TableCell colSpan={6} className="text-center text-gold-dark py-8">No leads found</TableCell>
                       </TableRow>
                     )}
                   </TableBody>
@@ -151,40 +151,40 @@ function AdminDashboard() {
           </TabsContent>
 
           <TabsContent value="advisors">
-            <Card className="bg-[#4a1810] border-2 border-amber-700">
+            <Card className="bg-white border border-gold/30 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-amber-100">Advisor Management</CardTitle>
-                <CardDescription className="text-amber-200">Monitor advisor performance and assignments</CardDescription>
+                <CardTitle className="text-velvet">Advisor Management</CardTitle>
+                <CardDescription className="text-velvet/70">Monitor advisor performance and assignments</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {(loading ? [] : advisors).map((advisor: any) => (
-                    <Card key={advisor.id} className="bg-[#3a1010] border border-amber-700">
+                    <Card key={advisor.id} className="bg-pearl border border-gold/30">
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between mb-4">
                           <div>
-                            <h3 className="text-lg font-semibold text-amber-100">{advisor.name}</h3>
+                            <h3 className="text-lg font-semibold text-velvet">{advisor.name}</h3>
                             <Badge className="mt-2 bg-green-700 text-white text-xs">
                               active
                             </Badge>
                           </div>
-                          <Users className="w-8 h-8 text-amber-400" />
+                          <Users className="w-8 h-8 text-gold-dark" />
                         </div>
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm">
-                            <span className="text-amber-300">Email</span>
-                            <span className="text-amber-100 font-semibold text-xs">{advisor.email}</span>
+                            <span className="text-gold-dark">Email</span>
+                            <span className="text-velvet font-semibold text-xs">{advisor.email}</span>
                           </div>
                           <div className="flex justify-between text-sm">
-                            <span className="text-amber-300">Phone</span>
-                            <span className="text-amber-100 font-semibold">{advisor.phone || '—'}</span>
+                            <span className="text-gold-dark">Phone</span>
+                            <span className="text-velvet font-semibold">{advisor.phone || '—'}</span>
                           </div>
                         </div>
                       </CardContent>
                     </Card>
                   ))}
                   {!loading && advisors.length === 0 && (
-                    <p className="text-amber-300 text-center col-span-3 py-8">No advisors found</p>
+                    <p className="text-gold-dark text-center col-span-3 py-8">No advisors found</p>
                   )}
                 </div>
               </CardContent>
@@ -192,18 +192,18 @@ function AdminDashboard() {
           </TabsContent>
 
           <TabsContent value="listings">
-            <Card className="bg-[#4a1810] border-2 border-amber-700">
+            <Card className="bg-white border border-gold/30 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-amber-100">Property Listings Approval</CardTitle>
-                <CardDescription className="text-amber-200">Review and approve new property submissions</CardDescription>
+                <CardTitle className="text-velvet">Property Listings Approval</CardTitle>
+                <CardDescription className="text-velvet/70">Review and approve new property submissions</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {(loading ? [] : listings).map((listing: any) => (
-                    <div key={listing.id} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700 flex items-center justify-between">
+                    <div key={listing.id} className="bg-pearl p-6 rounded-lg border border-gold/30 flex items-center justify-between">
                       <div>
-                        <h3 className="text-lg font-semibold text-amber-100 mb-1">{listing.title}</h3>
-                        <p className="text-sm text-amber-300 flex items-center gap-2">
+                        <h3 className="text-lg font-semibold text-velvet mb-1">{listing.title}</h3>
+                        <p className="text-sm text-gold-dark flex items-center gap-2">
                           <Building2 className="w-4 h-4" />
                           {listing.location} • AED {Number(listing.price).toLocaleString()}
                         </p>
@@ -230,7 +230,7 @@ function AdminDashboard() {
                     </div>
                   ))}
                   {!loading && listings.length === 0 && (
-                    <p className="text-amber-300 text-center py-8">No pending listings</p>
+                    <p className="text-gold-dark text-center py-8">No pending listings</p>
                   )}
                 </div>
               </CardContent>
@@ -239,9 +239,9 @@ function AdminDashboard() {
 
           <TabsContent value="analytics">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card className="bg-[#4a1810] border-2 border-amber-700">
+              <Card className="bg-white border border-gold/30 shadow-sm">
                 <CardHeader>
-                  <CardTitle className="text-amber-100">Calculator Usage</CardTitle>
+                  <CardTitle className="text-velvet">Calculator Usage</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -252,12 +252,12 @@ function AdminDashboard() {
                     ].map((calc, index) => (
                       <div key={index}>
                         <div className="flex justify-between mb-2">
-                          <span className="text-amber-200 text-sm">{calc.name}</span>
-                          <span className="text-amber-100 font-semibold">{calc.uses}</span>
+                          <span className="text-velvet/70 text-sm">{calc.name}</span>
+                          <span className="text-velvet font-semibold">{calc.uses}</span>
                         </div>
-                        <div className="w-full bg-[#2a0808] rounded-full h-2">
+                        <div className="w-full bg-gold/15 rounded-full h-2">
                           <div
-                            className="bg-amber-600 h-2 rounded-full"
+                            className="bg-gold h-2 rounded-full"
                             style={{ width: `${calc.percentage}%` }}
                           />
                         </div>
@@ -267,9 +267,9 @@ function AdminDashboard() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#4a1810] border-2 border-amber-700">
+              <Card className="bg-white border border-gold/30 shadow-sm">
                 <CardHeader>
-                  <CardTitle className="text-amber-100">Lead Sources</CardTitle>
+                  <CardTitle className="text-velvet">Lead Sources</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -280,12 +280,12 @@ function AdminDashboard() {
                     ].map((source, index) => (
                       <div key={index}>
                         <div className="flex justify-between mb-2">
-                          <span className="text-amber-200 text-sm">{source.source}</span>
-                          <span className="text-amber-100 font-semibold">{source.count}</span>
+                          <span className="text-velvet/70 text-sm">{source.source}</span>
+                          <span className="text-velvet font-semibold">{source.count}</span>
                         </div>
-                        <div className="w-full bg-[#2a0808] rounded-full h-2">
+                        <div className="w-full bg-gold/15 rounded-full h-2">
                           <div
-                            className="bg-amber-600 h-2 rounded-full"
+                            className="bg-gold h-2 rounded-full"
                             style={{ width: `${source.percentage}%` }}
                           />
                         </div>
@@ -321,11 +321,11 @@ function AdvisorDashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-[#2a0808] to-[#3a1010] py-12">
+    <div className="min-h-screen bg-pearl py-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-amber-100 mb-2">Advisor Dashboard</h1>
-          <p className="text-amber-200">Manage your leads and client relationships</p>
+          <h1 className="text-4xl font-bold text-velvet mb-2">Advisor Dashboard</h1>
+          <p className="text-velvet/70">Manage your leads and client relationships</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
@@ -335,29 +335,29 @@ function AdvisorDashboard() {
             { label: 'This Month', value: '—', icon: TrendingUp },
             { label: 'Conversion Rate', value: '—', icon: Activity },
           ].map((stat, index) => (
-            <Card key={index} className="bg-[#4a1810] border-2 border-amber-700">
+            <Card key={index} className="bg-white border border-gold/30 shadow-sm">
               <CardContent className="p-6">
-                <stat.icon className="w-8 h-8 text-amber-400 mb-3" />
-                <div className="text-3xl font-bold text-amber-100 mb-1">{stat.value}</div>
-                <div className="text-sm text-amber-300">{stat.label}</div>
+                <stat.icon className="w-8 h-8 text-gold-dark mb-3" />
+                <div className="text-3xl font-bold text-velvet mb-1">{stat.value}</div>
+                <div className="text-sm text-gold-dark">{stat.label}</div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <Card className="bg-[#4a1810] border-2 border-amber-700 mb-8">
+        <Card className="bg-white border border-gold/30 shadow-sm mb-8">
           <CardHeader>
-            <CardTitle className="text-amber-100">Assigned Leads</CardTitle>
-            <CardDescription className="text-amber-200">Your active client prospects</CardDescription>
+            <CardTitle className="text-velvet">Assigned Leads</CardTitle>
+            <CardDescription className="text-velvet/70">Your active client prospects</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {(loading ? [] : leads).map((lead: any) => (
-                <div key={lead.id} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700">
+                <div key={lead.id} className="bg-pearl p-6 rounded-lg border border-gold/30">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-lg font-semibold text-amber-100 mb-1">{lead.name}</h3>
-                      <div className="flex items-center gap-3 text-sm text-amber-300">
+                      <h3 className="text-lg font-semibold text-velvet mb-1">{lead.name}</h3>
+                      <div className="flex items-center gap-3 text-sm text-gold-dark">
                         <span className="flex items-center gap-1">
                           <Calculator className="w-4 h-4" />
                           {lead.source}
@@ -375,15 +375,15 @@ function AdvisorDashboard() {
                     </Badge>
                   </div>
                   <div className="flex gap-2 flex-wrap">
-                    <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white">
+                    <Button size="sm" className="bg-velvet hover:bg-velvet-light text-white">
                       <Phone className="w-4 h-4 mr-1" />
                       Call
                     </Button>
-                    <Button size="sm" variant="outline" className="border-amber-700 text-amber-100 hover:bg-amber-700">
+                    <Button size="sm" variant="outline" className="border-gold/30 text-velvet hover:bg-gold-dark">
                       <Mail className="w-4 h-4 mr-1" />
                       Email
                     </Button>
-                    <Button size="sm" variant="outline" className="border-amber-700 text-amber-100 hover:bg-amber-700">
+                    <Button size="sm" variant="outline" className="border-gold/30 text-velvet hover:bg-gold-dark">
                       <MessageSquare className="w-4 h-4 mr-1" />
                       WhatsApp
                     </Button>
@@ -391,7 +391,7 @@ function AdvisorDashboard() {
                 </div>
               ))}
               {!loading && leads.length === 0 && (
-                <p className="text-amber-300 text-center py-8">No leads assigned yet</p>
+                <p className="text-gold-dark text-center py-8">No leads assigned yet</p>
               )}
             </div>
           </CardContent>
@@ -420,77 +420,77 @@ function CustomerDashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-[#2a0808] to-[#3a1010] py-12">
+    <div className="min-h-screen bg-pearl py-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-amber-100 mb-2">My Dashboard</h1>
-          <p className="text-amber-200">Your investment journey with AKR Group</p>
+          <h1 className="text-4xl font-bold text-velvet mb-2">My Dashboard</h1>
+          <p className="text-velvet/70">Your investment journey with AKR Group</p>
         </div>
 
         {/* Quick Actions */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Card className="bg-[#4a1810] border-2 border-amber-700 hover:border-amber-500 transition-all cursor-pointer">
+          <Card className="bg-white border border-gold/30 hover:border-gold shadow-sm transition-all cursor-pointer">
             <CardContent className="p-6 text-center">
-              <Calculator className="w-12 h-12 text-amber-400 mx-auto mb-3" />
-              <h3 className="text-xl font-semibold text-amber-100 mb-2">Use Calculators</h3>
-              <p className="text-sm text-amber-200">Get instant estimates</p>
+              <Calculator className="w-12 h-12 text-gold-dark mx-auto mb-3" />
+              <h3 className="text-xl font-semibold text-velvet mb-2">Use Calculators</h3>
+              <p className="text-sm text-velvet/70">Get instant estimates</p>
             </CardContent>
           </Card>
 
-          <Card className="bg-[#4a1810] border-2 border-amber-700 hover:border-amber-500 transition-all cursor-pointer">
+          <Card className="bg-white border border-gold/30 hover:border-gold shadow-sm transition-all cursor-pointer">
             <CardContent className="p-6 text-center">
-              <Phone className="w-12 h-12 text-amber-400 mx-auto mb-3" />
-              <h3 className="text-xl font-semibold text-amber-100 mb-2">Contact Advisor</h3>
-              <p className="text-sm text-amber-200">Schedule consultation</p>
+              <Phone className="w-12 h-12 text-gold-dark mx-auto mb-3" />
+              <h3 className="text-xl font-semibold text-velvet mb-2">Contact Advisor</h3>
+              <p className="text-sm text-velvet/70">Schedule consultation</p>
             </CardContent>
           </Card>
 
-          <Card className="bg-[#4a1810] border-2 border-amber-700 hover:border-amber-500 transition-all cursor-pointer">
+          <Card className="bg-white border border-gold/30 hover:border-gold shadow-sm transition-all cursor-pointer">
             <CardContent className="p-6 text-center">
-              <Building2 className="w-12 h-12 text-amber-400 mx-auto mb-3" />
-              <h3 className="text-xl font-semibold text-amber-100 mb-2">Browse Properties</h3>
-              <p className="text-sm text-amber-200">View exclusive listings</p>
+              <Building2 className="w-12 h-12 text-gold-dark mx-auto mb-3" />
+              <h3 className="text-xl font-semibold text-velvet mb-2">Browse Properties</h3>
+              <p className="text-sm text-velvet/70">View exclusive listings</p>
             </CardContent>
           </Card>
         </div>
 
         {/* Saved Reports */}
-        <Card className="bg-[#4a1810] border-2 border-amber-700 mb-8">
+        <Card className="bg-white border border-gold/30 shadow-sm mb-8">
           <CardHeader>
-            <CardTitle className="text-amber-100">My Calculator Reports</CardTitle>
-            <CardDescription className="text-amber-200">Your saved calculations and reports</CardDescription>
+            <CardTitle className="text-velvet">My Calculator Reports</CardTitle>
+            <CardDescription className="text-velvet/70">Your saved calculations and reports</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {(loading ? [] : results).map((result: any) => (
-                <div key={result.id} className="bg-[#3a1010] p-6 rounded-lg border border-amber-700 flex items-center justify-between">
+                <div key={result.id} className="bg-pearl p-6 rounded-lg border border-gold/30 flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-amber-100 mb-1">
+                    <h3 className="text-lg font-semibold text-velvet mb-1">
                       {result.type === 'MORTGAGE' ? 'Mortgage Calculator' :
                         result.type === 'ROI' ? 'ROI / XIRR Calculator' :
                           'Mutual Fund Calculator'}
                     </h3>
-                    <div className="flex items-center gap-4 text-sm text-amber-300">
+                    <div className="flex items-center gap-4 text-sm text-gold-dark">
                       <span>Ref: {result.referenceId.slice(0, 8)}...</span>
                       <span>•</span>
                       <span>{new Date(result.createdAt).toLocaleDateString()}</span>
                     </div>
                     <div className="mt-2">
-                      <Badge className="bg-amber-600 text-white">
+                      <Badge className="bg-gold text-white">
                         {result.type}
                       </Badge>
                     </div>
                   </div>
                   <div className="flex gap-2">
                     {result.pdfUrl && (
-                      <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white" asChild>
+                      <Button size="sm" className="bg-velvet hover:bg-velvet-light text-white" asChild>
                         <a href={`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/calculators/${result.id}/pdf`} download>
                           <Download className="w-4 h-4 mr-1" />
                           PDF
                         </a>
                       </Button>
                     )}
-                    <Button size="sm" variant="outline" className="border-amber-700 text-amber-100 hover:bg-amber-700">
+                    <Button size="sm" variant="outline" className="border-gold/30 text-velvet hover:bg-gold-dark">
                       <Phone className="w-4 h-4 mr-1" />
                       Discuss
                     </Button>
@@ -498,7 +498,7 @@ function CustomerDashboard() {
                 </div>
               ))}
               {!loading && results.length === 0 && (
-                <p className="text-amber-300 text-center py-8">
+                <p className="text-gold-dark text-center py-8">
                   No calculator results yet. Visit the calculators page to get started.
                 </p>
               )}
@@ -507,11 +507,11 @@ function CustomerDashboard() {
         </Card>
 
         {/* Contact Section */}
-        <Card className="bg-linear-to-r from-amber-800 to-amber-600 border-none">
+        <Card className="bg-linear-to-r from-velvet to-velvet-light border-none">
           <CardContent className="py-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-3">Need Expert Guidance?</h2>
             <p className="text-white/90 mb-6">Our advisors are here to help you make informed investment decisions</p>
-            <Button size="lg" className="bg-[#3a1010] hover:bg-[#2a0808] text-amber-100">
+            <Button size="lg" className="bg-pearl hover:bg-pearl text-velvet">
               <Phone className="w-5 h-5 mr-2" />
               Schedule Consultation
             </Button>

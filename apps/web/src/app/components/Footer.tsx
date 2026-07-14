@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-linear-to-b from-[#3a1010] to-[#2a0808] text-amber-100 border-t-2 border-amber-600">
+    <footer className="bg-linear-to-b from-velvet to-velvet-dark text-pearl border-t-2 border-gold">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -25,11 +25,11 @@ export function Footer() {
                 height={130}
                 className="object-cover"
               />
-              <div className="font-bold text-lg text-amber-100">
+              <div className="font-bold text-lg text-pearl">
                 AKR GROUP UAE
               </div>
             </div>
-            <p className="text-sm text-amber-200 leading-relaxed">
+            <p className="text-sm text-white/70 leading-relaxed">
               Your trusted partner in financial and real estate advisory
               services in the UAE.
             </p>
@@ -37,25 +37,25 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-amber-300 mb-4 text-lg">Quick Links</h3>
+            <h3 className="font-bold text-gold-light mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/properties" className="text-sm hover:text-amber-300 transition-colors">
+                <Link href="/properties" className="text-sm text-white/70 hover:text-gold-light transition-colors">
                   Property Listings
                 </Link>
               </li>
               <li>
-                <Link href="/calculators" className="text-sm hover:text-amber-300 transition-colors">
+                <Link href="/calculators" className="text-sm text-white/70 hover:text-gold-light transition-colors">
                   Financial Services
                 </Link>
               </li>
               <li>
-                <Link href="/calculators" className="text-sm hover:text-amber-300 transition-colors">
+                <Link href="/calculators" className="text-sm text-white/70 hover:text-gold-light transition-colors">
                   Calculators
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm hover:text-amber-300 transition-colors">
+                <Link href="/about" className="text-sm text-white/70 hover:text-gold-light transition-colors">
                   About Us
                 </Link>
               </li>
@@ -64,18 +64,18 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-amber-300 mb-4 text-lg">Contact Us</h3>
+            <h3 className="font-bold text-gold-light mb-4 text-lg">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-sm">
-                <Phone className="w-4 h-4 mt-1 text-amber-400" />
+              <li className="flex items-start gap-2 text-sm text-white/70">
+                <Phone className="w-4 h-4 mt-1 text-gold" />
                 <span>+971 55 884 7365</span>
               </li>
-              <li className="flex items-start gap-2 text-sm">
-                <Mail className="w-4 h-4 mt-1 text-amber-400" />
+              <li className="flex items-start gap-2 text-sm text-white/70">
+                <Mail className="w-4 h-4 mt-1 text-gold" />
                 <span>info@akrgroupuae.com</span>
               </li>
-              <li className="flex items-start gap-2 text-sm">
-                <MapPin className="w-4 h-4 mt-1 text-amber-400" />
+              <li className="flex items-start gap-2 text-sm text-white/70">
+                <MapPin className="w-4 h-4 mt-1 text-gold" />
                 <span>Dubai, United Arab Emirates</span>
               </li>
             </ul>
@@ -83,18 +83,18 @@ export function Footer() {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-bold text-amber-300 mb-4 text-lg">Follow Us</h3>
+            <h3 className="font-bold text-gold-light mb-4 text-lg">Follow Us</h3>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
+              <a href="#" className="w-10 h-10 bg-gold hover:bg-gold-light text-velvet rounded-full flex items-center justify-center transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
+              <a href="#" className="w-10 h-10 bg-gold hover:bg-gold-light text-velvet rounded-full flex items-center justify-center transition-all">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
+              <a href="#" className="w-10 h-10 bg-gold hover:bg-gold-light text-velvet rounded-full flex items-center justify-center transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition-all">
+              <a href="#" className="w-10 h-10 bg-gold hover:bg-gold-light text-velvet rounded-full flex items-center justify-center transition-all">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -102,23 +102,23 @@ export function Footer() {
         </div>
 
         {/* Compliance Disclaimers */}
-        <div className="mt-12 pt-8 border-t border-amber-800">
-          <div className="bg-[#4a1810] p-6 rounded-lg space-y-4 text-xs text-amber-200">
+        <div className="mt-12 pt-8 border-t border-gold/30">
+          <div className="bg-velvet-dark p-6 rounded-lg space-y-4 text-xs text-white/70">
             <div>
-              <strong className="text-amber-300">AKR Realty LLC</strong> -
-             AKR Realty LLC is a RERA-Dubai Land Department -registered and licensed real estate brokerage in Dubai-UAE 
-ORN no:57750 & 
+              <strong className="text-gold-light">AKR Realty LLC</strong> -
+             AKR Realty LLC is a RERA-Dubai Land Department -registered and licensed real estate brokerage in Dubai-UAE
+ORN no:57750 &
 BRN NO:95660
 All property transactions are subject to UAE laws and DLD regulations.
             </div>
             <div>
-              <strong className="text-amber-300">AKR Financial &amp; Real Estate LLC</strong>{" "}
+              <strong className="text-gold-light">AKR Financial &amp; Real Estate LLC</strong>{" "}
               Registered and Licensed by SHAMS ,SHARJAH -UAE
-License no:24286.01 
+License no:24286.01
 Financial & Real Estate & Marketing advisory services are subject to UAE regulatory requirements and approvals where-ever applicable.
             </div>
             <div>
-              <strong className="text-amber-300">Important Disclaimer:</strong>{" "}
+              <strong className="text-gold-light">Important Disclaimer:</strong>{" "}
               All calculators and estimates provided are for advisory purposes
               only and do not constitute financial advice. Results are
               indicative and subject to approval by relevant financial
@@ -130,7 +130,7 @@ Financial & Real Estate & Marketing advisory services are subject to UAE regulat
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-amber-800 text-center text-sm text-amber-300">
+        <div className="mt-8 pt-8 border-t border-gold/30 text-center text-sm text-gold-light">
           <p>&copy; {new Date().getFullYear()} AKR Group UAE. All rights reserved.</p>
         </div>
       </div>

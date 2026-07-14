@@ -118,36 +118,36 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1a0808]">
+    <div className="min-h-screen bg-pearl">
       {/* Hero */}
-      <div className="bg-gradient-to-b from-[#2a0808] to-[#1a0808] py-20 text-center px-4">
-        <p className="text-amber-400 text-sm tracking-widest uppercase mb-3">Support</p>
+      <div className="bg-linear-to-b from-velvet to-velvet-dark py-20 text-center px-4">
+        <p className="text-gold-light text-sm tracking-widest uppercase mb-3">Support</p>
         <h1 className="text-5xl font-bold text-white mb-2">
           Frequently Asked
         </h1>
-        <h1 className="text-5xl font-bold text-amber-400 mb-6">Questions</h1>
-        <p className="text-amber-200 text-lg max-w-xl mx-auto">
+        <h1 className="text-5xl font-bold text-gold-light mb-6">Questions</h1>
+        <p className="text-white/70 text-lg max-w-xl mx-auto">
           Everything you need to know about investing in real estate with AKR Group UAE
         </p>
       </div>
 
       {/* Breadcrumb */}
-      <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-2 text-sm text-amber-400">
-        <Link href="/" className="hover:text-amber-300 transition-colors">Home</Link>
-        <span className="text-amber-700">/</span>
-        <span className="text-amber-200">FAQ</span>
+      <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-2 text-sm text-gold">
+        <Link href="/" className="hover:text-gold-dark transition-colors">Home</Link>
+        <span className="text-gold/50">/</span>
+        <span className="text-velvet">FAQ</span>
       </div>
 
       <div className="max-w-3xl mx-auto px-4 pb-20">
         {/* Search */}
         <div className="relative mb-6">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-amber-500" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gold" />
           <input
             type="text"
             placeholder="Search FAQs..."
             value={search}
             onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-            className="w-full bg-[#2a0808] border border-amber-800 text-amber-100 placeholder-amber-700 rounded-lg pl-11 pr-4 py-3 focus:outline-none focus:border-amber-500 transition-colors"
+            className="w-full bg-white border border-gold/40 text-velvet placeholder-velvet/40 rounded-lg pl-11 pr-4 py-3 focus:outline-none focus:border-gold transition-colors"
           />
         </div>
 
@@ -159,8 +159,8 @@ export default function FAQPage() {
               onClick={() => { setActiveCategory(cat); setPage(1); }}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 activeCategory === cat
-                  ? "bg-amber-500 text-[#1a0808]"
-                  : "bg-[#2a0808] border border-amber-800 text-amber-300 hover:border-amber-500"
+                  ? "bg-gold text-white"
+                  : "bg-white border border-gold/40 text-velvet hover:border-gold"
               }`}
             >
               {cat} ({counts[cat]})
@@ -171,34 +171,34 @@ export default function FAQPage() {
         {/* FAQ Items */}
         <div className="space-y-3 mb-8">
           {paginated.length === 0 && (
-            <p className="text-amber-400 text-center py-12">No FAQs found matching your search.</p>
+            <p className="text-gold text-center py-12">No FAQs found matching your search.</p>
           )}
           {paginated.map((faq) => (
             <div
               key={faq.id}
-              className="bg-[#2a0808] border border-amber-900 rounded-lg overflow-hidden"
+              className="bg-white border border-gold/30 rounded-lg overflow-hidden"
             >
               <button
                 onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
                 className="w-full text-left px-5 py-4 flex items-start justify-between gap-4"
               >
                 <div>
-                  <span className="inline-block bg-amber-500 text-[#1a0808] text-xs font-semibold px-2 py-0.5 rounded mb-2">
+                  <span className="inline-block bg-gold text-white text-xs font-semibold px-2 py-0.5 rounded mb-2">
                     {faq.category}
                   </span>
-                  <p className="text-amber-100 font-medium text-sm leading-snug">{faq.question}</p>
+                  <p className="text-velvet font-medium text-sm leading-snug">{faq.question}</p>
                 </div>
                 <div className="flex-shrink-0 mt-1">
                   {openId === faq.id ? (
-                    <ChevronUp className="w-5 h-5 text-amber-400" />
+                    <ChevronUp className="w-5 h-5 text-gold-dark" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-amber-600" />
+                    <ChevronDown className="w-5 h-5 text-gold" />
                   )}
                 </div>
               </button>
               {openId === faq.id && (
-                <div className="px-5 pb-5 border-t border-amber-900 pt-4">
-                  <p className="text-amber-200 text-sm leading-relaxed">{faq.answer}</p>
+                <div className="px-5 pb-5 border-t border-gold/30 pt-4">
+                  <p className="text-velvet/70 text-sm leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
@@ -211,7 +211,7 @@ export default function FAQPage() {
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={page === 1}
-              className="px-4 py-2 rounded-lg border border-amber-800 text-amber-300 text-sm disabled:opacity-30 hover:border-amber-500 transition-colors"
+              className="px-4 py-2 rounded-lg border border-gold/40 text-velvet text-sm disabled:opacity-30 hover:border-gold transition-colors"
             >
               ← Previous
             </button>
@@ -221,8 +221,8 @@ export default function FAQPage() {
                 onClick={() => setPage(p)}
                 className={`w-9 h-9 rounded-lg text-sm font-medium transition-all ${
                   page === p
-                    ? "bg-amber-500 text-[#1a0808]"
-                    : "border border-amber-800 text-amber-300 hover:border-amber-500"
+                    ? "bg-gold text-white"
+                    : "border border-gold/40 text-velvet hover:border-gold"
                 }`}
               >
                 {p}
@@ -231,60 +231,60 @@ export default function FAQPage() {
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               disabled={page === totalPages}
-              className="px-4 py-2 rounded-lg border border-amber-800 text-amber-300 text-sm disabled:opacity-30 hover:border-amber-500 transition-colors"
+              className="px-4 py-2 rounded-lg border border-gold/40 text-velvet text-sm disabled:opacity-30 hover:border-gold transition-colors"
             >
               Next →
             </button>
           </div>
         )}
-        <p className="text-center text-amber-700 text-xs mb-16">
+        <p className="text-center text-velvet/50 text-xs mb-16">
           Showing {Math.min((page - 1) * ITEMS_PER_PAGE + 1, filtered.length)}–
           {Math.min(page * ITEMS_PER_PAGE, filtered.length)} of {filtered.length} FAQs
         </p>
 
         {/* Still have questions */}
-        <div className="bg-[#2a0808] border border-amber-900 rounded-xl p-8 text-center">
-          <h2 className="text-white text-2xl font-bold mb-2">Still have questions?</h2>
-          <p className="text-amber-300 text-sm mb-8">
+        <div className="bg-white border border-gold/30 rounded-xl p-8 text-center">
+          <h2 className="text-velvet text-2xl font-bold mb-2">Still have questions?</h2>
+          <p className="text-velvet/70 text-sm mb-8">
             Can't find the answer you're looking for? Our team is here to help.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <a
               href="tel:+971558847365"
-              className="bg-[#3a1010] border border-amber-900 rounded-lg p-6 flex flex-col items-center gap-3 hover:border-amber-500 transition-colors group"
+              className="bg-white border border-gold/30 rounded-lg p-6 flex flex-col items-center gap-3 hover:border-gold transition-colors group"
             >
-              <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <Phone className="w-5 h-5 text-amber-400" />
+              <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
+                <Phone className="w-5 h-5 text-gold-dark" />
               </div>
               <div>
-                <p className="text-amber-100 font-medium text-sm">Call Us</p>
-                <p className="text-amber-500 text-xs mt-1">+971 55 884 7365</p>
+                <p className="text-velvet font-medium text-sm">Call Us</p>
+                <p className="text-gold-dark text-xs mt-1">+971 55 884 7365</p>
               </div>
             </a>
             <a
               href="mailto:info@akrgroupuae.com"
-              className="bg-[#3a1010] border border-amber-900 rounded-lg p-6 flex flex-col items-center gap-3 hover:border-amber-500 transition-colors group"
+              className="bg-white border border-gold/30 rounded-lg p-6 flex flex-col items-center gap-3 hover:border-gold transition-colors group"
             >
-              <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <Mail className="w-5 h-5 text-amber-400" />
+              <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
+                <Mail className="w-5 h-5 text-gold-dark" />
               </div>
               <div>
-                <p className="text-amber-100 font-medium text-sm">Email Us</p>
-                <p className="text-amber-500 text-xs mt-1">Get support</p>
+                <p className="text-velvet font-medium text-sm">Email Us</p>
+                <p className="text-gold-dark text-xs mt-1">Get support</p>
               </div>
             </a>
             <a
               href="https://wa.me/971507772751"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#3a1010] border border-amber-900 rounded-lg p-6 flex flex-col items-center gap-3 hover:border-amber-500 transition-colors group"
+              className="bg-white border border-gold/30 rounded-lg p-6 flex flex-col items-center gap-3 hover:border-gold transition-colors group"
             >
-              <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-amber-400" />
+              <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 text-green-600" />
               </div>
               <div>
-                <p className="text-amber-100 font-medium text-sm">Chat with us</p>
-                <p className="text-amber-500 text-xs mt-1">WhatsApp support</p>
+                <p className="text-velvet font-medium text-sm">Chat with us</p>
+                <p className="text-gold-dark text-xs mt-1">WhatsApp support</p>
               </div>
             </a>
           </div>

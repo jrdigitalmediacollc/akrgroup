@@ -41,19 +41,19 @@ export function HomePage() {
         Financial &<br />
         Investment Architects
       </p>
-      <p className="text-amber-300 text-lg mb-8 italic">
+      <p className="text-gold-dark text-lg mb-8 italic">
         Forward Together. For Life. For Legacy
       </p>
       <div className="flex flex-wrap gap-4">
         <button
           onClick={() => router.push('/contact')}
-          className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
+          className="border-2 border-gold text-white hover:bg-gold hover:border-gold px-8 py-3 text-sm font-semibold tracking-wide transition-all"
         >
           Explore Opportunities
         </button>
         <button
           onClick={() => router.push('/contact')}
-          className="border-2 border-amber-500 text-white hover:bg-amber-600 hover:border-amber-600 px-8 py-3 text-sm font-semibold tracking-wide transition-all"
+          className="border-2 border-gold text-white hover:bg-gold hover:border-gold px-8 py-3 text-sm font-semibold tracking-wide transition-all"
         >
           Speak To an Advisor
         </button>
@@ -72,17 +72,17 @@ export function HomePage() {
 
     {/* Title */}
     <div className="flex items-center justify-center gap-4 mb-10">
-      <div className="flex-1 max-w-[120px] h-0.5" style={{ background: "linear-gradient(to right, transparent, #8B3A0F)" }} />
+      <div className="flex-1 max-w-[120px] h-0.5" style={{ background: "linear-gradient(to right, transparent, #7A0F16)" }} />
       <div
-        className="px-12 py-2.5 border-2 border-amber-800"
+        className="px-12 py-2.5 border-2 border-gold/40"
         style={{
-          background: "linear-gradient(180deg, #8B2A0A 0%, #6B1A06 100%)",
+          background: "linear-gradient(180deg, #7A0F16 0%, #5C0B10 100%)",
           clipPath: "polygon(14px 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0% 50%)"
         }}
       >
-        <span className="text-amber-300 font-bold tracking-[3px] uppercase text-lg font-serif">Our Services</span>
+        <span className="text-gold-dark font-bold tracking-[3px] uppercase text-lg font-serif">Our Services</span>
       </div>
-      <div className="flex-1 max-w-[120px] h-0.5" style={{ background: "linear-gradient(to left, transparent, #8B3A0F)" }} />
+      <div className="flex-1 max-w-[120px] h-0.5" style={{ background: "linear-gradient(to left, transparent, #7A0F16)" }} />
     </div>
 
     {/* Cards */}
@@ -92,31 +92,31 @@ export function HomePage() {
         { title: "Investment Advisory", desc: "Strategic investment solutions", icon: "M2 20h20v2H2v-2zm2-8h2v7H4v-7zm5 0h2v7H9v-7zm4 0h2v7h-2v-7zm5 0h2v7h-2v-7zM12 1L2 6v2h20V6L12 1z" },
         { title: "Real Estate Management", desc: "Comprehensive property management", icon: "M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2zM9 22V12h6v10" },
       ].map((s) => (
-        <div key={s.title} className="border-2 border-amber-600 p-[3px]"
-          style={{ background: "linear-gradient(170deg, #8B1A08 0%, #5B0E05 100%)" }}>
+        <div key={s.title} className="border-2 border-gold p-[3px]"
+          style={{ background: "linear-gradient(170deg, #7A0F16 0%, #5C0B10 100%)" }}>
           {/* Middle border layer */}
-          <div className="border border-amber-600/50 p-[3px] h-full">
+          <div className="border border-gold/50 p-[3px] h-full">
             {/* Inner border layer with corner ornaments */}
-            <div className="border border-amber-600/25 p-7 text-center flex flex-col items-center h-full relative">
+            <div className="border border-gold/25 p-7 text-center flex flex-col items-center h-full relative">
               {/* Corner ornaments */}
-              <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t border-l border-amber-500" />
-              <div className="absolute top-1.5 right-1.5 w-3 h-3 border-t border-r border-amber-500" />
-              <div className="absolute bottom-1.5 left-1.5 w-3 h-3 border-b border-l border-amber-500" />
-              <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b border-r border-amber-500" />
+              <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t border-l border-gold" />
+              <div className="absolute top-1.5 right-1.5 w-3 h-3 border-t border-r border-gold" />
+              <div className="absolute bottom-1.5 left-1.5 w-3 h-3 border-b border-l border-gold" />
+              <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b border-r border-gold" />
 
-              <svg className="w-14 h-14 fill-amber-500 mb-4" viewBox="0 0 24 24">
+              <svg className="w-14 h-14 fill-gold-dark mb-4" viewBox="0 0 24 24">
                 <path d={s.icon} />
               </svg>
-              <h3 className="text-amber-300 font-bold text-base font-serif mb-2">{s.title}</h3>
-              <p className="text-amber-600 text-xs mb-5 leading-relaxed font-sans">{s.desc}</p>
+              <h3 className="text-gold-dark font-bold text-base font-serif mb-2">{s.title}</h3>
+              <p className="text-gold-dark text-xs mb-5 leading-relaxed font-sans">{s.desc}</p>
 
               {/* Button with dot ornaments */}
               <div className="mt-auto flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-600" />
-                <button className="border-2 border-amber-600 text-amber-300 text-xs tracking-widest uppercase px-6 py-2 hover:bg-amber-600/15 transition-colors font-sans">
+                <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                <button className="border-2 border-gold text-gold-dark text-xs tracking-widest uppercase px-6 py-2 hover:bg-gold/15 transition-colors font-sans">
                   View More
                 </button>
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-600" />
+                <div className="w-1.5 h-1.5 rounded-full bg-gold" />
               </div>
             </div>
           </div>
@@ -131,9 +131,9 @@ export function HomePage() {
       </h3>
       <button
         onClick={() => router.push('/contact')}
-        className="border-2 border-amber-800 text-amber-300 font-bold text-xs tracking-[3px] uppercase px-14 py-3 font-sans hover:opacity-90 transition-opacity"
+        className="border-2 border-gold/40 text-gold-dark font-bold text-xs tracking-[3px] uppercase px-14 py-3 font-sans hover:opacity-90 transition-opacity"
         style={{
-          background: "linear-gradient(180deg, #8B2A0A 0%, #6B1A06 100%)",
+          background: "linear-gradient(180deg, #7A0F16 0%, #5C0B10 100%)",
           clipPath: "polygon(10px 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0% 50%)"
         }}
       >
@@ -159,17 +159,17 @@ export function HomePage() {
 
         {/* Content */}
         {/* <div className="relative z-20 max-w-7xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-amber-100 mb-6 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-bold text-velvet mb-6 tracking-wide">
             Trusted Strategic Real Estate,  <br />Financial & Investment Advisory
           </h1>
-          <p className="text-xl md:text-2xl text-amber-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-velvet/70 mb-8 max-w-3xl mx-auto">
             Delivering integrated, compliant, and high-value solutions across UAE’s real estate and financial landscape for discerning clients.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button
               size="lg"
               onClick={() => router.push('/calculators')}
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg"
+              className="bg-velvet hover:bg-velvet-light text-white px-8 py-6 text-lg"
             >
               <Calculator className="w-5 h-5 mr-2" />
               Explore Opportunities
@@ -177,7 +177,7 @@ export function HomePage() {
             <Button
               size="lg"
               onClick={() => router.push('/properties')}
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg"
+              className="bg-velvet hover:bg-velvet-light text-white px-8 py-6 text-lg"
             >
               <Building2 className="w-5 h-5 mr-2" />
               Speak to an Advisor
@@ -197,32 +197,32 @@ export function HomePage() {
 
     {/* Left */}
     <div>
-      <div className="inline-block border border-[#8B3A0F] bg-[#6B1A06]/60 text-[#E8C060] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-6"
+      <div className="inline-block border border-[#7A0F16] bg-[#5C0B10]/60 text-[#E4C766] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-6"
         style={{ clipPath: "polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)" }}>
         About AKR Group UAE
       </div>
 
       <h2 className="text-4xl font-bold leading-snug mb-4 font-serif" style={{ color: "#fff" }}>
         Multi-Sector Advisory<br />
-        <span style={{ color: "#6B1A06" }}>Built for UAE</span>
+        <span style={{ color: "#5C0B10" }}>Built for UAE</span>
       </h2>
 
       <div className="flex items-center gap-3 mb-7">
-        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
-        <div className="w-2 h-2 rotate-45" style={{ background: "#C8960A" }} />
-        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
+        <div className="w-10 h-0.5" style={{ background: "#7A0F16" }} />
+        <div className="w-2 h-2 rotate-45" style={{ background: "#B8952E" }} />
+        <div className="w-10 h-0.5" style={{ background: "#7A0F16" }} />
       </div>
 
       <p className="text-base leading-relaxed mb-8" style={{ color: "#fff" }}>
         AKR Group UAE is a multi-sector advisory firm combining real estate, finance, insurance,
         and strategic marketing into one unified platform.<br /><br />
-        With 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide
+        Guided by vision and led by 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide
         confidential, insight-driven advisory services tailored for investors, business owners,
         and high-net-worth individuals.
       </p>
 
       <div className="border-l-4 py-3 pl-5 pr-4"
-        style={{ borderColor: "#8B3A0F", background: "rgba(107,26,6,0.25)" }}>
+        style={{ borderColor: "#7A0F16", background: "rgba(122,15,22,0.25)" }}>
         <p className="italic text-lg font-serif" style={{ color: "#fff" }}>
           One Partner. Complete Advisory. Measurable Value.
         </p>
@@ -237,14 +237,14 @@ export function HomePage() {
         {[{num: '25+', label: 'Years of Expertise'}, {num: '4', label: 'Advisory Sectors'}].map((s) => (
           <div key={s.label}
             className="p-6 border-2 relative"
-            style={{ borderColor: "#C8960A", background: "linear-gradient(170deg, #8B1A08 0%, #5B0E05 100%)" }}>
+            style={{ borderColor: "#B8952E", background: "linear-gradient(170deg, #7A0F16 0%, #5C0B10 100%)" }}>
             {/* Corner ornaments */}
-            <div className="absolute top-1 left-1 w-3 h-3 border-t border-l" style={{ borderColor: "#C8960A" }} />
-            <div className="absolute top-1 right-1 w-3 h-3 border-t border-r" style={{ borderColor: "#C8960A" }} />
-            <div className="absolute bottom-1 left-1 w-3 h-3 border-b border-l" style={{ borderColor: "#C8960A" }} />
-            <div className="absolute bottom-1 right-1 w-3 h-3 border-b border-r" style={{ borderColor: "#C8960A" }} />
-            <div className="text-4xl font-bold mb-1" style={{ color: "#E8C060" }}>{s.num}</div>
-            <div className="text-xs uppercase tracking-widest" style={{ color: "#C8960A" }}>{s.label}</div>
+            <div className="absolute top-1 left-1 w-3 h-3 border-t border-l" style={{ borderColor: "#B8952E" }} />
+            <div className="absolute top-1 right-1 w-3 h-3 border-t border-r" style={{ borderColor: "#B8952E" }} />
+            <div className="absolute bottom-1 left-1 w-3 h-3 border-b border-l" style={{ borderColor: "#B8952E" }} />
+            <div className="absolute bottom-1 right-1 w-3 h-3 border-b border-r" style={{ borderColor: "#B8952E" }} />
+            <div className="text-4xl font-bold mb-1" style={{ color: "#E4C766" }}>{s.num}</div>
+            <div className="text-xs uppercase tracking-widest" style={{ color: "#B8952E" }}>{s.label}</div>
           </div>
         ))}
       </div>
@@ -258,13 +258,13 @@ export function HomePage() {
       ].map((p) => (
         <div key={p.title}
           className="flex items-center gap-4 p-4 border relative"
-          style={{ borderColor: "rgba(200,150,10,0.3)", background: "rgba(107,26,6,0.35)" }}>
+          style={{ borderColor: "rgba(184,149,46,0.3)", background: "rgba(122,15,22,0.35)" }}>
           <div className="w-9 h-9 flex items-center justify-center shrink-0 border-2 font-bold text-sm"
-            style={{ borderColor: "#C8960A", background: "rgba(139,26,8,0.6)", color: "#E8C060" }}>
+            style={{ borderColor: "#B8952E", background: "rgba(92,11,16,0.6)", color: "#E4C766" }}>
             {p.title[0]}
           </div>
           <div className="text-sm">
-            <strong style={{ color: "#E8C060" }}>{p.title}</strong>
+            <strong style={{ color: "#E4C766" }}>{p.title}</strong>
             <span style={{ color: "#fff" }}> — {p.desc}</span>
           </div>
         </div>
@@ -286,19 +286,19 @@ export function HomePage() {
 
     {/* Header */}
     <div className="text-center mb-16">
-      <div className="inline-block border border-[#8B3A0F]  text-[#E8C060] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-5"
+      <div className="inline-block border border-[#7A0F16]  text-[#E4C766] text-xs tracking-[3px] px-4 py-1.5 uppercase mb-5"
         style={{ clipPath: "polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)" }}>
         What We Offer
       </div>
-      <h2 className="text-4xl font-bold font-serif mb-3" style={{ color: "#2a0800" }}>
-        Our <span style={{ color: "#8B2A0A" }}>Premium</span> Services
+      <h2 className="text-4xl font-bold font-serif mb-3" style={{ color: "#7A0F16" }}>
+        Our <span style={{ color: "#7A0F16" }}>Premium</span> Services
       </h2>
       <div className="flex items-center justify-center gap-3 mb-4">
-        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
-        <div className="w-2 h-2 rotate-45" style={{ background: "#C8960A" }} />
-        <div className="w-10 h-0.5" style={{ background: "#8B3A0F" }} />
+        <div className="w-10 h-0.5" style={{ background: "#7A0F16" }} />
+        <div className="w-2 h-2 rotate-45" style={{ background: "#B8952E" }} />
+        <div className="w-10 h-0.5" style={{ background: "#7A0F16" }} />
       </div>
-      <p className="text-sm max-w-lg mx-auto leading-relaxed" style={{ color: "#3a0e00" }}>
+      <p className="text-sm max-w-lg mx-auto leading-relaxed" style={{ color: "#7A0F16" }}>
         Three powerful pillars of advisory — unified under one trusted partner across the UAE.
       </p>
     </div>
@@ -336,39 +336,39 @@ export function HomePage() {
       ].map((s) => (
         <div key={s.sector}
           className="flex flex-col border-2 relative p-[3px] transition-opacity hover:opacity-95"
-          style={{ borderColor: "#C8960A", background: "linear-gradient(170deg, #8B1A08 0%, #5B0E05 100%)" }}>
+          style={{ borderColor: "#B8952E", background: "linear-gradient(170deg, #7A0F16 0%, #5C0B10 100%)" }}>
           {/* Corner ornaments */}
-          <div className="absolute top-2 left-2 w-3 h-3 border-t border-l z-10" style={{ borderColor: "#C8960A" }} />
-          <div className="absolute top-2 right-2 w-3 h-3 border-t border-r z-10" style={{ borderColor: "#C8960A" }} />
-          <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l z-10" style={{ borderColor: "#C8960A" }} />
-          <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r z-10" style={{ borderColor: "#C8960A" }} />
+          <div className="absolute top-2 left-2 w-3 h-3 border-t border-l z-10" style={{ borderColor: "#B8952E" }} />
+          <div className="absolute top-2 right-2 w-3 h-3 border-t border-r z-10" style={{ borderColor: "#B8952E" }} />
+          <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l z-10" style={{ borderColor: "#B8952E" }} />
+          <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r z-10" style={{ borderColor: "#B8952E" }} />
 
-          <div className="border flex flex-col flex-1" style={{ borderColor: "rgba(200,150,10,0.3)" }}>
+          <div className="border flex flex-col flex-1" style={{ borderColor: "rgba(184,149,46,0.3)" }}>
             {/* Image */}
             <div className="h-48 w-full overflow-hidden relative">
               <img src={s.image} alt={s.title} className="w-full h-full object-cover brightness-75" />
             </div>
-            <div className="h-0.5" style={{ background: "#C8960A" }} />
+            <div className="h-0.5" style={{ background: "#B8952E" }} />
 
             {/* Body */}
             <div className="p-7 flex flex-col flex-1">
-              <span className="text-xs tracking-widest uppercase mb-2" style={{ color: "#C8960A" }}>{s.sector}</span>
-              <h3 className="text-xl font-bold mb-1 font-serif" style={{ color: "#E8C060" }}>{s.title}</h3>
-              <p className="text-xs tracking-wide mb-3" style={{ color: "#C8960A" }}>{s.location}</p>
-              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(232,192,96,0.7)" }}>{s.overview}</p>
+              <span className="text-xs tracking-widest uppercase mb-2" style={{ color: "#B8952E" }}>{s.sector}</span>
+              <h3 className="text-xl font-bold mb-1 font-serif" style={{ color: "#E4C766" }}>{s.title}</h3>
+              <p className="text-xs tracking-wide mb-3" style={{ color: "#B8952E" }}>{s.location}</p>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(228,199,102,0.7)" }}>{s.overview}</p>
 
               <ul className="flex flex-col gap-2 mb-5">
                 {s.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-xs" style={{ color: "rgba(232,192,96,0.8)" }}>
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#C8960A" }} />
+                  <li key={i} className="flex items-start gap-2.5 text-xs" style={{ color: "rgba(228,199,102,0.8)" }}>
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#B8952E" }} />
                     {item}
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-auto border-l-2 pl-3 py-2 text-xs leading-relaxed" style={{ borderColor: "#C8960A", background: "rgba(200,150,10,0.08)" }}>
-                <span className="font-semibold" style={{ color: "#C8960A" }}>Note: </span>
-                <span style={{ color: "rgba(200,150,10,0.7)" }}>{s.compliance}</span>
+              <div className="mt-auto border-l-2 pl-3 py-2 text-xs leading-relaxed" style={{ borderColor: "#B8952E", background: "rgba(184,149,46,0.08)" }}>
+                <span className="font-semibold" style={{ color: "#B8952E" }}>Note: </span>
+                <span style={{ color: "rgba(184,149,46,0.7)" }}>{s.compliance}</span>
               </div>
             </div>
           </div>
@@ -378,17 +378,17 @@ export function HomePage() {
 
     {/* Bottom CTA */}
     <div className="max-w-6xl mx-auto mt-6 border px-10 py-7 flex items-center justify-between gap-6"
-      style={{ borderColor: "rgba(200,150,10,0.3)", background: "rgba(107,26,6,0.4)" }}>
+      style={{ borderColor: "rgba(184,149,46,0.3)", background: "rgba(122,15,22,0.4)" }}>
       <p className="font-serif text-lg italic" style={{ color: "#fff" }}>
         Ready to explore our services?{" "}
-        <span style={{ color: "#8B2A0A" }}>Let's build your strategy.</span>
+        <span style={{ color: "#7A0F16" }}>Let's build your strategy.</span>
       </p>
       <button
         className="text-xs tracking-widest uppercase px-8 py-3 transition-opacity hover:opacity-90 whitespace-nowrap border-2 font-bold"
         style={{
-          borderColor: "#8B3A0F",
-          background: "linear-gradient(180deg, #8B2A0A 0%, #6B1A06 100%)",
-          color: "#E8C060",
+          borderColor: "#7A0F16",
+          background: "linear-gradient(180deg, #7A0F16 0%, #5C0B10 100%)",
+          color: "#E4C766",
           clipPath: "polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)"
         }}
       >
@@ -400,7 +400,7 @@ export function HomePage() {
 </section>
 
     {/* Quick Calculator Section */}
-    <section className="relative py-12 border-y-2 border-amber-600 overflow-hidden">
+    <section className="relative py-12 border-y-2 border-gold overflow-hidden">
   {/* Texture background */}
   <div className="absolute inset-0">
     <img src="/texture-bg.png" alt="" className="w-full h-full object-cover" />
@@ -413,11 +413,11 @@ export function HomePage() {
 </section>
 
       {/* Services Section */}
-      {/* <section className="py-20 bg-linear-to-b from-[#2a0808] to-[#3a1010]">
+      {/* <section className="py-20 bg-pearl">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-amber-100 mb-4">Our Services</h2>
-            <p className="text-xl text-amber-200">Comprehensive advisory solutions for your financial goals</p>
+            <h2 className="text-4xl font-bold text-velvet mb-4">Our Services</h2>
+            <p className="text-xl text-velvet/70">Comprehensive advisory solutions for your financial goals</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -484,17 +484,17 @@ function ServiceCard({ icon, title, description, onClick }: {
 }) {
   return (
     <Card
-      className="bg-[#4a1810] border-2 border-amber-700 hover:border-amber-500 transition-all cursor-pointer group"
+      className="bg-white border border-gold/30 hover:border-gold shadow-sm transition-all cursor-pointer group"
       onClick={onClick}
     >
       <CardHeader>
-        <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+        <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
           {icon}
         </div>
-        <CardTitle className="text-amber-100 text-xl">{title}</CardTitle>
+        <CardTitle className="text-velvet text-xl">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-amber-200">{description}</CardDescription>
+        <CardDescription className="text-velvet/70">{description}</CardDescription>
       </CardContent>
     </Card>
   );
@@ -527,55 +527,55 @@ function MortgageCalculatorQuick() {
   };
 
   return (
-    <Card className="bg-linear-to-br from-[#3a1010] to-[#4a1810] border-2 border-amber-600">
+    <Card className="bg-white border border-gold/30 shadow-sm">
       <CardHeader className="text-center">
-        <CardTitle className="text-3xl text-amber-100">Mortgage Calculator</CardTitle>
-        <CardDescription className="text-amber-200">Get an instant estimate of your monthly payments</CardDescription>
+        <CardTitle className="text-3xl text-velvet">Mortgage Calculator</CardTitle>
+        <CardDescription className="text-velvet/70">Get an instant estimate of your monthly payments</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div>
-              <label className="block text-amber-100 mb-2">Property Value (AED)</label>
+              <label className="block text-velvet mb-2">Property Value (AED)</label>
               <input
                 type="number"
                 value={propertyValue}
                 onChange={(e) => setPropertyValue(Number(e.target.value))}
-                className="w-full px-4 py-3 bg-[#2a0808] border border-amber-700 rounded text-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="w-full px-4 py-3 bg-pearl border border-gold/30 rounded text-velvet focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
             <div>
-              <label className="block text-amber-100 mb-2">Down Payment (AED)</label>
+              <label className="block text-velvet mb-2">Down Payment (AED)</label>
               <input
                 type="number"
                 value={downPayment}
                 onChange={(e) => setDownPayment(Number(e.target.value))}
-                className="w-full px-4 py-3 bg-[#2a0808] border border-amber-700 rounded text-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="w-full px-4 py-3 bg-pearl border border-gold/30 rounded text-velvet focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
             <div>
-              <label className="block text-amber-100 mb-2">Interest Rate (%)</label>
+              <label className="block text-velvet mb-2">Interest Rate (%)</label>
               <input
                 type="number"
                 step="0.1"
                 value={loanRate}
                 onChange={(e) => setLoanRate(Number(e.target.value))}
-                className="w-full px-4 py-3 bg-[#2a0808] border border-amber-700 rounded text-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="w-full px-4 py-3 bg-pearl border border-gold/30 rounded text-velvet focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
             <div>
-              <label className="block text-amber-100 mb-2">Loan Tenure (Months)</label>
+              <label className="block text-velvet mb-2">Loan Tenure (Months)</label>
               <input
                 type="number"
                 value={loanTenure}
                 onChange={(e) => setLoanTenure(Number(e.target.value))}
-                className="w-full px-4 py-3 bg-[#2a0808] border border-amber-700 rounded text-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="w-full px-4 py-3 bg-pearl border border-gold/30 rounded text-velvet focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
           </div>
 
           <div className="flex flex-col justify-center">
-            <div className="bg-amber-600 p-8 rounded-lg text-center">
+            <div className="bg-gold p-8 rounded-lg text-center">
               <div className="text-white/80 mb-2">Estimated Monthly EMI</div>
               <div className="text-4xl font-bold text-white mb-4">
                 AED {emi.toLocaleString('en-US', { maximumFractionDigits: 0 })}
@@ -585,12 +585,12 @@ function MortgageCalculatorQuick() {
               </div>
               <Button
                 onClick={() => router.push('/calculators')}
-                className="bg-[#3a1010] hover:bg-[#2a0808] text-amber-100 w-full"
+                className="bg-velvet hover:bg-velvet-light text-white w-full"
               >
                 View Detailed Report
               </Button>
             </div>
-            <p className="text-xs text-amber-300 mt-4 text-center">
+            <p className="text-xs text-gold-dark mt-4 text-center">
               * This is an indicative calculation. Final terms subject to lender approval.
             </p>
           </div>

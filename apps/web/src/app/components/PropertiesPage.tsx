@@ -105,30 +105,30 @@ export function PropertiesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-[#2a0808] to-[#3a1010] py-12">
+    <div className="min-h-screen bg-pearl py-12">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-amber-100 mb-4">Exclusive Properties</h1>
-          <p className="text-xl text-amber-200">Investment-Grade Real Estate in Dubai</p>
+          <h1 className="text-5xl font-bold text-velvet mb-4">Exclusive Properties</h1>
+          <p className="text-xl text-velvet/70">Investment-Grade Real Estate in Dubai</p>
         </div>
 
         {/* Important Notice */}
-        <Card className="mb-8 bg-[#4a1810] border-2 border-amber-600">
+        <Card className="mb-8 bg-white border border-gold/40 shadow-sm">
           <CardHeader>
-            <CardTitle className="text-amber-300 flex items-center gap-2">
+            <CardTitle className="text-gold-dark flex items-center gap-2">
               <Building2 className="w-5 h-5" />
               Advisory-Led Property Service
             </CardTitle>
           </CardHeader>
-          <CardContent className="text-amber-200 space-y-2">
+          <CardContent className="text-velvet/70 space-y-2">
             <p>
-              <strong className="text-amber-300">AKR Realty LLC</strong> - Licensed by RERA (Real Estate Regulatory Agency). License No: XXXXX
+              <strong className="text-gold-dark">AKR Realty LLC</strong> - Licensed by RERA (Real Estate Regulatory Agency). License No: XXXXX
             </p>
             <p>
               All property listings are curated for investment advisory purposes.
               For detailed information, property viewings, or investment consultation, please contact our licensed advisors.
-              <strong className="text-amber-300"> Direct client-lister contact is not permitted as per regulatory requirements.</strong>
+              <strong className="text-gold-dark"> Direct client-lister contact is not permitted as per regulatory requirements.</strong>
             </p>
           </CardContent>
         </Card>
@@ -138,7 +138,7 @@ export function PropertiesPage() {
           {properties.map((property) => (
             <Card
               key={property.id}
-              className="bg-[#4a1810] border-2 border-amber-700 hover:border-amber-500 transition-all overflow-hidden group cursor-pointer"
+              className="bg-white border border-gold/30 hover:border-gold shadow-sm transition-all overflow-hidden group cursor-pointer"
               onClick={() => setSelectedProperty(property.id)}
             >
               {/* Property Image */}
@@ -149,7 +149,7 @@ export function PropertiesPage() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-amber-600 text-white">
+                  <Badge className="bg-gold text-white">
                     {property.type}
                   </Badge>
                 </div>
@@ -161,8 +161,8 @@ export function PropertiesPage() {
               </div>
 
               <CardHeader>
-                <CardTitle className="text-amber-100 text-xl">{property.name}</CardTitle>
-                <CardDescription className="text-amber-200 flex items-center gap-2">
+                <CardTitle className="text-velvet text-xl">{property.name}</CardTitle>
+                <CardDescription className="text-velvet/70 flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
                   {property.location}
                 </CardDescription>
@@ -173,47 +173,47 @@ export function PropertiesPage() {
                   {/* Property Details */}
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center">
-                      <Bed className="w-5 h-5 text-amber-400 mx-auto mb-1" />
-                      <div className="text-sm text-amber-100">{property.bedrooms}</div>
-                      <div className="text-xs text-amber-300">Beds</div>
+                      <Bed className="w-5 h-5 text-gold-dark mx-auto mb-1" />
+                      <div className="text-sm text-velvet">{property.bedrooms}</div>
+                      <div className="text-xs text-gold-dark">Beds</div>
                     </div>
                     <div className="text-center">
-                      <Bath className="w-5 h-5 text-amber-400 mx-auto mb-1" />
-                      <div className="text-sm text-amber-100">{property.bathrooms}</div>
-                      <div className="text-xs text-amber-300">Baths</div>
+                      <Bath className="w-5 h-5 text-gold-dark mx-auto mb-1" />
+                      <div className="text-sm text-velvet">{property.bathrooms}</div>
+                      <div className="text-xs text-gold-dark">Baths</div>
                     </div>
                     <div className="text-center">
-                      <Square className="w-5 h-5 text-amber-400 mx-auto mb-1" />
-                      <div className="text-sm text-amber-100">{property.area}</div>
-                      <div className="text-xs text-amber-300">Sq Ft</div>
+                      <Square className="w-5 h-5 text-gold-dark mx-auto mb-1" />
+                      <div className="text-sm text-velvet">{property.area}</div>
+                      <div className="text-xs text-gold-dark">Sq Ft</div>
                     </div>
                   </div>
 
                   {/* Investment Metrics */}
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-amber-700">
-                    <div className="bg-[#2a0808] p-3 rounded">
-                      <div className="text-xs text-amber-300 mb-1">Projected ROI</div>
-                      <div className="text-lg font-bold text-amber-100 flex items-center gap-1">
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gold/30">
+                    <div className="bg-gold/10 p-3 rounded">
+                      <div className="text-xs text-gold-dark mb-1">Projected ROI</div>
+                      <div className="text-lg font-bold text-velvet flex items-center gap-1">
                         <TrendingUp className="w-4 h-4" />
                         {property.roi}%
                       </div>
                     </div>
-                    <div className="bg-[#2a0808] p-3 rounded">
-                      <div className="text-xs text-amber-300 mb-1">Rental Yield</div>
-                      <div className="text-lg font-bold text-amber-100">
+                    <div className="bg-gold/10 p-3 rounded">
+                      <div className="text-xs text-gold-dark mb-1">Rental Yield</div>
+                      <div className="text-lg font-bold text-velvet">
                         {property.rentalYield}%
                       </div>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-amber-200 line-clamp-2">
+                  <p className="text-sm text-velvet/70 line-clamp-2">
                     {property.description}
                   </p>
 
                   {/* CTA Button */}
                   <Button
-                    className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                    className="w-full bg-velvet hover:bg-velvet-light text-white"
                     onClick={(e) => {
                       e.stopPropagation();
                       // Contact advisor action
@@ -228,7 +228,7 @@ export function PropertiesPage() {
         </div>
 
         {/* Bottom CTA */}
-        <Card className="mt-12 bg-linear-to-r from-amber-800 to-amber-600 border-none">
+        <Card className="mt-12 bg-linear-to-r from-velvet to-velvet-light border-none">
           <CardContent className="py-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Looking for Investment Guidance?
@@ -239,7 +239,7 @@ export function PropertiesPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-[#3a1010] hover:bg-[#2a0808] text-amber-100"
+                className="bg-pearl hover:bg-pearl text-velvet"
                 onClick={() => router.push('/contact')}
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -248,7 +248,7 @@ export function PropertiesPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#3a1010]"
+                className="border-2 border-white text-white hover:bg-white hover:text-velvet"
                 onClick={() => router.push('/calculators')}
               >
                 <TrendingUp className="w-5 h-5 mr-2" />

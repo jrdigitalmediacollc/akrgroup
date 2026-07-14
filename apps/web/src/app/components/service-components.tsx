@@ -46,44 +46,44 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 px-10" style={{ background: "#2a0a05" }}>
+    <section className="py-20 px-10 bg-velvet">
       {/* Header */}
       <div className="text-center mb-16">
-        <span className="inline-block border border-amber-600 bg-amber-900/20 text-amber-400 text-xs tracking-widest px-4 py-1.5 uppercase mb-5">
+        <span className="inline-block border border-gold bg-gold/10 text-gold-light text-xs tracking-widest px-4 py-1.5 uppercase mb-5">
           What We Offer
         </span>
-        <h2 className="text-4xl font-bold text-amber-100 font-serif mb-3">
-          Our <span className="text-amber-400">Premium</span> Services
+        <h2 className="text-4xl font-bold text-pearl font-serif mb-3">
+          Our <span className="text-gold-light">Premium</span> Services
         </h2>
-        <div className="w-16 h-0.5 bg-amber-600 mx-auto mb-4" />
-        <p className="text-amber-800 text-sm max-w-lg mx-auto leading-relaxed">
+        <div className="w-16 h-0.5 bg-gold mx-auto mb-4" />
+        <p className="text-white/70 text-sm max-w-lg mx-auto leading-relaxed">
           Three powerful pillars of advisory — unified under one trusted partner across the UAE.
         </p>
       </div>
 
       {/* Cards Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-0.5 bg-amber-700/20">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-0.5 bg-gold/20">
         {services.map((s) => (
-          <div key={s.sector} className="bg-[#3a0f08] hover:bg-[#4a1810] transition-colors flex flex-col">
+          <div key={s.sector} className="bg-velvet-dark hover:bg-velvet-light transition-colors flex flex-col">
             {/* Image */}
             <div className="relative h-48 w-full overflow-hidden">
               <Image src={s.image} alt={s.title} fill className="object-cover brightness-75" />
             </div>
-            {/* Amber accent line */}
-            <div className="h-0.5 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700" />
+            {/* Gold accent line */}
+            <div className="h-0.5 bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark" />
             {/* Body */}
             <div className="p-7 flex flex-col flex-1">
-              <span className="text-amber-500 text-xs tracking-widest uppercase mb-2">{s.sector}</span>
-              <h3 className="text-xl font-bold text-amber-100 font-serif mb-1">{s.title}</h3>
-              <p className="text-amber-600 text-xs tracking-wide mb-3">{s.location}</p>
-              <p className="text-amber-200/60 text-sm leading-relaxed mb-5">{s.overview}</p>
+              <span className="text-gold-light text-xs tracking-widest uppercase mb-2">{s.sector}</span>
+              <h3 className="text-xl font-bold text-pearl font-serif mb-1">{s.title}</h3>
+              <p className="text-gold text-xs tracking-wide mb-3">{s.location}</p>
+              <p className="text-white/60 text-sm leading-relaxed mb-5">{s.overview}</p>
 
               {/* Simple items */}
               {s.items && (
                 <ul className="flex flex-col gap-2 mb-5">
                   {s.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-xs text-amber-200/80">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0" />
+                    <li key={i} className="flex items-start gap-2.5 text-xs text-white/80">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
                       {item.label}{item.desc ? ` — ${item.desc}` : ""}
                     </li>
                   ))}
@@ -93,13 +93,13 @@ export function ServicesSection() {
               {/* Sub-sections (Finance card) */}
               {s.subSections && s.subSections.map((sub) => (
                 <div key={sub.title} className="mb-4">
-                  <div className="text-amber-500 text-xs tracking-widest uppercase border-b border-amber-700/30 pb-1.5 mb-2">
+                  <div className="text-gold-light text-xs tracking-widest uppercase border-b border-gold/30 pb-1.5 mb-2">
                     {sub.title}
                   </div>
                   <ul className="flex flex-col gap-1.5">
                     {sub.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-xs text-amber-200/80">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0" />
+                      <li key={i} className="flex items-start gap-2.5 text-xs text-white/80">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -108,8 +108,8 @@ export function ServicesSection() {
               ))}
 
               {/* Compliance */}
-              <div className="mt-auto pt-4 border-l-2 border-amber-600 pl-3 bg-amber-500/5 py-2 text-xs text-amber-700 leading-relaxed">
-                <span className="text-amber-600 font-semibold">Note: </span>{s.compliance}
+              <div className="mt-auto pt-4 border-l-2 border-gold pl-3 bg-gold/5 py-2 text-xs text-gold-light leading-relaxed">
+                <span className="text-gold font-semibold">Note: </span>{s.compliance}
               </div>
             </div>
           </div>
@@ -117,11 +117,11 @@ export function ServicesSection() {
       </div>
 
       {/* Bottom CTA strip */}
-      <div className="max-w-6xl mx-auto mt-0.5 border border-amber-700/25 bg-amber-500/5 px-10 py-7 flex items-center justify-between gap-6">
-        <p className="font-serif text-lg text-amber-100 italic">
+      <div className="max-w-6xl mx-auto mt-0.5 border border-gold/25 bg-gold/5 px-10 py-7 flex items-center justify-between gap-6">
+        <p className="font-serif text-lg text-pearl italic">
           Ready to explore our services? <span className="text-white">Let's build your strategy.</span>
         </p>
-        <button className="bg-amber-600 hover:bg-amber-500 text-white text-xs tracking-widest uppercase px-8 py-3 transition-colors whitespace-nowrap">
+        <button className="bg-velvet hover:bg-velvet-light text-white text-xs tracking-widest uppercase px-8 py-3 transition-colors whitespace-nowrap">
           Book a Consultation
         </button>
       </div>
