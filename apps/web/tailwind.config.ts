@@ -60,17 +60,6 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        pearl: "#FEFCF8",
-        velvet: {
-          DEFAULT: "#7A0F16",
-          dark: "#5C0B10",
-          light: "#93131A",
-        },
-        gold: {
-          DEFAULT: "#D4AF37",
-          dark: "#B8952E",
-          light: "#E4C766",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",

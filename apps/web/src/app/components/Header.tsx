@@ -109,23 +109,23 @@ export function SiteHeader() {
       </div>
 
       {/* Main header */}
-      <div className="bg-linear-to-b from-velvet to-velvet-dark border-b-2 border-gold">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+      <div className="bg-pearl border-b border-gold/40 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-3">
              <Image
               src="/logonew.png"
               alt="AKR Group UAE Logo"
               width={120}
               height={130}
-              className=" shadow-lg object-cover"
+              className="object-cover w-14 h-auto"
             />
-              <div className="text-white">
-                <div className="text-2xl font-bold tracking-wider text-pearl">
+              <div>
+                <div className="text-xl font-bold tracking-wider text-velvet font-serif leading-none">
                   AKR GROUP UAE
                 </div>
-                <div className="text-xs text-gold-light tracking-widest">
+                <div className="text-[10px] text-gold-dark tracking-[0.2em] mt-1">
                   FINANCIAL &amp; REAL ESTATE INVESTMENT ARCHITECTS
                 </div>
               </div>
@@ -137,19 +137,25 @@ export function SiteHeader() {
                 <Link
                   key={item.id}
                   href={item.id}
-                  className={`px-3 py-2 text-sm font-medium tracking-wide transition-all ${currentPage === item.id
-                    ? "text-gold-light bg-velvet-dark"
-                    : "text-pearl hover:text-gold-light hover:bg-velvet-dark"
+                  className={`px-3 py-2 text-sm font-medium tracking-wide border-b-2 transition-all ${currentPage === item.id
+                    ? "text-velvet border-gold"
+                    : "text-velvet/70 border-transparent hover:text-velvet hover:border-gold/50"
                     }`}
                 >
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/contact"
+                className="ml-3 bg-velvet hover:bg-velvet-light text-white text-xs font-semibold tracking-widest uppercase px-5 py-2.5 transition-colors"
+              >
+                Get in Touch
+              </Link>
             </nav>
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-pearl hover:text-gold-light"
+              className="lg:hidden text-velvet hover:text-gold-dark"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
@@ -162,21 +168,28 @@ export function SiteHeader() {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <nav className="lg:hidden mt-4 pb-4 border-t border-gold/40 pt-4">
-              <div className="flex flex-col gap-2">
+            <nav className="lg:hidden mt-4 pb-4 border-t border-gold/30 pt-4">
+              <div className="flex flex-col gap-1">
                 {navItems.map((item) => (
                   <Link
                     key={item.id}
                     href={item.id}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-4 py-3 text-left text-sm font-medium tracking-wide transition-all ${currentPage === item.id
-                      ? "text-gold-light bg-velvet-dark"
-                      : "text-pearl hover:text-gold-light hover:bg-velvet-dark"
+                      ? "text-velvet bg-gold/10 border-l-2 border-gold"
+                      : "text-velvet/70 hover:text-velvet hover:bg-gold/5"
                       }`}
                   >
                     {item.label}
                   </Link>
                 ))}
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="mt-2 mx-4 text-center bg-velvet hover:bg-velvet-light text-white text-xs font-semibold tracking-widest uppercase px-5 py-3 transition-colors"
+                >
+                  Get in Touch
+                </Link>
               </div>
             </nav>
           )}
