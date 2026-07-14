@@ -80,7 +80,7 @@ export function HomePage() {
           clipPath: "polygon(14px 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0% 50%)"
         }}
       >
-        <span className="text-gold-dark font-bold tracking-[3px] uppercase text-lg font-serif">Our Services</span>
+        <span className="text-gold-light font-bold tracking-[3px] uppercase text-lg font-serif">Our Services</span>
       </div>
       <div className="flex-1 max-w-[120px] h-0.5" style={{ background: "linear-gradient(to left, transparent, #7A0F16)" }} />
     </div>
@@ -104,16 +104,16 @@ export function HomePage() {
               <div className="absolute bottom-1.5 left-1.5 w-3 h-3 border-b border-l border-gold" />
               <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b border-r border-gold" />
 
-              <svg className="w-14 h-14 fill-gold-dark mb-4" viewBox="0 0 24 24">
+              <svg className="w-14 h-14 fill-gold mb-4" viewBox="0 0 24 24">
                 <path d={s.icon} />
               </svg>
-              <h3 className="text-gold-dark font-bold text-base font-serif mb-2">{s.title}</h3>
-              <p className="text-gold-dark text-xs mb-5 leading-relaxed font-sans">{s.desc}</p>
+              <h3 className="text-gold-light font-bold text-base font-serif mb-2">{s.title}</h3>
+              <p className="text-white/80 text-xs mb-5 leading-relaxed font-sans">{s.desc}</p>
 
               {/* Button with dot ornaments */}
               <div className="mt-auto flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                <button className="border-2 border-gold text-gold-dark text-xs tracking-widest uppercase px-6 py-2 hover:bg-gold/15 transition-colors font-sans">
+                <button className="border-2 border-gold text-gold-light text-xs tracking-widest uppercase px-6 py-2 hover:bg-gold/15 transition-colors font-sans">
                   View More
                 </button>
                 <div className="w-1.5 h-1.5 rounded-full bg-gold" />
@@ -131,7 +131,7 @@ export function HomePage() {
       </h3>
       <button
         onClick={() => router.push('/contact')}
-        className="border-2 border-gold/40 text-gold-dark font-bold text-xs tracking-[3px] uppercase px-14 py-3 font-sans hover:opacity-90 transition-opacity"
+        className="border-2 border-gold/40 text-gold-light font-bold text-xs tracking-[3px] uppercase px-14 py-3 font-sans hover:opacity-90 transition-opacity"
         style={{
           background: "linear-gradient(180deg, #7A0F16 0%, #5C0B10 100%)",
           clipPath: "polygon(10px 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0% 50%)"
@@ -381,7 +381,7 @@ export function HomePage() {
       style={{ borderColor: "rgba(184,149,46,0.3)", background: "rgba(122,15,22,0.4)" }}>
       <p className="font-serif text-lg italic" style={{ color: "#fff" }}>
         Ready to explore our services?{" "}
-        <span style={{ color: "#7A0F16" }}>Let's build your strategy.</span>
+        <span style={{ color: "#E4C766" }}>Let's build your strategy.</span>
       </p>
       <button
         className="text-xs tracking-widest uppercase px-8 py-3 transition-opacity hover:opacity-90 whitespace-nowrap border-2 font-bold"
