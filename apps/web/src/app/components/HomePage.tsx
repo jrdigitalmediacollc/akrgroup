@@ -36,10 +36,10 @@ export function HomePage() {
     <div className="max-w-xl">
      
       <p className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
-        Trusted Strategic,<br />
+        Trusted Premium Strategic,<br />
         Real Estate,<br />
         Financial &<br />
-        Investment Architects
+        Investment Architects across the UAE
       </p>
       <p className="text-gold-dark text-lg mb-8 italic">
         Forward Together. For Life. For Legacy
@@ -203,8 +203,8 @@ export function HomePage() {
       </div>
 
       <h2 className="text-4xl font-bold leading-snug mb-4 font-serif" style={{ color: "#fff" }}>
-        Multi-Sector Advisory<br />
-        <span style={{ color: "#5C0B10" }}>Built for UAE</span>
+        Multi-Sector Framework<br />
+        <span style={{ color: "#5C0B10" }}>Built for the UAE Ecosystem</span>
       </h2>
 
       <div className="flex items-center gap-3 mb-7">
@@ -214,17 +214,19 @@ export function HomePage() {
       </div>
 
       <p className="text-base leading-relaxed mb-8" style={{ color: "#fff" }}>
-        AKR Group UAE is a multi-sector advisory firm combining real estate, finance, insurance,
-        and strategic marketing into one unified platform.<br /><br />
-        Guided by vision and led by 25+ years of collective expertise and deep-rooted UAE market knowledge, we provide
-        confidential, insight-driven advisory services tailored for investors, business owners,
-        and high-net-worth individuals.
+        AKR Group UAE — comprising AKR Realty LLC (Dubai) and AKR Financial & Real Estate Service LLC (Sharjah) —
+        is a unified multi-sector platform seamlessly integrating premium real estate navigation with elite banking
+        product consulting, independent investment & insurance consulting, and strategic enterprise marketing into
+        a singular ecosystem.<br /><br />
+        Guided by absolute market vision and backed by a 25+ year heritage of collective on-the-ground field expertise,
+        we engineer confidential, data-driven frameworks tailored exclusively for individual and institutional investors,
+        sovereign business owners, and ultra-high-net-worth individuals.
       </p>
 
       <div className="border-l-4 py-3 pl-5 pr-4"
         style={{ borderColor: "#7A0F16", background: "rgba(122,15,22,0.25)" }}>
         <p className="italic text-lg font-serif" style={{ color: "#fff" }}>
-          One Partner. Complete Advisory. Measurable Value.
+          Forward Together. For Life. For Legacy.
         </p>
       </div>
     </div>
@@ -307,31 +309,31 @@ export function HomePage() {
     <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
       {[
         {
-          sector: "Sector A",
-          title: "Real Estate Advisory",
+          sector: "Real Estate Navigator",
+          title: "Property Asset Navigation & Portfolio Guidance",
           location: "Dubai — AKR Realty LLC",
-          overview: "End-to-end property advisory aligned with Dubai's regulatory standards.",
+          overview: "Delivering premium asset navigation, off-market sourcing, and strategic asset matching tailored to your specific, targeted investment appetite and capital parameters.",
           image: "/realestate.jpg",
-          items: ["Buy | Sell  — Residential & Commercial", "Off-Plan Investment Opportunities", "Distress Property Solutions", "Portfolio Structuring"],
+          items: ["Premium Asset Navigation & Off-Market Sourcing", "Strategic Asset Matching for Investment Appetite", "Compliant Leasing Frameworks", "Private Portfolio Transactions Across the Emirates"],
           compliance: "Regulated by Real Estate Regulatory Agency & Dubai Land Department",
         },
         {
-          sector: "Sector B",
-          title: "Financial & Insurance Advisory",
-          location: "Sharjah — SHAMS Licensed",
-          overview: "Structured financial solutions supporting asset growth and protection.",
+          sector: "Financial Navigator",
+          title: "Strategic Banking, Investment & Insurance Solutions",
+          location: "Sharjah — AKR Financial & Real Estate Service LLC",
+          overview: "Strategic consulting across Tier-1 corporate and personal mortgage structures, capital frameworks, and independent investment & insurance solutions.",
           image: "/financial.jpg",
-          items: ["Mortgage Loans", "Personal Loans & Credit Cards", "Life, Medical, Motor & Home Insurance", "Mortgage Protection", "Mutual Fund Analysis", "Risk Assessment & Financial Structuring"],
-          compliance: "Licensed under Sharjah Media City — Non-custodial advisory services",
+          items: ["Strategic Private Banking Product Consulting", "Corporate & Personal Mortgage Structures", "Flexible, High-Limit Executive Credit Lines", "Independent Investment & Insurance Consulting", "Mutual Fund Evaluation & Capital Accumulation Vehicles", "Life, Health, Motor, Home & Mortgage Insurance"],
+          compliance: "Independent, non-custodial consulting built to insulate generational family wealth",
         },
         {
-          sector: "Sector C",
-          title: "Marketing & Business Solutions",
+          sector: "Strategic Marketing Navigator",
+          title: "Advertising & Marketing Solutions",
           location: "UAE-Wide Coverage",
-          overview: "Driving visibility, engagement, and revenue growth for businesses across the UAE.",
+          overview: "Advanced enterprise visibility navigation, institutional corporate growth campaigns, premium events production, and authoritative brand activation.",
           image: "/marketing.jpg",
-          items: ["Events Production & Brand Activation", "Marketing Campaigns & Promotions", "Digital & Social Media Marketing", "Direct & Email Marketing"],
-          compliance: "Strategic growth partner for businesses & high-net-worth individuals",
+          items: ["High-Impact Advertising Campaigns", "Precision Digital Media", "Targeted Social Architectures", "Direct Acquisition Channels for Private Networks"],
+          compliance: "Strategic growth partner for ambitious enterprises across the regional market footprint",
         },
       ].map((s) => (
         <div key={s.sector}

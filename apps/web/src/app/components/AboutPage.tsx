@@ -14,7 +14,7 @@ export function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-velvet mb-4">About AKR Group UAE</h1>
           <p className="text-xl text-velvet/70 max-w-3xl mx-auto">
-            Your trusted partner in financial and real estate advisory services across the United Arab Emirates
+            Your Trusted Premium Strategic Real Estate, Financial and Investment Architects across the United Arab Emirates
           </p>
         </div>
 
@@ -82,22 +82,28 @@ export function AboutPage() {
           <CardContent className="p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-velvet mb-4">Who We Are</h2>
+                <h2 className="text-3xl font-bold text-velvet mb-2">Who We Are</h2>
+                <h3 className="text-lg font-semibold text-gold-dark mb-4">Architects of Wealth, Investment & Strategic Growth</h3>
                 <div className="space-y-4 text-velvet/70">
                   <p>
-                    AKR Group UAE is a leading advisory firm specializing in financial planning and real estate investment solutions.
-                    We provide comprehensive guidance to individuals
-                    and businesses seeking to optimize their investment portfolios.
+                    <strong className="text-velvet">AKR Group UAE</strong> is a premier investment and growth platform, empowering individuals,
+                    families, and businesses with exceptional real estate, financial, and strategic solutions across the UAE.
                   </p>
                   <p>
-                    Our advisor-led approach ensures that every client receives personalized attention and data-driven recommendations
-                    aligned with their unique financial goals. We don't just provide information – we guide you through every step
-                    of your investment journey.
+                    Through <strong className="text-gold-dark">AKR Realty LLC, Dubai</strong> and <strong className="text-gold-dark">AKR Financial & Real Estate Service LLC, Sharjah</strong>,
+                    we deliver sophisticated real estate strategies, wealth solutions, investment structuring, and financial intelligence
+                    built on trust, transparency, and excellence.
                   </p>
                   <p>
-                    Operating through two specialized entities – <strong className="text-gold-dark">AKR Realty LLC</strong> for
-                    real estate advisory and <strong className="text-gold-dark">AKR Financial & Real Estate LLC</strong> for financial
-                    services – we maintain strict regulatory compliance while delivering exceptional value to our clients.
+                    Beyond investments, our <strong className="text-gold-dark">Strategic Advertising & Marketing division</strong> creates
+                    powerful brand influence, market positioning, and growth opportunities for ambitious enterprises.
+                  </p>
+                  <p>
+                    We don't simply provide solutions—we <strong className="text-velvet">architect wealth, engineer opportunities, and build enduring legacies</strong>.
+                    Combining market intelligence, strategic vision, and innovation, AKR Group UAE transforms aspirations into sustainable success.
+                  </p>
+                  <p className="font-semibold text-velvet italic">
+                    Forward Together. For Life. For Legacy.
                   </p>
                 </div>
               </div>
@@ -193,7 +199,7 @@ export function AboutPage() {
       <div className="font-serif italic font-bold text-lg text-gold-dark">
         " We Forward Together. For Life. For Legacy."
       </div>
-      <div className="text-xs tracking-[2px] text-gold-dark uppercase font-sans mt-2">— The AKR Promise</div>
+      <div className="text-xs tracking-[2px] text-gold-dark uppercase font-sans mt-2">— The AKR Legacy Vision</div>
     </div>
 
   </div>
