@@ -62,7 +62,7 @@ export function EntrancePopup() {
 </div>
 
           <div className="text-gold-light text-xs tracking-[4px] uppercase mb-1">AKR Group UAE</div>
-          <div className="text-white/70 text-xs tracking-[2px] uppercase mb-7">Financial & Real Estate Advisory</div>
+          <div className="text-white/70 text-xs tracking-[2px] uppercase mb-7">Financial & Real Estate Investment Architects</div>
 
           {/* Divider */}
           <div className="flex items-center gap-3 mb-6">
@@ -74,8 +74,11 @@ export function EntrancePopup() {
           <h2 className="text-2xl font-bold text-pearl font-serif mb-2">
             Welcome to<br /><span className="text-gold-light">AKR Group UAE</span>
           </h2>
-          <p className="text-xs text-white/70 leading-relaxed mb-8 max-w-xs mx-auto">
-            Your trusted partner for premium real estate, financial, and investment advisory services across the UAE.
+          <p className="text-xs text-white/70 leading-relaxed italic mb-2 max-w-xs mx-auto">
+            "Trusted Premium Strategic, Real Estate, Financial & Investment Architects across the UAE."
+          </p>
+          <p className="text-xs text-gold-dark leading-relaxed italic mb-8 max-w-xs mx-auto">
+            Forward Together. For Life. For Legacy.
           </p>
 
           {/* Progress */}
@@ -105,7 +108,7 @@ export function EntrancePopup() {
 
         {/* Badges */}
         <div className="flex justify-center gap-5 px-8 py-3 border-t border-gold/15 bg-black/20">
-          {["RERA", "DLD", "SHAMS", "25+ Years"].map((b) => (
+          {["RERA", "DLD", "SHAMS", "Led by 25+ Years Expertise"].map((b) => (
             <div key={b} className="flex items-center gap-1.5">
               <div className="w-1 h-1 rounded-full bg-gold" />
               <span className="text-xs text-white/70 tracking-wider uppercase">{b}</span>
