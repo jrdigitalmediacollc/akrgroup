@@ -118,14 +118,25 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* AKR Royal brand palette */
-  --color-pearl: #fefcf8;
-  --color-velvet: #7a0f16;
-  --color-velvet-dark: #5c0b10;
-  --color-velvet-light: #93131a;
-  --color-gold: #d4af37;
-  --color-gold-dark: #b8952e;
-  --color-gold-light: #e4c766;
+  /* AKR Royal brand palette — per client design spec */
+  --color-pearl: #faf7f2;        /* Pearl White */
+  --color-velvet: #8b0000;       /* Royal Red — primary headings, trust */
+  --color-velvet-dark: #6d0000;  /* Deeper royal red for gradients */
+  --color-velvet-light: #a80707; /* Deep Red — sub headings */
+  --color-gold: #d4af37;         /* Imperial Gold — luxury, highlights */
+  --color-gold-dark: #b8952e;    /* Muted gold for secondary accents */
+  --color-gold-light: #f5c76e;   /* Warm Gold */
+
+  /* Text colours for excellent visibility */
+  --color-charcoal: #1a1a1a;     /* Body text */
+  --color-soft-grey: #686868;    /* Secondary text */
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;   /* Light text / placeholder */
+
+  /* Typography — Cinzel/Playfair for headings, Inter for body */
+  --font-display: var(--font-cinzel), Georgia, serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -135,6 +146,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 
   /**

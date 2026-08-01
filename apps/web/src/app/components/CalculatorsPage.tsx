@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-import { Calculator, Download, Mail, Phone, TrendingUp, PieChart, DollarSign, GraduationCap, Umbrella, Building2, Home } from 'lucide-react';
+import { Calculator, Download, Mail, Phone, TrendingUp, PieChart, DollarSign, GraduationCap, Umbrella, Building2, Home, Percent, ArrowRight, Users, MapPin, ShieldCheck, BadgeCheck, Lock, FileText } from 'lucide-react';
+import Link from 'next/link';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
@@ -12,21 +13,190 @@ import { LineChart, Line, BarChart, Bar, PieChart as RechartsPieChart, Pie, Cell
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/dialog';
 import { useEffect } from 'react';
 
+const CALCULATOR_CARDS = [
+  {
+    value: 'mortgage',
+    title: 'Mortgage Calculator',
+    desc: 'Calculate monthly mortgage payments, interest and total cost.',
+    Icon: Home,
+    popular: true,
+  },
+  {
+    value: 'offplan',
+    title: 'Off-Plan Calculator',
+    desc: 'Evaluate off-plan projects and calculate potential returns and risks.',
+    Icon: Building2,
+  },
+  {
+    value: 'rental',
+    title: 'Rental Yield ROI Calculator',
+    desc: 'Calculate rental yield and ROI to analyze property income returns.',
+    Icon: Percent,
+  },
+  {
+    value: 'roi',
+    title: 'XIRR Calculator',
+    desc: 'Calculate extended internal rate of return for your investments.',
+    Icon: TrendingUp,
+  },
+  {
+    value: 'mutual',
+    title: 'Mutual Fund Calculator',
+    desc: 'Plan and project your mutual fund returns and corpus value over time.',
+    Icon: PieChart,
+  },
+  {
+    value: 'education',
+    title: 'Child Education Calculator',
+    desc: "Plan your child's education and estimate future expenses.",
+    Icon: GraduationCap,
+  },
+  {
+    value: 'retirement',
+    title: 'Retirement Calculator',
+    desc: 'Plan your retirement corpus and monthly income needs.',
+    Icon: Umbrella,
+  },
+];
+
+const TRUST_ITEMS = [
+  { label: 'UAE Focused', sub: 'Insights & Data', Icon: MapPin },
+  { label: 'Trusted by', sub: 'Investors', Icon: ShieldCheck },
+  { label: 'Accurate', sub: 'Financial Models', Icon: BadgeCheck },
+  { label: 'Secure &', sub: 'Confidential', Icon: Lock },
+  { label: 'Expert', sub: 'Financial Guidance', Icon: FileText },
+];
+
 export function CalculatorsPage() {
   const [showLeadCapture, setShowLeadCapture] = useState(false);
   const [leadData, setLeadData] = useState({ name: '', email: '', phone: '' });
+  const [activeTab, setActiveTab] = useState('mortgage');
+
+  const selectCalculator = (value: string) => {
+    setActiveTab(value);
+    document.getElementById('calculator-tools')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
-    <div className="min-h-screen bg-pearl py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-velvet mb-4">Financial Calculators</h1>
-          <p className="text-xl text-velvet/70">Advanced tools to help you make informed investment decisions</p>
+    <div className="min-h-screen bg-pearl">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-pearl">
+        <div className="absolute inset-y-0 right-0 w-full lg:w-1/2">
+          <img
+            src="/banner.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-pearl via-pearl/70 to-transparent" />
         </div>
 
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 lg:py-24">
+          <div className="max-w-2xl">
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-charcoal leading-tight mb-1">
+              Universal Strategic
+            </h1>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-velvet leading-tight">
+              Real Estate Investment &amp;<br />Financial Planning Calculators
+            </h2>
+            <p className="font-display text-2xl md:text-3xl text-gold-dark font-semibold mt-2 mb-6">
+              for UAE Residents &amp; Global Investors
+            </p>
+            <p className="text-charcoal/80 leading-relaxed mb-8 max-w-xl">
+              Mortgage, ROI, rental yield ROI, off-plan, XIRR, insurance, mutual fund,
+              education and retirement calculators — designed for UAE real estate and
+              global investment planning.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={() => selectCalculator('mortgage')}
+                className="inline-flex items-center gap-2 bg-velvet hover:bg-velvet-light text-white px-7 py-3.5 text-sm font-semibold tracking-wide transition-colors rounded-sm"
+              >
+                Explore Calculators
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 border border-gold text-velvet hover:bg-gold/10 px-7 py-3.5 text-sm font-semibold tracking-wide transition-colors rounded-sm"
+              >
+                <Users className="w-4 h-4" />
+                Consult an Advisor
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust strip */}
+      <section className="bg-velvet text-pearl">
+        <div className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {TRUST_ITEMS.map(({ label, sub, Icon }) => (
+            <div key={label} className="flex items-center justify-center gap-3 text-center lg:text-left">
+              <Icon className="w-6 h-6 text-gold shrink-0" />
+              <div className="text-xs leading-tight">
+                <div className="font-semibold">{label}</div>
+                <div className="text-pearl/70">{sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Calculator picker */}
+      <section className="max-w-7xl mx-auto px-4 py-14">
+        <div className="text-center mb-10">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2">
+            Powerful Calculators for Smart Financial Decisions
+          </h2>
+          <p className="text-sm text-charcoal/70">
+            Plan better. Invest smarter. Build your financial future with confidence.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {CALCULATOR_CARDS.map(({ value, title, desc, Icon, popular }) => (
+            <button
+              key={value}
+              onClick={() => selectCalculator(value)}
+              className="group relative text-left bg-white border border-gold/25 hover:border-gold rounded-md p-6 pb-14 transition-all hover:shadow-md"
+            >
+              {popular && (
+                <span className="absolute -top-2.5 right-4 bg-gold text-velvet text-[10px] font-bold tracking-wide uppercase px-2.5 py-1 rounded-full">
+                  Most Popular
+                </span>
+              )}
+              <Icon className="w-9 h-9 text-velvet mb-4" strokeWidth={1.5} />
+              <h3 className="font-display font-bold text-velvet text-base leading-snug mb-2">
+                {title}
+              </h3>
+              <p className="text-xs text-charcoal/70 leading-relaxed">{desc}</p>
+              <span className="absolute bottom-5 right-5 w-8 h-8 rounded-full bg-velvet group-hover:bg-gold text-white group-hover:text-velvet flex items-center justify-center transition-colors">
+                <ArrowRight className="w-4 h-4" />
+              </span>
+            </button>
+          ))}
+
+          {/* Advisor CTA card */}
+          <div className="relative overflow-hidden rounded-md bg-linear-to-br from-velvet to-velvet-dark p-6 flex flex-col justify-center">
+            <h3 className="font-display text-lg font-bold text-gold-light mb-2">
+              Need Expert Guidance?
+            </h3>
+            <p className="text-xs text-pearl/80 leading-relaxed mb-4">
+              Talk to our financial experts for personalized advice.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-between gap-2 bg-gold hover:bg-gold-light text-velvet text-xs font-bold px-4 py-2.5 rounded-sm transition-colors"
+            >
+              Book Free Consultation
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <div id="calculator-tools" className="max-w-7xl mx-auto px-4 pb-12 scroll-mt-8">
         {/* Calculator Tabs */}
-        <Tabs defaultValue="mortgage" className="w-full">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-white mb-8">
             <TabsTrigger value="mortgage" className="data-[state=active]:bg-velvet data-[state=active]:text-white text-velvet">
               <Calculator className="w-4 h-4 mr-2" />
@@ -116,6 +286,27 @@ export function CalculatorsPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Features strip */}
+      <section className="border-t border-gold/25 bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {[
+            { label: 'Data-Driven', sub: 'Calculations', Icon: BadgeCheck },
+            { label: 'UAE Market', sub: 'Insights', Icon: Building2 },
+            { label: 'Global Investment', sub: 'Perspective', Icon: MapPin },
+            { label: '100% Secure', sub: '& Private', Icon: Lock },
+            { label: 'Trusted by Thousands', sub: 'of Clients', Icon: Users },
+          ].map(({ label, sub, Icon }) => (
+            <div key={label} className="flex items-center justify-center gap-3">
+              <Icon className="w-6 h-6 text-gold-dark shrink-0" strokeWidth={1.5} />
+              <div className="text-xs leading-tight">
+                <div className="font-semibold text-charcoal">{label}</div>
+                <div className="text-charcoal/60">{sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Lead Capture Modal */}
       <Dialog open={showLeadCapture} onOpenChange={setShowLeadCapture}>

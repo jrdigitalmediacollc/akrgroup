@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Phone, Mail, LogOut } from "lucide-react";
+import { Menu, X, Phone, Mail, LogOut, BadgeCheck, ShieldCheck } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -45,7 +45,19 @@ export function SiteHeader() {
       {/* Top bar */}
       <div className="bg-velvet-dark text-gold-light py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
+          {/* Licence badges */}
+          <div className="hidden md:flex items-center gap-6">
+            <span className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase">
+              <BadgeCheck className="w-4 h-4 text-gold" />
+              RERA DLD Licensed
+            </span>
+            <span className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase">
+              <ShieldCheck className="w-4 h-4 text-gold" />
+              SHAMS Freezone Licensed
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4">
             <a
               href="mailto:info@akrgroupuae.com"
               className="flex items-center gap-2 hover:text-gold transition-colors"
@@ -60,8 +72,8 @@ export function SiteHeader() {
               <Phone className="w-4 h-4" />
               <span className="hidden sm:inline">+971 55 884 7365</span>
             </a>
-          </div>
-          <div className="flex items-center gap-4">
+
+            <span className="hidden sm:inline w-px h-4 bg-gold/30" />
             {!userRole ? (
               <>
                 <Button
@@ -122,7 +134,7 @@ export function SiteHeader() {
               className="object-cover w-14 h-auto"
             />
               <div>
-                <div className="text-xl font-bold tracking-wider text-velvet font-serif leading-none">
+                <div className="text-xl font-bold tracking-wider text-velvet font-display leading-none">
                   AKR GROUP UAE
                 </div>
                 <div className="text-[10px] text-gold-dark tracking-[0.2em] mt-1">
